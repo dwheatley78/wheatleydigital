@@ -1,0 +1,227 @@
+body {
+    font-size: 16px;
+    color: black;
+    background-color: whitesmoke;
+    font-family: 'Oxygen', sans-serif;
+  }
+
+
+ h1{
+    font-size: 2em;
+    font-size: 5vm;
+    margin-bottom: 20;
+    text-align: center;
+    padding:20px;
+  }
+  
+  /** HEADER **/
+  #header-nav {
+    background-color:rgb(2, 2, 26); 
+    color: white;
+    border-radius: 0;
+    border: 0;
+  }
+  
+  #logo-img {
+    background: url('../images/logo-m.png') no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 5px 5px 5px 0;
+  }
+  
+  .navbar-brand {
+    padding-top: 25px;
+  }
+  
+  .navbar-brand .brand { /* WHEATLEY */
+    font-family: 'Oxygen', sans-serif;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: .9;
+    text-align: right;
+  }
+  .navbar-brand a:hover, .navbar-brand a:focus {
+    text-decoration: none;
+  }
+
+  .navbar-brand p { /* domain */
+    font-family: 'Oxygen', sans-serif;
+    color: white;
+    font-size: 1.5em;
+    margin-top: 0;
+    text-align: right;
+  }
+  
+  #nav-list {
+    margin-top: 10px;
+  }
+  #nav-list a {
+    color: white;
+    text-align: center;
+  }
+  #nav-list .highlight:hover {
+    background: lightblue;
+    color: black;
+  }
+  #nav-list a span {
+    font-size: 1.8em;
+  }
+  
+  #email {
+    margin-top: 5px;
+  }
+  #email a { /* email */
+    text-align: right;
+    padding-bottom: 2px;
+    color: white;
+  }
+  #email div { /* Get in touch */
+    color:lightblue;
+    text-align: right;
+    font-size: 0.8em;
+    padding-right: 15px;
+  }
+
+  .block{
+    font-size: 2em;
+    font-size: 5vm;
+    margin-bottom: 20;
+    text-align: center;
+    border: 2px solid black;
+    padding:20px;
+    background-color: white;
+
+  }
+
+
+  
+  .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+    border: 1px solid lightblue;;
+  }
+  .navbar-header button.navbar-toggle {
+    clear: both;
+    margin-top: -30px;
+  }
+
+
+ 
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header */
+
+  /* End Header */
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Header */
+
+  /* End Header */
+}
+
+/********** Extra Small devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+  #logo-img {
+    background: url('../images/logo_s.png') no-repeat;
+    width: 50px;
+    height: 50px;
+    margin: 2px 2px 2px 5px;
+  }
+
+  .navbar-brand .brand{
+    font-size: 1em; 
+      padding-top: 5px;
+  }
+  
+  .navbar-brand p{
+  font-size: 0.8em;
+  padding-top: 2px;
+  }
+
+  .navbar-brand{
+  padding-top: 5px;
+  }
+
+  #collapsable-nav a span{
+    font-size: 1em;
+    margin-right: 10px;
+  }
+}
+  /* End Header */ 
+  /* END HEADER */
+
+
+
+  footer {
+    padding-top:10px;
+
+    margin-top: 20px;
+    background-color:rgb(2, 2, 26); 
+    border-radius: 0;
+    border: 0;
+  }
+  #email2 span {
+    color:white;
+    float: right;
+    font-size: 1.2em;
+    
+  }
+
+  #email2 div {
+    color:lightblue;
+    float: right;
+    font-size: .7em;
+    text-align: right;
+    margin-bottom:30px;
+    clear:both;
+  }
+
+
+
+#skills-tile, #forum-tile, #events-tile, #map-tile {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid black;
+  overflow: hidden;
+}
+#skills-tile:hover, #forum-tile:hover, #events-tile:hover, #map-tile:hover {
+  box-shadow: 0 5px 10px 5px steelblue;
+}
+#skills-tile {
+  background: url('../images/skills.png') no-repeat;
+  background-position: center;
+}
+#events-tile {
+  background: url('../images/group_img.png') no-repeat;
+  background-position: center;
+}
+#forum-tile {
+  background: url('../images/workshop_img.png') no-repeat;
+  background-position: center;
+}
+
+#skills-tile span, #forum-tile span,#events-tile span, #map-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+
+

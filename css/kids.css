@@ -1,0 +1,221 @@
+body {
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    font-family: 'Oxygen', sans-serif;
+  }
+
+
+ h1{
+    font-size: 4em;
+    font-size: 10vm;
+    padding-bottom: 100px;
+   
+  }
+  
+  /** HEADER **/
+  #header-nav {
+    background-color:rgb(196, 4, 4); 
+    color: white;
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 0;
+  }
+  
+  #logo-img {
+    background: url('../images/kids_logo2.png') no-repeat;
+    width: 201px;
+    height: 100px;
+    margin: 5px 5px 5px 0;
+  }
+  
+  .navbar-brand {
+    padding-top: 25px;
+  }
+  
+  .navbar-brand .brand { /* WHEATLEY */
+    font-family: 'Oxygen', sans-serif;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: .9;
+    text-align: right;
+  }
+  .navbar-brand a:hover, .navbar-brand a:focus {
+    text-decoration: none;
+  }
+
+  .navbar-brand p { /* domain */
+    font-family: 'Oxygen', sans-serif;
+    color: white;
+    font-size: 1.5em;
+    margin-top: 0;
+    text-align: right;
+  }
+    
+
+
+  .block{
+    font-size: 2em;
+    font-size: 5vm;
+    text-align: center;
+    border: 2px solid black;
+    background-color: white;
+
+  }
+
+
+
+
+  footer {
+    padding-top:10px;
+
+    margin-top: 20px;
+    background-color:rgb(196, 4, 4); 
+    border-radius: 0;
+    border: 0;
+  }
+  #email2 span {
+    color:white;
+    float: right;
+    font-size: 1.2em;
+    
+  }
+
+  #email2 div {
+    color:lightblue;
+    float: right;
+    font-size: .7em;
+    text-align: right;
+    margin-bottom:30px;
+    clear:both;
+  }
+
+
+
+#game-tile{
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid black;
+  overflow: hidden;
+}
+#game-tile:hover{
+  box-shadow: 0 5px 10px 5px red;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color:rgb(196, 4, 4);
+}
+
+#game-tile:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-10%, -10%);
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+.animate span{
+	display: block;
+	position: relative;
+	text-align: center;
+}
+
+.animate.backwards > span{
+	animation: animateBackwards 1s ease-in-out 
+forwards;
+}
+.animate.forwards > span{
+	animation: animateForwards 1s ease-in-out 
+forwards;
+}
+
+.animate.mixed > span:nth-child(1){
+	animation: animateBackwards 1s ease-in-out 
+forwards;
+color:blue;
+}
+.animate.mixed > span:nth-child(2){
+	animation: animateForwards 1s ease-in-out 
+forwards;
+color:red;
+}
+.animate.mixed > span:nth-child(3){
+	animation: animateBackwards 1s ease-in-out 
+forwards;
+color:green;
+}
+
+@keyframes animateForwards {
+	from { top: 0; transform: rotate(0deg); }
+	to { top: .9em; transform: rotate(-345deg); }
+}
+@keyframes animateBackwards {
+	from { top: 0; transform: rotate(350deg); }
+	to { top: 1em; transform: rotate(deg); }
+}
+
+
+#panda
+	{
+    position: absolute;
+		background: url("../images/Panda.png"); 
+		width :250px;
+		height: 330px;		
+		animation: walking_animation 1s steps(12) infinite,move_forward 8s linear infinite;	
+	}
+
+
+
+
+
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+
+  @keyframes walking_animation
+	{
+		0%{background-position: 0px;}
+		100%{background-position: 3000px;}
+	}
+  
+  @keyframes move_forward{
+  0%{transform:translateX(-100px);}
+  100%{transform:translateX(940px);}
+  }
+
+}
+
+
+
+
+
