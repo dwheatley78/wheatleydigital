@@ -71,13 +71,13 @@ body {
 
   footer {
     padding-top:10px;
-
     margin-top: 20px;
     background-color:rgb(196, 4, 4); 
     border-radius: 0;
     border: 0;
   }
   #email2 span {
+    font-family: 'Oxygen', sans-serif;
     color:white;
     float: right;
     font-size: 1.2em;
@@ -85,6 +85,7 @@ body {
   }
 
   #email2 div {
+    font-family: 'Oxygen', sans-serif;
     color:lightblue;
     float: right;
     font-size: .7em;
