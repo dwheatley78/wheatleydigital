@@ -1,8 +1,10 @@
  
   .grid {
     padding: 15px 30px;
+    justify-content: center;
     display: grid;
     grid-template-columns:420px 200px;
+
   }
   
   .right-column {
