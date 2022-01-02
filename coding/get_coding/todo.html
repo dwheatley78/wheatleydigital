@@ -2,43 +2,8 @@
 <html lang="en">
 <head>
     <title> To-Do List App </title> 
-    <style>
 
-        body{ background-color: lightblue; 
-        padding: 30px; 
-        height: 40px;
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0px;
-        }
-
-        .button1{
-            display:inline-block;
-            padding:0.5em 1.2em;
-            border:0.1em solid #FFFFFF;
-            margin:0 0.3em 0.3em 0;
-            border-radius:5em;
-            box-sizing: border-box;
-            text-decoration:none;
-            font-family:'Roboto',sans-serif;
-            font-weight:300;
-            color:#FFFFFF;
-            text-align:center;
-            transition: all 0.2s;
-            clear: left;
-            float: left;
-        }
-        .button1:hover{
-            color:#000000;
-            background-color:#FFFFFF
-        }
-        @media all and (max-width:30em){
-            .button1{
-                display:block;
-                margin:0.4em auto;
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="./style.css">
 
     <script> 
     
@@ -75,12 +40,27 @@
 
 
 <body> 
+
+    <div class="header pad">
+        The Monk Diamond Discovery<br/>
+        <a href="./monkdiamonddiscovery.html" style>Click Here to Return</a>    
+       </div>
+       <div>
+        <p class="welcome">
+         Stolen Diamond Discovered in Siberia!
+        </p>
+    </div>
+
+
+
     <h1>The House of Volkov </h1> 
     <p>Special Exhibition To-Do List</p>
     <br/>
     <input type ="text" id ="box" onfocus="this.value=''" value ="Type here to add task"/>
     <br><br>
-    <input type ="button" value ="Add item" onclick ="addItem();"/> 
+    <input type ="button" value ="Add item" onclick ="addItem();"/>
+    <br><br>
+    <p>Once complete click on an item to remove it</p> 
     <br><br>
     <div id ="list"> 
 
@@ -90,6 +70,11 @@
             loadList(); 
             } 
     </script>
+    
+    
+
+
+    </body>
 </body> 
 
 
