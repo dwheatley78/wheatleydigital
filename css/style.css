@@ -16,14 +16,14 @@ body {
   
   /** HEADER **/
   #header-nav {
-    background-color:rgb(2, 2, 26); 
+    background-color:rgb(40, 40, 40); 
     color: white;
     border-radius: 0;
     border: 0;
   }
   
   #logo-img {
-    background: url('../images/logo-m.png') no-repeat;
+    background: url('../images/EMPEDATA_s.png') no-repeat;
     width: 100px;
     height: 100px;
     margin: 5px 5px 5px 0;
@@ -63,8 +63,8 @@ body {
     text-align: center;
   }
   #nav-list .highlight:hover {
-    background: lightblue;
-    color: black;
+    background: rgb(65, 190, 234);
+    color: rgb(40, 40, 40);
   }
   #nav-list a span {
     font-size: 1.8em;
@@ -79,7 +79,7 @@ body {
     color: white;
   }
   #email div { /* Get in touch */
-    color:lightblue;
+    color:rgb(65, 190, 234);
     text-align: right;
     font-size: 0.8em;
     padding-right: 15px;
@@ -90,7 +90,7 @@ body {
     font-size: 5vm;
     margin-bottom: 20;
     text-align: center;
-    border: 2px solid black;
+    border: 2px solid: rgb(40, 40, 40);
     padding:20px;
     background-color: white;
 
@@ -99,7 +99,7 @@ body {
 
   
   .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
-    border: 1px solid lightblue;;
+    border: 1px solid rgb(65, 190, 234);
   }
   .navbar-header button.navbar-toggle {
     clear: both;
@@ -165,7 +165,7 @@ body {
     padding-top:10px;
 
     margin-top: 20px;
-    background-color:rgb(2, 2, 26); 
+    background-color: rgb(40, 40, 40); 
     border-radius: 0;
     border: 0;
   }
@@ -177,7 +177,7 @@ body {
   }
 
   #email2 div {
-    color:lightblue;
+    color:rgb(65, 190, 234);
     float: right;
     font-size: .7em;
     text-align: right;
@@ -192,18 +192,18 @@ body {
   width: 100%;
   margin-bottom: 15px;
   position: relative;
-  border: 2px solid black;
+  border: 2px solid rgb(40, 40, 40);
   overflow: hidden;
 }
 #skills-tile:hover, #forum-tile:hover, #events-tile:hover, #map-tile:hover {
-  box-shadow: 0 5px 10px 5px steelblue;
+  box-shadow: 0 5px 10px 5px rgb(54, 133, 196);
 }
 #skills-tile {
   background: url('../images/skills.png') no-repeat;
   background-position: center;
 }
 #events-tile {
-  background: url('../images/group_img.png') no-repeat;
+  background-color: rgb(40, 40, 40);
   background-position: center;
 }
 #forum-tile {
@@ -219,7 +219,7 @@ body {
   text-align: center;
   font-size: 1.6em;
   text-transform: uppercase;
-  background-color: #000;
+  background-color: rgb(40, 40, 40);
   color: #fff;
   opacity: .8;
 }
