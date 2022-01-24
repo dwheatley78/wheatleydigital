@@ -187,7 +187,7 @@ body {
 
 
 
-#skills-tile, #forum-tile, #events-tile, #map-tile {
+#skills-tile, #forum-tile, #events-tile, #map-tile, #strategy-tile, #analytics-tile, #production-tile{
   height: 250px;
   width: 100%;
   margin-bottom: 15px;
@@ -195,7 +195,7 @@ body {
   border: 2px solid rgb(40, 40, 40);
   overflow: hidden;
 }
-#skills-tile:hover, #forum-tile:hover, #events-tile:hover, #map-tile:hover {
+#skills-tile:hover, #forum-tile:hover, #events-tile:hover, #map-tile:hover, #strategy-tile:hover, #analytics-tile:hover, #production-tile:hover{
   box-shadow: 0 5px 10px 5px rgb(54, 133, 196);
 }
 #skills-tile {
@@ -211,7 +211,27 @@ body {
   background-position: center;
 }
 
-#skills-tile span, #forum-tile span,#events-tile span, #map-tile span {
+#skills-tile {
+  background: url('../images/skills.png') no-repeat;
+  background-position: center;
+}
+
+#strategy-tile {
+  background: url('../images/strategy.png') no-repeat;
+  background-position: center;
+}
+
+#analytics-tile {
+  background: url('../images/analytics.png') no-repeat;
+  background-position: center;
+}
+
+#production-tile {
+  background: url('../images/production.png') no-repeat;
+  background-position: center;
+}
+
+#skills-tile span, #forum-tile span,#events-tile span, #map-tile span, #strategy-tile span, #analytics-tile span, #production-tile span{
   position: absolute;
   bottom: 0;
   right: 0;
