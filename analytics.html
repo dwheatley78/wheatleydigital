@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WHEATLEY.digital |  3 Pillars of Digital Transformation Success</title>
+  <meta name=description content="The approach we take when delivering a digital transformation strategy"/>
+ 
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href ="css/style.css">
+  <link rel="stylesheet" href ="css/modal.css">
+
+  <link rel='shortcut icon' type='image/ico' href='images/favicon.ico' />
+  <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+
+</head>
+
+<body>
+
+
+
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="pull-left visible-xs visible-sm visible-md visible-lg">
+            <div id="logo-img" alt="logo image"></div>
+          </a>
+          <div class="navbar-brand">
+            <a href="index.html"><p class="brand">EMPEDATA</p></a>
+            <a href="index.html"><p>.com</p></a>
+          </div>
+  
+          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li>
+              <a class="highlight" href="strategy.html">
+                <span class="glyphicon glyphicon-dashboard"></span><br class="hidden-xs">Strategy</a>
+            </li>
+            <li>
+              <a class="highlight" href="analytics.html">
+                <span class="glyphicon glyphicon-stats"></span><br class="hidden-xs">Analytics</a>
+            </li>
+            <li>
+                <a class="highlight" href="production.html">
+                  <span class="glyphicon glyphicon-send"></span><br class="hidden-xs">Production</a>
+            </li>
+
+            <li id="email" class="hidden-xs hidden-sm hidden-md">
+              <a href="mailto:david@wheatley.digital">
+                <span>david@wheatley.digital</span>
+              </a><div>*To discuss how we can best support you</br>please get in touch</div>
+            </li>
+  
+          </ul><!-- #nav-list -->
+        </div><!-- .collapse .navbar-collapse -->
+      </div><!-- .container -->
+    </nav><!-- #header-nav -->
+  </header>
+        
+  <div id="main_content" class="container">
+    <h1>Analytics</h1>
+    <p>Click on the links below to find out more</p>
+    <div id="home-tiles" class="row" >
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="tile" id="ac_health-tile" onclick="document.getElementById('id01').style.display='block'"><span>Aircraft prognostics</span></div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="tile"  id="music-tile" onclick="document.getElementById('id02').style.display='block'"><span>Royalty forecasting</span></div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="tile" id="tweet-tile" onclick="document.getElementById('id01').style.display='block'"><span>Sentiment Analysis</span></div>
+      </div>
+
+    </div><!-- End of #home-tiles -->
+  </div>
+
+
+
+  <div id="id01" class="modal">
+    <div class="modal-content card-4 animate-zoom">
+      <header class="container2 blue"> 
+        <span onclick="document.getElementById('id01').style.display='none'" class="button blue xlarge display-topright">&times;</span>
+        <h2>Aircraft Prognostics</h2>
+      </header>
+
+      <div class="bar border-bottom">
+        <button class="tablink bar-item button" onclick="openProject(event, 'Objective')">Objective</button>
+        <button class="tablink bar-item button" onclick="openProject(event, 'Hypothesis')">Approach</button>
+        <button class="tablink bar-item button" onclick="openProject(event, 'Outcome')">Outcome</button>
+      </div>
+
+      <div id="Objective" class="container2 project">
+        <p>Working for one of the UK's leading aircraft manufactures to devlopp a solution to enable the maintenace activities performed on aircraft to be optimised.</p>
+        <p>This top level objective broke down into 3 lower level tasks.</p>
+        <ul>
+          <li>Using aircraft sensor data develop a method to predict the remaining useful ife of a number of key componnents.</li>
+          <li>Using the same sensor data develop a diagnostic tool to guide a miantainer to the most probable root cause.</li>
+          <li>Using sythetic data develpp a simplified digital twin of the aircraft to detrmine the optimum maintenance startegy against a range of cost and availableity objective funcitons</li>
+        </ul>
+      </div>
+
+      <div id="Hypothesis" class="container2 project">
+        <p>The approach taken involved training a varierty of regression models to forecast the RUL</p>
+        <p>A varierty of preprocessing techniques were used to capture the temporal nature of the data and normalising to the 
+          reading based on the operating conditions provided some good results.
+        </p>
+        <p>After extensive testing the LSTM (Long Term Short Term Model) was found to deliver the greatest accuracy
+          reading based on the operating conditions provided some good results.
+        </p>
+        <p>A baysian network was also produced to enable the likelihood of a varerty of root causes for an observed fault to be dynamically presented to a maintaner</p>
+      </div>
+
+      <div id="Outcome" class="container2 project">
+        <img src="images/predictive results.png" style="height:250px; width:auto">
+        <p>Outcome is the capital of Japan.</p><br>
+      </div>
+
+      <div class="container2 light-grey padding">
+        <button class="button right white border" onclick="document.getElementById('id01').style.display='none'">Close</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="id02" class="modal">
+
+    <div class="modal-content card-4 animate-zoom">
+      <header class="container2 blue"> 
+        <span onclick="document.getElementById('id02').style.display='none'" class="button blue xlarge display-topright">&times;</span>
+        <h2>Royalty Forecasting</h2>
+      </header>
+
+      <div class="bar border-bottom">
+        <button class="tablink bar-item button" onclick="openProject(event, 'Objective2')">Objective</button>
+        <button class="tablink bar-item button" onclick="openProject(event, 'Hypothesis2')">Approach</button>
+        <button class="tablink bar-item button" onclick="openProject(event, 'Outcome2')">Outcome</button>
+      </div>
+
+      <div id="Objective2" class="container2 project">
+        <p>Working for one of the UK's leading aircraft manufactures to devlopp a solution to enable the maintenace activities performed on aircraft to be optimised.</p>
+      </div>
+
+      <div id="Hypothesis2" class="container2 project">
+        <p>The approach taken involved training a varierty of regression models to forecast the RUL</p>
+      </div>
+
+      <div id="Outcome2" class="container2 project">
+        <img src="images/predictive results.png" style="height:250px; width:auto">
+        <p>Outcome is the capital of Japan.</p><br>
+      </div>
+
+      <div class="container2 light-grey padding">
+        <button class="button right white border" onclick="document.getElementById('id02').style.display='none'">Close</button>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <script>
+
+    document.getElementsByClassName("tablink")[0].click();
+
+
+    function openProject(evt, projectName) {
+      var i, x, tablinks;
+
+      x = document.getElementsByClassName("project");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].classList.remove("light-grey");
+      }
+
+      document.getElementById(projectName).style.display = "block";
+      evt.currentTarget.classList.add("light-grey");
+    }
+
+
+  </script>
+
+
+
+
+
+
+<footer >
+  <div id="email2" class="container">
+    <a href="mailto:david@wheatley.digital">
+      <span font-size=100px>david@wheatley.digital</span></a>
+    <div>*To discuss how we can best support you</br>please get in touch</div> 
+    <a href='https://uk.linkedin.com/in/david-wheatley-19a94739?trk=profile-badge';title ="Linkedin"; target="_blank">
+      <img src="images/linkedin-logo.jpg" alt="linkedin" style="width: 100px;padding-top: 10px;"/>
+    </a>
+  </div>
+</footer>
+  
+</body>
+</html>

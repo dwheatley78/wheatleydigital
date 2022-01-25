@@ -187,21 +187,14 @@ body {
 
 
 
-#skills-tile, #forum-tile, #events-tile, #map-tile, #strategy-tile, #analytics-tile, #production-tile{
-  height: 250px;
-  width: 100%;
-  margin-bottom: 15px;
-  position: relative;
-  border: 2px solid rgb(40, 40, 40);
-  overflow: hidden;
-}
-#skills-tile:hover, #forum-tile:hover, #events-tile:hover, #map-tile:hover, #strategy-tile:hover, #analytics-tile:hover, #production-tile:hover{
-  box-shadow: 0 5px 10px 5px rgb(54, 133, 196);
-}
+
+
 #skills-tile {
   background: url('../images/skills.png') no-repeat;
   background-position: center;
 }
+
+
 #events-tile {
   background-color: rgb(40, 40, 40);
   background-position: center;
@@ -231,7 +224,24 @@ body {
   background-position: center;
 }
 
-#skills-tile span, #forum-tile span,#events-tile span, #map-tile span, #strategy-tile span, #analytics-tile span, #production-tile span{
+
+
+
+.tile{
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid rgb(40, 40, 40);
+  overflow: hidden;
+}
+
+.tile:hover{
+  box-shadow: 0 5px 10px 5px rgb(54, 133, 196);
+  cursor: pointer;
+}
+
+.tile span{
   position: absolute;
   bottom: 0;
   right: 0;
@@ -244,4 +254,18 @@ body {
   opacity: .8;
 }
 
+#ac_health-tile {
+  background: url('../images/helicopter.png') no-repeat;
+  background-position: center;
+}
 
+#music-tile {
+  background: url('../images/music_tile.png') no-repeat;
+  background-position: center;
+}
+
+#tweet-tile {
+  background: url('../images/tweet_tile.png') no-repeat;
+  background-position: center;
+}
+  
