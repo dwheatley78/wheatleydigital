@@ -99,44 +99,47 @@
 
   <div id="id01" class="modal">
     <div class="modal-content card-4 animate-zoom">
-      <header class="container2 blue"> 
+      <header class="modal_container blue"> 
         <span onclick="document.getElementById('id01').style.display='none'" class="button blue xlarge display-topright">&times;</span>
         <h2>Aircraft Prognostics</h2>
       </header>
 
       <div class="bar border-bottom">
-        <button class="tablink bar-item button" onclick="openProject(event, 'Objective')">Objective</button>
-        <button class="tablink bar-item button" onclick="openProject(event, 'Hypothesis')">Approach</button>
-        <button class="tablink bar-item button" onclick="openProject(event, 'Outcome')">Outcome</button>
+        <button class="tablink bar-item button" onclick="openProject(event, 'Objective','project1')">Objective</button>
+        <button class="tablink bar-item button" onclick="openProject(event, 'Hypothesis','project1')">Approach</button>
+        <button class="tablink bar-item button" onclick="openProject(event, 'Outcome','project1')">Outcome</button>
       </div>
 
-      <div id="Objective" class="container2 project">
-        <p>Working for one of the UK's leading aircraft manufactures to devlopp a solution to enable the maintenace activities performed on aircraft to be optimised.</p>
-        <p>This top level objective broke down into 3 lower level tasks.</p>
-        <ul>
-          <li>Using aircraft sensor data develop a method to predict the remaining useful ife of a number of key componnents.</li>
-          <li>Using the same sensor data develop a diagnostic tool to guide a miantainer to the most probable root cause.</li>
-          <li>Using sythetic data develpp a simplified digital twin of the aircraft to detrmine the optimum maintenance startegy against a range of cost and availableity objective funcitons</li>
-        </ul>
-      </div>
-
-      <div id="Hypothesis" class="container2 project">
-        <p>The approach taken involved training a varierty of regression models to forecast the RUL</p>
-        <p>A varierty of preprocessing techniques were used to capture the temporal nature of the data and normalising to the 
-          reading based on the operating conditions provided some good results.
+      <div id="Objective" class="modal_container project1">
+        <br>
+        <p>With the growing development of autonomous air vehicles we were commissioned to develop a prototype
+          solution to monitor the health of theaircraft and optimise the associated maintenance activities 
+          to drive down coat and maximise availability.
         </p>
-        <p>After extensive testing the LSTM (Long Term Short Term Model) was found to deliver the greatest accuracy
-          reading based on the operating conditions provided some good results.
+        <br>
+      </div>
+
+      <div id="Hypothesis" class="modal_container project1">
+        <br>
+        <p>The developed solution utilised an LSTM deep learning model to capture the temporal nature of the 
+          aircraft sensor data normalised by the operating conditions to minimise the impact of the operating conditions.
         </p>
-        <p>A baysian network was also produced to enable the likelihood of a varerty of root causes for an observed fault to be dynamically presented to a maintaner</p>
+        <p>The results of the remaining useful life calculations combined with a simulated physical degradation were 
+          then used to populate a Reduced Order Model (ROM) digital twin and supporting optimisation algorithm to 
+          determine to optimum maintenance actions dependent on a range of objectives and capacity and material availability constraints.
+        </p>
+        <p>
+          A complimentary Bayesian network was used to provide probabilistic diagnostics of an observed failure.
+        </p>
+        <br>
       </div>
 
-      <div id="Outcome" class="container2 project">
-        <img src="images/predictive results.png" style="height:250px; width:auto">
-        <p>Outcome is the capital of Japan.</p><br>
+      <div id="Outcome" class="modal_container project1">
+        <br>
+        <p>The client is now using the proposed model as the basis of their future support service offering</p>
       </div>
 
-      <div class="container2 light-grey padding">
+      <div class="modal_container light-grey padding">
         <button class="button right white border" onclick="document.getElementById('id01').style.display='none'">Close</button>
       </div>
     </div>
@@ -146,31 +149,31 @@
   <div id="id02" class="modal">
 
     <div class="modal-content card-4 animate-zoom">
-      <header class="container2 blue"> 
+      <header class="modal_container blue"> 
         <span onclick="document.getElementById('id02').style.display='none'" class="button blue xlarge display-topright">&times;</span>
         <h2>Royalty Forecasting</h2>
       </header>
 
       <div class="bar border-bottom">
-        <button class="tablink bar-item button" onclick="openProject(event, 'Objective2')">Objective</button>
-        <button class="tablink bar-item button" onclick="openProject(event, 'Hypothesis2')">Approach</button>
-        <button class="tablink bar-item button" onclick="openProject(event, 'Outcome2')">Outcome</button>
+        <button class="tablink bar-item button" onclick="openProject(event, 'Objective2', 'project2')">Objective</button>
+        <button class="tablink bar-item button" onclick="openProject(event, 'Hypothesis2','project2')">Approach</button>
+        <button class="tablink bar-item button" onclick="openProject(event, 'Outcome2','project2')">Outcome</button>
       </div>
 
-      <div id="Objective2" class="container2 project">
+      <div id="Objective2" class="modal_container project2">
         <p>Working for one of the UK's leading aircraft manufactures to devlopp a solution to enable the maintenace activities performed on aircraft to be optimised.</p>
       </div>
 
-      <div id="Hypothesis2" class="container2 project">
+      <div id="Hypothesis2" class="modal_container project2">
         <p>The approach taken involved training a varierty of regression models to forecast the RUL</p>
       </div>
 
-      <div id="Outcome2" class="container2 project">
+      <div id="Outcome2" class="modal_container project2">
         <img src="images/predictive results.png" style="height:250px; width:auto">
         <p>Outcome is the capital of Japan.</p><br>
       </div>
 
-      <div class="container2 light-grey padding">
+      <div class="modal_container light-grey padding">
         <button class="button right white border" onclick="document.getElementById('id02').style.display='none'">Close</button>
       </div>
     </div>
@@ -178,19 +181,13 @@
   </div>
 
 
-
-
-
-
   <script>
-
     document.getElementsByClassName("tablink")[0].click();
-
-
-    function openProject(evt, projectName) {
+    document.getElementsByClassName("tablink")[3].click();
+    function openProject(evt, projectName,proj) {
       var i, x, tablinks;
 
-      x = document.getElementsByClassName("project");
+      x = document.getElementsByClassName(proj);
       for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
       }
@@ -201,8 +198,7 @@
 
       document.getElementById(projectName).style.display = "block";
       evt.currentTarget.classList.add("light-grey");
-    }
-
+    };
 
   </script>
 

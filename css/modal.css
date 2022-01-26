@@ -24,21 +24,18 @@ button{overflow:visible}
 .bar .button{white-space:normal}
 .bar-block .bar-item{width:100%;display:block;padding:8px 16px;text-align:left;border:none;white-space:normal;float:none;outline:0}
 .bar-block .bar-item{text-align:center}.block{display:block;width:100%}
-.container2:after,.container2:before,.bar:before,.bar:after{content:"";display:table;clear:both}
+.modal_container:after,.modal_container:before,.bar:before,.bar:after{content:"";display:table;clear:both}
 
 @media (min-width:601px){}
 @media (min-width:993px){}
-
 @media (max-width:600px){.modal-content{margin:10px;width:auto!important}.modal{padding-top:30px}
-.bar-item{text-align:center}
-.button{width:100%}}
+.bar-item{text-align:center}}
 @media (max-width:768px){.modal-content{width:500px}.modal{padding-top:50px}}
 @media (min-width:993px){.modal-content{width:900px}}
 @media (max-width:992px) and (min-width:601px){.hide-medium{display:none!important}}
-@media (max-width:992px){.sidebar.collapse{display:none}.main{margin-left:0!important;margin-right:0!important}.auto{max-width:100%}}
 
 .display-topright{position:absolute;right:0;top:0}
-.container2{padding:0.01em 16px}
+.modal_container{padding:0.01em 16px}
 .animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
 .xlarge{font-size:24px!important}
 .right-align{text-align:right!important}
