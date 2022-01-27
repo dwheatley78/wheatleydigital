@@ -138,7 +138,7 @@
       </div>
 
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-        <div class="tile" id="tweet-tile" onclick="document.getElementById('id01').style.display='block'"><span>Sentiment Analysis</span></div>
+        <div class="tile" id="tweet-tile"><span>Sentiment Analysis</span></div>
       </div>
 
     </div><!-- End of #home-tiles -->
@@ -161,31 +161,50 @@
 
       <div id="Objective" class="modal_container project1">
         <br>
-        <p>With the growing development of autonomous air vehicles we were commissioned to develop a prototype
-          solution to monitor the health of theaircraft and optimise the associated maintenance activities 
-          to drive down coat and maximise availability.
+        <p>Autonomous aircraft, requiring no human interventions during operation, is a rapidly evolving sector.
+          The global autonomous aircraft market was estimated to be USD 4.56 billion in 2019 and is projected to reach USD 16.23 billion by 2027.</p>
+          
+        <p>With such competition and growth potential manufacturers are looking towards enhanced service strategies as a means of delivering a competative advantage</p>
+        <p>In responce to this opportunity we were commissioned to perform a comprehensive review intelligent health management solutions
+          and develop a prototype solution utilising advanced analytics to demonstrate an approach to deliver adaptive vehicle health management, 
+          providing greater process control, reduced operating costs and enhanced availability.
         </p>
         <br>
       </div>
 
       <div id="Hypothesis" class="modal_container project1">
         <br>
-        <p>The developed solution utilised an LSTM deep learning model to capture the temporal nature of the 
-          aircraft sensor data normalised by the operating conditions to minimise the impact of the operating conditions.
-        </p>
-        <p>The results of the remaining useful life calculations combined with a simulated physical degradation were 
-          then used to populate a Reduced Order Model (ROM) digital twin and supporting optimisation algorithm to 
-          determine to optimum maintenance actions dependent on a range of objectives and capacity and material availability constraints.
-        </p>
-        <p>
-          A complimentary Bayesian network was used to provide probabilistic diagnostics of an observed failure.
-        </p>
+        <p>The approach taken involved decomposing this top-level objective into three targeted
+          value propositions. 
+          <ul>
+            <li>Accurately predicting the remaining useful life of aircraft components based on the provided sensor data</li>
+            <li>Providing dynamic fault diagnostics advice to the maintainer based on the observations</li>
+            <li>Simulating the degradation of the aircraft and the potential maintenance decisions to determine the optimum responce 
+              based on defined objective funcitons and within defined operational constraints.</li>
+          </ul>
+
         <br>
       </div>
 
       <div id="Outcome" class="modal_container project1">
         <br>
-        <p>The client is now using the proposed model as the basis of their future support service offering</p>
+        <p>Aviation will always mandate stringent safety requirements, however the ability to
+          reduce uncertainty regarding the health of components presents an enormous
+          opportunity to reduce cost and drive operational efficiencies.
+        </p>
+          The novel approach developd here, normalising the aircraft sensors data based on flight condition, to train a Long-Term-ShortTerm-Memory (LSTM) model  
+          demonstrated the ability to predicting the degradation state of these complex systems, with supporting confidence intervals, and
+          demonstrate how a move to a condition-based maintenance strategy could be realised. 
+        </p>
+        <p>The use of Bayesian Belief Networks (BBNs) provided the requried adaptive diagnostic advice to the
+          maintainer in an intuitive and visual way.  This approach had the additional benefit of enabling any divergence from the designed system reliability</p>
+        <p>
+          Performing a monte-carlo analysis on the simulation combined with a dual annealing optimisation function enabled:
+          <ul>
+            <li>An optimised stocking policy to be proposed, based on both financial and aircraft availability constraints.</li>
+            <li>Opportunity maintenance to be identified (proactively replacing an item early) to reduce cost and better utilise limited manpower and hangar capacity</li>
+          </ul>
+        </p>
       </div>
 
       <div class="modal_container light-grey padding">
@@ -210,16 +229,33 @@
       </div>
 
       <div id="Objective2" class="modal_container project2">
-        <p>Working for one of the UK's leading aircraft manufactures to devlopp a solution to enable the maintenace activities performed on aircraft to be optimised.</p>
+        <br>
+        <p>An international accounting firm whose clients represent some of the worlds leading peforming artists had aspirations to provide increased clarity to their clients when managing their future revenue potential.</p>
+        <p>
+          The firm provided over 10 years of revenue information for a number of artists, which incorported revenues derived from streaming, perfoming, merchandise sales and syncronsiation rights (TV, movie, video games or advertising).
+          The challenge set was to apply a varierty of analytical techniques to this data to enable more accurate and efficent revenue 
+          forecasts to be generated when compared to the traditional approach being used.
+        </p>
       </div>
 
       <div id="Hypothesis2" class="modal_container project2">
-        <p>The approach taken involved training a varierty of regression models to forecast the RUL</p>
+        <br>
+        <p>The approach taken involved:</p>
+          <ul>
+            <li>Developing a method to consolidate disparte records and identify key attributes into defined data structure suitable for analysis.</li> 
+            <li>Assessing a varierty of machine learning, curve fitting and time series methodologies to predict future royalties</li>
+            <li>Augment the existing data with additional publically available information to improve the predictive capability of the proposed solution</li>
+          </ul>
       </div>
 
       <div id="Outcome2" class="modal_container project2">
-        <img src="images/predictive results.png" style="height:250px; width:auto">
-        <p>Outcome is the capital of Japan.</p><br>
+       <br>
+        <p>From analysis at an individual song level the revenues generated were found to follow a decay curve, initially growing as the songs populatirty increased before begining to decline</p><br>
+        <p>Using a modified version of the <a href=https://en.wikipedia.org/wiki/Bass_diffusion_model#:~:text">Bass Diffusion Model</a>, used extensively for modelling future sales(shown below) we were able to accuratly fit the parameters in the equation for all the established songs in an artists catalogue</p>
+        <img src="images/bass_model1.png" width=175px><img src="images/bass_model.png" width=175px>
+        
+        <p>The real challenge came in trying to predict future revenue for songs released in the last 6 months and therefore lacked the required historic information.  To overcome this problem we used the <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a> to obtain charecterisics of the song and artist and 
+          use them to train a model to predict the co-efficents of innovation and immitation.</p> 
       </div>
 
       <div class="modal_container light-grey padding">
