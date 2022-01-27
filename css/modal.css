@@ -28,6 +28,7 @@ button{overflow:visible}
 
 @media (min-width:601px){}
 @media (min-width:993px){}
+
 @media (max-width:600px){.modal-content{margin:10px;width:auto!important}.modal{padding-top:30px}
 .bar-item{text-align:center}}
 @media (max-width:768px){.modal-content{width:500px}.modal{padding-top:50px}}
