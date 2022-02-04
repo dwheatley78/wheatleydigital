@@ -24,8 +24,10 @@
   <meta name="keywords" content="webapps, website, design thinking, service design, machine learning, artificial intelligence, AI, digital, transformation, data science, analytics, marketing">
   <meta name="author" content="David Wheatley">
   
+  
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href ="css/style.css">
+  <link rel="stylesheet" href ="css/modal.css">
 
   <link rel='shortcut icon' type='image/ico' href='images/icons/favicon.ico'/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
@@ -34,7 +36,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   
   <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,300,200,100" rel="stylesheet" type='text/css'>
+  
 
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
   <script src="js/jquery-2.1.4.min.js"></script>
@@ -73,15 +75,15 @@
             <ul id="nav-list" class="nav navbar-nav navbar-right">
               <li>
                 <a class="highlight" href="strategy.html">
-                  <span class="glyphicon glyphicon-dashboard"></span><br class="hidden-xs">Strategy</a>
+                  <span class="glyphicon glyphicon-dashboard"></span><br class="hidden-xs">Strategise</a>
               </li>
               <li>
                 <a class="highlight" href="analytics.html">
-                  <span class="glyphicon glyphicon-stats"></span><br class="hidden-xs">Analytics</a>
+                  <span class="glyphicon glyphicon-stats"></span><br class="hidden-xs">Analyse</a>
               </li>
               <li>
                   <a class="highlight" href="production.html">
-                    <span class="glyphicon glyphicon-send"></span><br class="hidden-xs">Production</a>
+                    <span class="glyphicon glyphicon-send"></span><br class="hidden-xs">Productionise</a>
               </li>
   
               <li id="email" class="hidden-xs hidden-sm hidden-md">
@@ -96,8 +98,274 @@
       </nav><!-- #header-nav -->
     </header>
 
-  <div id="main_content" class="container">
-    <h1 class = "heading">Production - Coming Soon</h1>
+    <div id="main_content" class="container">
+      <h1>Building a Production Ready Data Platform</h1>
+      <p>
+        While data analysis can provide rich insights and value for an organisation only 10% of 
+        developed machine learning models make it into production to deliver real value.  
+        The two main problems preventing wider adoption of analytical solutions are:
+      </p>
+      <ul>
+        <li><b>Source data not reliable</b> - Being obtained from uncontrolled sources, 
+          e.g. spreadsheets that can introduce errors and inconsistencies.  As the volume of data 
+          grows and people in the organisation change, these systems can become unsupportable and 
+          the valuable information is locked in siloes within the business. 
+        </li>
+        <li><b>Accessibility of the output</b> – The solutions produced are not intuitive and accessible
+           for a wider audience.  Certainly when looking to provide the developed solutions directly 
+           to your customers it is important that the look and feel of the applications match those 
+           of company values.
+        </li>
+      </ul>
+      <p>
+        Developing an intuitive user interface (UI) for both the consumption and collection of data 
+        is essential.  Validating data entry, managing access and permissions and providing 
+        coherence with the wider corporate data warehouse strategy are essential.  
+        As the business becomes more dependent on the applications the 
+        code and models developed need to be reliable, maintainable and reproducible.
+      </p>
+      <p>
+        All this can be achieved through the adoption of good software development practices and appropriate tool selection.
+        In this section we outline
+      </p>
+      <ul>
+        <li><a href="#DevOps">DevOps</a> - software industry best practice way of working</li>
+        <li><a href="#WebApps">WebApps</a> – defining the architecture of a web app</li>
+        <li><a href="#Tech_Stack">Tech Stack</a> – Selecting the tools to develop an application</li>
+        <li><a href="#Hosting">Hosting</a> – Make an application accessible</li>
+
+      </ul>
+      <br>
+      
+      <div id="DevOps" style="background-color: white; padding:8px; border:2px solid black;">
+        <h2>DevOps</h2>
+        <p>DevOps has become the software industry best practice way of working. Combining cultural philosophies, practices, 
+          and tools to develop and evolve applications faster and more reliably.
+        </p>
+        <p>
+          At its heart the objective is to improve communication and feedback, automate processes where possible and identify issues early.    
+          By breaking a large problem into smaller units, constantly validating the output with users and performing rigorous testing gives the best possible chance of success.
+        </p> 
+        <p>The lifecycle of a production solution can be represented as a figure of eight as the requirements continue to evolve over time.  
+          Here we will introduce a few key concepts to help business leaders to understand however for a more comprehensive account of DevOps practices refer to the DevOps Handbook.
+        </p>
+        <img src="images/DevOps.png" class="center" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal01').style.display='block'">
+        <div id="modal01" class="modal" onclick="this.style.display='none'">
+          <span class="button hover-light-grey blue xlarge display-topright">&times;</span>
+          <div class="modal-content animate-zoom">
+            <img src="images/DevOps.png" style="width:100%">
+          </div>
+        </div>
+
+   
+        <ul>
+          <li><b>Minimum Viable Product (MVP) </b> - When developing a new application we always seek to produce something with enough features to get internal business users using the system or attract early-adopter customers with whom we can validate the  concepts early.  Once created we can then iteratively develop the capability learning from the feedback received.</li>
+          <li><b>Agile </b> – When operating with a high degree of uncertainty traditional project management techniques don’t work.  Agile is an approach to project management in which small 2-3 week sprints of activity are planned and aim to deliver some demonstrable output, which can be tested with the user.</li>
+          <li><b>Continuous integration</b> – is a software development practice where developers regularly merge their code changes into a central repository, after which automated tests validate the code quality.  A robust approach to ensure good test coverage enables bugs to be found quicker, improve software quality, and reduce the time it takes to validate and release new software updates.</li>
+          <li><b>Application Programming Interface (API)</b>) –In computer programming a guiding design principle is to introduce Separation of concerns (SoC).  Breaking the programme into distinct services that communicates with other services through a well-defined interface such as an API.  This approach allows areas of the code to be developed in parallel and minimises the risk of unintended consequences so long as the interfaces between services are maintained.</li>
+          <li><b>MLOPS</b>– Extends the concept of DevOps to machine learning models where integration not only covers testing and validating code but is now extended to test and validate the data in the system including the retraining and serving of models as required.</li>
+        </ul>
+           
+      </div>
+      <br>
+
+
+      <div id="WebApps" style="background-color: white; padding:8px; border:2px solid black;">
+        <h2>WebApps</h2>
+        <p>When building applications the main objective is to make the functionality and data contained within it available to a 
+          range of users, both internal and external to the organisation.  Web apps provide secure access to a range of users over the Internet through their web browser.  
+          This ability to  avoid the need to install specialist software on peoples devices, allowing all updates to be deployed remotely and centralising the data store 
+          make WebApps an ideal solution for most applications.  
+        </p>
+        <p>
+          While all the logic is held on a server the code can be processed either in the users browser or on the server.  
+          In general, the user interface, which is controlled using a combination of HTML, CSS and Javascript runs in the browser, 
+          whereas the business logic, authentication and interaction with the databases occurs on the server side and can be written 
+          in a variety of programming languages.  While alternative approaches do exist, the Model View Controller (MVC) architecture 
+          pattern represents good practice.  By constructing these three elements separately, we introduce separation of concerns between 
+          the frontend and backend components.
+
+        </p> 
+        <ul>
+          <li><b>Model</b> - The backend that contains all the data logic</li>
+          <li><b>View </b> – The frontend or graphical user interface (GUI)</li>
+          <li><b>Controller</b> – The brains of the application that controls how data is displayed.</li>
+        </ul>
+        <img src="images/MVC.png" class="center" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal02').style.display='block'">
+        <div id="modal02" class="modal" onclick="this.style.display='none'">
+          <span class="button hover-light-grey blue xlarge display-topright">&times;</span>
+          <div class="modal-content animate-zoom">
+            <img src="images/MVC.png" class="center" style="width:65%">
+          </div>
+        </div>           
+      </div>
+      <br>
+
+
+
+
+
+
+      <div id="Tech_Stack" style="background-color: white; padding:8px; border:2px solid black;">
+        <h2>Tech Stack</h2>
+        <p>The options when selecting the languages, libraries and frameworks with which to develop an application can be overwhelming. While specific applications may necessarily drive towards different solutions it is useful to default stack that can guarantee affordability, supportability, reliability, and security.  
+        </p>
+        <p>
+          In the context of supporting data driven digital transformation the ability to incorporate machine learning models and analysis (detailed in the ANALYSE section of site) is paramount.  We therefore look to use a Python framework to write our backend processes, maximising the ability to reuse code and minimising the breadth of knowledge required to manage these developed solutions.
+        </p> 
+        <p>Another key consideration is to select popular open-source frameworks for which there is a rich source of training materials and support while avoiding costly licence fees.  For these reasons, our default stack uses Django, React and PostgreSQL, which collectively provide a highly capable and supportable solution.  A brief outline of each of these is provided below.
+        </p>
+
+
+   
+        <ul>
+          <li><b>Django</b> - is a Python backend (server-side framework) able to integrate easily with existing analytical and machine learning models.  Django provides a host of built in advanced functionality such as admin panels, file upload support, authentication, comment boxes, contact forms, app management and a versatile toolkit for constructing web APIs to significantly reduce the time and effort in building robust web applications.</li>
+          <li><b>React </b> – is a JavaScript frontend (client-side framework used to build single page User Interfaces (UI).   getting and setting data via requests to the Django backend.  As with Django, React comes with multiple component libraries, add-on packages and full template offerings to save developers a lot of time capable of producing engaging and intuitive user interfaces. 
+          </li>
+          <li><b>PostgreSQL</b> – provide a highly capable database to store the required data.  It supports a wide variety of data types, provides integrity controls to prevent invalid or orphan records and powerful indexing methods to optimize performance.  Advanced features such as full-text search speed up finding information and the ability to store non-relational data such as JSON and XML formats actually turns PostgreSQL into NoSQL database providing the flexibility to meet a the evolving requirements of your applications.</li>
+          </ul>
+           
+      </div>
+      <br>
+
+
+
+      <div id="Hosting" style="background-color: white; padding:8px; border:2px solid black;">
+        <h2>Hosting</h2>
+        <p>There are fundamentally two types of hosting arrangement available.</p>
+        <p>
+          <b>Statically hosting</b>- enables web pages serve up the same page to HTML, CSS and JavaScript to all users who enter the site, in reality this is nothing more than a file store.  As no processing is required on the server these pages are generally faster and can be hosted at minimal, or no, cost using a variety of service providers including our favourite GitHub Pages.
+        </p> 
+        <p><b>Dynamic hosting</b> -enables the processing of content and storage of data on the server.  Dynamic hosting can be provided on any corporate network or by a cloud 
+          service provider however these services can become complex to manage.  If you have a team already set, up to configure and manage servers these options provide the 
+          greatest flexibility however they can be difficult to manage and control cost if you don’t have the prerequisite skills. 
+          <p>An alternative solution is to opt for a PaaS (platform as a service) offering a more managed, low configuration services, making it incredibly easy to get up and running 
+            and provide total upfront transparency of the costs. Our favoured solution is to use Heroku, which comes with the added benefit of providing a “Free Tier” which, while 
+            there are significant constraints in terms of speed and storage capacity, provides an ideal sandpit environment in which to demonstrate capability without commitment.</p>
+
+        </p>
+           
+      </div>
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+      <div id="home-tiles" class="row" >
+      <h2>Project Portfolio</h2><br>
+  
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <div class="tile" id="ac_health-tile" onclick="document.getElementById('id01').style.display='block'"><span>Aircraft prognostics</span></div>
+        </div>
+  
+  
+      </div><!-- End of #home-tiles -->
+    </div>
+  
+  
+  
+    <div id="id01" class="modal">
+      <div class="modal-content card-4 animate-zoom">
+        <header class="modal_container blue"> 
+          <span onclick="document.getElementById('id01').style.display='none'" class="button blue xlarge display-topright">&times;</span>
+          <h2>Aircraft Prognostics</h2>
+        </header>
+  
+        <div class="bar border-bottom">
+          <button class="tablink bar-item button" onclick="openProject(event, 'Objective','project1')">Objective</button>
+          <button class="tablink bar-item button" onclick="openProject(event, 'Hypothesis','project1')">Approach</button>
+          <button class="tablink bar-item button" onclick="openProject(event, 'Outcome','project1')">Outcome</button>
+        </div>
+  
+        <div id="Objective" class="modal_container project1">
+          <br>
+          <p>Autonomous aircraft, requiring no human interventions during operation, is a rapidly evolving sector.
+            The global autonomous aircraft market was estimated to be USD 4.56 billion in 2019 and is projected to reach USD 16.23 billion by 2027.</p>
+            
+          <p>With such competition and growth potential manufacturers are looking towards enhanced service strategies as a means of delivering a competative advantage</p>
+          <p>In responce to this opportunity we were commissioned to perform a comprehensive review intelligent health management solutions
+            and develop a prototype solution utilising advanced analytics to demonstrate an approach to deliver adaptive vehicle health management, 
+            providing greater process control, reduced operating costs and enhanced availability.
+          </p>
+          <br>
+        </div>
+  
+        <div id="Hypothesis" class="modal_container project1">
+          <br>
+          <p>The approach taken involved decomposing this top-level objective into three targeted
+            value propositions. 
+            <ul>
+              <li>Accurately predicting the remaining useful life of aircraft components based on the provided sensor data</li>
+              <li>Providing dynamic fault diagnostics advice to the maintainer based on the observations</li>
+              <li>Simulating the degradation of the aircraft and the potential maintenance decisions to determine the optimum responce 
+                based on defined objective funcitons and within defined operational constraints.</li>
+            </ul>
+  
+          <br>
+        </div>
+  
+        <div id="Outcome" class="modal_container project1">
+          <br>
+          <p>Aviation will always mandate stringent safety requirements, however the ability to
+            reduce uncertainty regarding the health of components presents an enormous
+            opportunity to reduce cost and drive operational efficiencies.
+          </p>
+            The novel approach developd here, normalising the aircraft sensors data based on flight condition, to train a Long-Term-ShortTerm-Memory (LSTM) model  
+            demonstrated the ability to predicting the degradation state of these complex systems, with supporting confidence intervals, and
+            demonstrate how a move to a condition-based maintenance strategy could be realised. 
+          </p>
+          <p>The use of Bayesian Belief Networks (BBNs) provided the requried adaptive diagnostic advice to the
+            maintainer in an intuitive and visual way.  This approach had the additional benefit of enabling any divergence from the designed system reliability</p>
+          <p>
+            Performing a monte-carlo analysis on the simulation combined with a dual annealing optimisation function enabled:
+            <ul>
+              <li>An optimised stocking policy to be proposed, based on both financial and aircraft availability constraints.</li>
+              <li>Opportunity maintenance to be identified (proactively replacing an item early) to reduce cost and better utilise limited manpower and hangar capacity</li>
+            </ul>
+          </p>
+        </div>
+  
+        <div class="modal_container light-grey padding">
+          <button class="button right white border" onclick="document.getElementById('id01').style.display='none'">Close</button>
+        </div>
+      </div>
+    </div>  
+  
+    <script>
+      document.getElementsByClassName("tablink")[0].click();
+      document.getElementsByClassName("tablink")[3].click();
+      function openProject(evt, projectName,proj) {
+        var i, x, tablinks;
+  
+        x = document.getElementsByClassName(proj);
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+          tablinks[i].classList.remove("light-grey");
+        }
+  
+        document.getElementById(projectName).style.display = "block";
+        evt.currentTarget.classList.add("light-grey");
+      };
+  
+    </script>
+
+
+
+
+
+
 
 
 
