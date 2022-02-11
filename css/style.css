@@ -191,7 +191,10 @@ body {
   }
 
 
-
+  #brand {
+    color:rgb(65, 190, 234);
+    font-weight: bold;
+  }
 
 
 #skills-tile {
