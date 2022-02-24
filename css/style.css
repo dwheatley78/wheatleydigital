@@ -180,7 +180,7 @@ body {
     font-size: 1.2em;
     
   }
-
+  
   #email2 div {
     color:rgb(65, 190, 234);
     float: right;
@@ -232,6 +232,12 @@ body {
   background-position: center;
 }
 
+.required{
+  position: relative; 
+  top: -0.5em; 
+  font-size: 80%;
+  color:red;
+}
 
 .center {
   display: block;
