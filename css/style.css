@@ -241,6 +241,7 @@ body {
 
 .gmap_canvas{
   position: relative;
+  clear:both;
   float: right; 
   background: none;
 }
