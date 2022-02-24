@@ -115,21 +115,24 @@ body {
  
 /********** Large devices only **********/
 @media (min-width: 1200px) {
+  .lrgscr_image {
+    display: none;
+  }
 
 }
 
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* Header */
-
-  /* End Header */
+  .lrgscr_image {
+    display: none;
+  }
 }
 
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
-  /* Header */
-
-  /* End Header */
+  .lrgscr_image {
+    display: none;
+  }
 }
 
 /********** Extra Small devices only **********/
@@ -140,6 +143,10 @@ body {
     width: 50px;
     height: 50px;
     margin: 2px 2px 2px 5px;
+  }
+
+  .smlscr_image {
+    display: none;
   }
 
   .navbar-brand .brand{
