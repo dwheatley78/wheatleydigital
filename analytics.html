@@ -26,6 +26,7 @@
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="//code.jquery.com/jquery.min.js"></script>
 
 </head>
 
@@ -33,57 +34,34 @@
 
 
 
-  <header>
-    <nav id="header-nav" class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="index.html" class="pull-left visible-xs visible-sm visible-md visible-lg">
-            <div id="logo-img" alt="logo image"></div>
-          </a>
-          <div class="navbar-brand">
-            <a href="index.html"><p class="brand">EMPEDATA</p></a>
-            <a href="index.html"><p>.com</p></a>
-          </div>
-  
-          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-
-        <div id="collapsable-nav" class="collapse navbar-collapse">
-          <ul id="nav-list" class="nav navbar-nav navbar-right">
-            <li>
-              <a class="highlight" href="strategy.html">
-                <span class="glyphicon glyphicon-dashboard"></span><br class="hidden-xs">Strategise</a>
-            </li>
-            <li>
-              <a class="highlight" href="analytics.html">
-                <span class="glyphicon glyphicon-stats"></span><br class="hidden-xs">Analyse</a>
-            </li>
-            <li>
-                <a class="highlight" href="production.html">
-                  <span class="glyphicon glyphicon-send"></span><br class="hidden-xs">Productionise</a>
-            </li>
-
-            <li id="email" class="hidden-xs hidden-sm hidden-md">
-              <a href="mailto:david@wheatley.digital">
-                <span>david@wheatley.digital</span>
-              </a><div>*To discuss how we can best support you</br>please get in touch</div>
-            </li>
-  
-          </ul><!-- #nav-list -->
-        </div><!-- .collapse .navbar-collapse -->
-      </div><!-- .container -->
-    </nav><!-- #header-nav -->
-  </header>
+  <header id="nav-placeholder">HEADER</header>
         
   <div id="main_content" class="container">
     <h1>Generating Value Through Actionable Insights</h1>
-    <p>The boxes below provide a very brief outline of some of the types of analysis we can perform.  
+    <p>Analytics is the art of converting data into information that delivers value for your business.  These insights can broadly be grouped into 5 catagories:</p>
+    <ul>
+      <li><b>Descriptive</b> - Generally delivered through some form of dashboard descriptive analytics enables you to understand what has happend</li>
+      <li><b>Diagnostic</b> - Leveraging statistical analysis Diagnostics analytics enables the root causes of an event to be understood</li>
+      <li><b>Predictive</b> - Using previously observed data predictive analytics allows forecasts for what will happen in the future to be made</li>
+      <li><b>Prescriptive</b> - Taking this a step further prescriptive analytics begins to provide optimal actions that need to be taken to achieve the desired outcomes</li>
+      <li><b>Cognitive</b> - Taking the human out of the loop cognitive analytics then begins to deliver learning and takes actions based on a defined reward mechanism</li>
+    </ul>
+    <img src="images/analytics_cats.png" class="center" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal03').style.display='block'">
+        <div id="modal03" class="modal" onclick="this.style.display='none'">
+          <span class="button hover-light-grey blue xlarge display-topright">&times;</span>
+          <div class="modal-content animate-zoom">
+            <img src="images/analytics_cats.png" class="center" style="width:65%">
+          </div>
+        </div>       
+    <p>The boxes below provide a very brief outline of some of the types of analysis we can perform. 
       For examples of projects we have completed click on the links in the <a href="#home-tiles">project portfolio</a> section of this page</p>
+    <br>
+
+    <div style="background-color: white; padding:8px; border:2px solid black;">
+      <h2 style="padding:0px; float:left;">Business intelligence</h2>
+      <p style="padding:3px;clear:both;">Some info on PowerBI and Tableau
+      </p>
+    </div>
     <br>
 
     <div style="background-color: white; padding:8px; border:2px solid black;">
@@ -321,16 +299,21 @@
 
 
 
-<footer >
-  <div id="email2" class="container">
-    <a href="mailto:david@wheatley.digital">
-      <span font-size=100px>david@wheatley.digital</span></a>
-    <div>*To discuss how we can best support you</br>please get in touch</div> 
-    <a href='https://uk.linkedin.com/in/david-wheatley-19a94739?trk=profile-badge';title ="Linkedin"; target="_blank">
-      <img src="images/linkedin-logo.jpg" alt="linkedin" style="width: 100px;padding-top: 10px;"/>
-    </a>
-  </div>
-</footer>
+<footer id="footer-placeholder">FOOTER</footer>
   
 </body>
 </html>
+
+
+
+
+<script>
+  $.get("navbar.html", function(data){
+      $("#nav-placeholder").replaceWith(data);
+  });
+
+  $.get("footerbar.html", function(data){
+      $("#footer-placeholder").replaceWith(data);
+  });
+
+</script>

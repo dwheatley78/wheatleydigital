@@ -33,8 +33,11 @@
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="//code.jquery.com/jquery.min.js"></script>
 
 </head>
+
+
 
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -42,58 +45,12 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-
-  <header>
-    <nav id="header-nav" class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="index.html" class="pull-left visible-xs visible-sm visible-md visible-lg">
-            <div id="logo-img" alt="logo image"></div>
-          </a>
-          <div class="navbar-brand">
-            <a href="index.html"><p class="brand">EMPEDATA</p></a>
-            <a href="index.html"><p>.com</p></a>
-          </div>
+<header id="nav-placeholder">HEADER</header>
   
-          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        
-        <div id="collapsable-nav" class="collapse navbar-collapse">
-          <ul id="nav-list" class="nav navbar-nav navbar-right">
-            <li>
-              <a class="highlight" href="strategy.html">
-                <span class="glyphicon glyphicon-dashboard"></span><br class="hidden-xs">Strategise</a>
-            </li>
-            <li>
-              <a class="highlight" href="analytics.html">
-                <span class="glyphicon glyphicon-stats"></span><br class="hidden-xs">Analyse</a>
-            </li>
-            <li>
-                <a class="highlight" href="production.html">
-                  <span class="glyphicon glyphicon-send"></span><br class="hidden-xs">Productionise</a>
-            </li>
-
-            <li id="email" class="hidden-xs hidden-sm hidden-md">
-              <a href="mailto:david@wheatley.digital">
-                <span>david@wheatley.digital</span>
-              </a><div>*To discuss how we can best support you</br>please get in touch</div>
-            </li>
-  
-          </ul><!-- #nav-list -->
-        </div><!-- .collapse .navbar-collapse -->
-      </div><!-- .container -->
-    </nav><!-- #header-nav -->
-  </header>
-
 
 <div id="main_content" class="container">
   
-  <h1>Your Digital Transformation Partner</h1>
+  <h1>"Supporting a network of local businesses to grow and drive digital efficiency through the effective application of digital technologies"</h1>
   <p>Business leaders across all sectors are recognising digital transformation as the main force driving their businesses in the year ahead, 
     however securing the skills required to identify opportunities and delivering digital value can be a challenge!</p>
 
@@ -105,7 +62,7 @@
   </p>
     
   <p>
-    Our structured approach ensures your digital transformation programme remains focussed on delivering value, 
+    Our agile approach, rooted in traditional change management, ensures your digital transformation programme remains focussed on delivering value, 
     enhancing decision-making capabilities, increasing efficiencies or providing new services / business models.
   </p>
   <p>
@@ -137,16 +94,21 @@
 </div>
 
 
-<footer >
-  <div id="email2" class="container">
-    <a href="mailto:david@wheatley.digital">
-      <span font-size=100px>david@wheatley.digital</span></a>
-    <div>*To discuss how we can best support you</br>please get in touch</div> 
-    <a href='https://uk.linkedin.com/in/david-wheatley-19a94739?trk=profile-badge';title ="Linkedin"; target="_blank">
-      <img src="images/linkedin-logo.jpg" alt="linkedin" style="width: 100px;padding-top: 10px;"/>
-    </a>
-  </div>
-</footer>
+<footer id="footer-placeholder">FOOTER</footer>
   
 </body>
 </html>
+
+
+
+
+<script>
+  $.get("navbar.html", function(data){
+      $("#nav-placeholder").replaceWith(data);
+  });
+
+  $.get("footerbar.html", function(data){
+      $("#footer-placeholder").replaceWith(data);
+  });
+
+</script>
