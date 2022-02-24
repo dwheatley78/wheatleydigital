@@ -239,6 +239,12 @@ body {
   color:red;
 }
 
+.gmap_canvas{
+  position: relative;
+  float: right; 
+  background: none;
+}
+
 .center {
   display: block;
   margin-left: auto;
