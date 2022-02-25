@@ -52,11 +52,11 @@
 
 <div id="main_content" class="container">
   <h1>Getting to know each other</h1>
-  <script src="js/greeting.js"></script>
+  <p id="p1">Hi!</p>
 
   <p>
-    My name is David and I am the founder of <span id="brand">EMPEDATA</span>, I'd love to tell you about more about our company and how we got started but 
-    before I do maybe you'd like to tell me about yourself and if there is anything in particular we can help you with. 
+    My name is David and I am the founder of <span id="brand">EMPEDATA</span>, I'd love to tell you about our company and how we got started but 
+    before I do maybe you'd like to tell me about yourself and if there is anything in particular we can help you with? 
   </p>
 
   
@@ -103,21 +103,20 @@
       both small and large. 
     </p>
     <p >
-      While my early career and first degree have all been focussed on traditional engineering / manufacturing disciplines I have always been fascinated in computers.  
-      As a child I learnt to programming games in Basic on an old Commodore, a passion I know inflict on other kids though our <a href="kids.html">Kids Code Club</a>.
+      While my early career and first degree have all been focussed on traditional engineering / manufacturing disciplines I have always been fascinated by computers.  
+      As a child I learnt programming wrting games like frogger on an old Commodore, a passion I know inflict on other kids though our <a href="kids.html">Kids Code Club</a>.
     </p>
 
     <p>
-      In more recent years I have had the opportunity to combine my manufacturing and IT skills running the application development and support team at Leonardo.
-      Within this role I have been trained in, and insturmental in, implimenting design thinking, scrum project management and eco-system mapping all of which have 
-      been hugely valuable in driving a cultural change.
+      In more recent years I have had the opportunity to combine my interests in manufacturing and IT, running the application development and support team at Leonardo.
+      Within this role I have been trained, and insturmental in, implimenting design thinking, scrum project management and eco-system mapping all of which have 
+      been hugely valuable in helping to drive a cultural change acorss the organisation.
     </p> 
 
     <p>
-      My knowledge building machine learning models, decision optimisation tools and simulations to provide actionable insight and deliver business 
-      value, coupled with experience running operational facilities, creating empowered environments and driving organisational change, enables me 
-      to offer a truly unique value proposition. I am confident that I offer a package of skills, experience, and abilities that would provide you 
-      with an invaluable resource.  
+      In 2021 I graduated, with distinction, from Imperial College London with an MSc in Buisness data analytics, which has helped to consolidate my knowledge of implimenting statistical and machine learning models, 
+      as well as building simulation and decision modeling tools to deliver business value.  These skills combined with my experience running operational facilities offer a unique value proposition which I'm confident 
+      can support you on your digital transformation journey.  
     </p>
     <p style="clear:both"></p>
   </div>
@@ -167,5 +166,23 @@
       $("#footer-placeholder").replaceWith(data);
   });
 </script>
+
+<script>
+  const d = new Date();
+  let hour = d.getHours();
+  if (hour > 18) {
+    greeting = "Hi! Thanks for taking time out of your evening to check out our site and I look forward to working with you";
+    }
+  else if (hour > 12) {
+    greeting = "Hi and good afternoon, I hope your day is going well";
+    }
+  else if (hour > 0) {
+    greeting = "We're really excited to see you this morning";
+    }
+  document.getElementById("p1").innerHTML = greeting;
+</script>
+
+
+
 
 
