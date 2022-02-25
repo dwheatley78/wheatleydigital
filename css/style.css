@@ -115,24 +115,57 @@ body {
  
 /********** Large devices only **********/
 @media (min-width: 1200px) {
-  .lrgscr_image {
-    display: none;
+  .smlscr_image {
+    position: relative;
+    clear:both;
+    background: none;
+    width:350px; 
+    height:175px;
+    }
+  
+  .right_image {
+    float: right; 
   }
-
+  .left_image {
+    float: left; 
+  }
 }
 
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
-  .lrgscr_image {
-    display: none;
+  .smlscr_image {
+    position: relative;
+    clear:both;
+    background: none;
+    width:350px; 
+    height:175px;
+    }
+  
+  .right_image {
+    float: right; 
+  }
+  .left_image {
+    float: left; 
   }
 }
 
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
-  .lrgscr_image {
-    display: none;
+  .smlscr_image {
+    position: relative;
+    clear:both;
+    background: none;
+    width:350px; 
+    height:175px;
+    }
+  
+  .right_image {
+    float: right; 
   }
+  .left_image {
+    float: left; 
+  }
+
 }
 
 /********** Extra Small devices only **********/
@@ -146,8 +179,10 @@ body {
   }
 
   .smlscr_image {
-    display: none;
-  }
+    width:100%; 
+    height:175px;
+    }    
+  
 
   .navbar-brand .brand{
     font-size: 1em; 
@@ -203,42 +238,6 @@ body {
     font-weight: bold;
   }
 
-
-#skills-tile {
-  background: url('../images/skills.png') no-repeat;
-  background-position: center;
-}
-
-
-#events-tile {
-  background-color: rgb(40, 40, 40);
-  background-position: center;
-}
-#forum-tile {
-  background: url('../images/workshop_img.png') no-repeat;
-  background-position: center;
-}
-
-#skills-tile {
-  background: url('../images/skills.png') no-repeat;
-  background-position: center;
-}
-
-#strategy-tile {
-  background: url('../images/strategy.png') no-repeat;
-  background-position: center;
-}
-
-#analytics-tile {
-  background: url('../images/analytics.png') no-repeat;
-  background-position: center;
-}
-
-#production-tile {
-  background: url('../images/production.png') no-repeat;
-  background-position: center;
-}
-
 .required{
   position: relative; 
   top: -0.5em; 
@@ -246,12 +245,7 @@ body {
   color:red;
 }
 
-.gmap_canvas{
-  position: relative;
-  clear:both;
-  float: right; 
-  background: none;
-}
+
 
 .center {
   display: block;
@@ -260,45 +254,4 @@ body {
   width: 50%;
 }
 
-.tile{
-  height: 250px;
-  width: 100%;
-  margin-bottom: 15px;
-  position: relative;
-  border: 2px solid rgb(40, 40, 40);
-  overflow: hidden;
-}
-
-.tile:hover{
-  box-shadow: 0 5px 10px 5px rgb(54, 133, 196);
-  cursor: pointer;
-}
-
-.tile span{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 1.6em;
-  text-transform: uppercase;
-  background-color: rgb(40, 40, 40);
-  color: #fff;
-  opacity: .8;
-}
-
-#ac_health-tile {
-  background: url('../images/helicopter.png') no-repeat;
-  background-position: center;
-}
-
-#music-tile {
-  background: url('../images/music_tile.png') no-repeat;
-  background-position: center;
-}
-
-#tweet-tile {
-  background: url('../images/tweet_tile.png') no-repeat;
-  background-position: center;
-}
   

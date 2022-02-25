@@ -1,0 +1,91 @@
+.tile{
+    height: 250px;
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    border: 2px solid rgb(40, 40, 40);
+    overflow: hidden;
+  }
+  
+.tile:hover{
+    box-shadow: 0 5px 10px 5px rgb(54, 133, 196);
+    cursor: pointer;
+  }
+  
+.tile span{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    background-color: rgb(40, 40, 40);
+    color: #fff;
+    opacity: .8;
+  }
+  
+#ac_health-tile {
+    background: url('../images/helicopter.png') no-repeat;
+    background-position: center;
+  }
+  
+#music-tile {
+    background: url('../images/music_tile.png') no-repeat;
+    background-position: center;
+  }
+  
+#NLP-tile {
+    background: url('../images/NLP_img.png') no-repeat;
+    background-position: center;
+  }
+
+  
+#skills-tile {
+    background: url('../images/skills.png') no-repeat;
+    background-position: center;
+  }
+  
+  
+#events-tile {
+    background-color: rgb(40, 40, 40);
+    background-position: center;
+}
+
+#forum-tile {
+    background: url('../images/workshop_img.png') no-repeat;
+    background-position: center;
+}
+  
+#skills-tile {
+    background: url('../images/skills.png') no-repeat;
+    background-position: center;
+}
+  
+#strategy-tile {
+    background: url('../images/strategy.png') no-repeat;
+    background-position: center;
+}
+ 
+#analytics-tile {
+    background: url('../images/analytics.png') no-repeat;
+    background-position: center;
+}
+  
+#production-tile {
+    background: url('../images/production.png') no-repeat;
+    background-position: center;
+}
+
+#headx-tile {
+    background: url('../images/headx.png') no-repeat;
+    background-position: center;
+}
+  
+#powerspec-tile {
+    background: url('../images/powerspec.png') no-repeat;
+    background-position: center;
+}
+
+
+  
