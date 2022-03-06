@@ -95,7 +95,7 @@ body {
     font-size: 5vm;
     margin-bottom: 20;
     text-align: center;
-    border: 2px solid: rgb(40, 40, 40);
+    border: 2px solid;
     padding:20px;
     background-color: white;
 
@@ -120,14 +120,17 @@ body {
     clear:both;
     background: none;
     width:350px; 
-    height:175px;
+
+    border-radius:12px;
     }
   
   .right_image {
-    float: right; 
+    float: right;
+    padding-left:12px;
   }
   .left_image {
-    float: left; 
+    float: left;
+    padding-right:12px;
   }
 }
 
@@ -138,14 +141,17 @@ body {
     clear:both;
     background: none;
     width:350px; 
-    height:175px;
+ 
+    border-radius:12px;
     }
   
   .right_image {
-    float: right; 
+    float: right;
+    padding-left:12px;
   }
   .left_image {
-    float: left; 
+    float: left;
+    padding-right:12px;
   }
 }
 
@@ -156,14 +162,17 @@ body {
     clear:both;
     background: none;
     width:350px; 
-    height:175px;
+
+    border-radius:12px;
     }
   
   .right_image {
-    float: right; 
+    float: right;
+    padding-left:12px;
   }
   .left_image {
-    float: left; 
+    float: left;
+    padding-right:12px;
   }
 
 }
@@ -180,7 +189,7 @@ body {
 
   .smlscr_image {
     width:100%; 
-    height:175px;
+    
     }    
   
 
