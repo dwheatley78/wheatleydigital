@@ -52,42 +52,40 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N52W96G"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-
+<a name="top"></a>
 <header id="nav-placeholder">HEADER</header>
 
   <div id="main_content" class="container">
     <h1>Developing a Data Platform</h1>
     <p>
-      While data analysis can provide rich insights and value for an organisation only 10% of 
-      developed machine learning models make it into production to deliver real value.  
+      Data analysis can provide rich insights for an organisation, however the real value is only realised once these tools are made available to a wider user base.
+      However it is estimated that only around 10% of machine learning models developed actually make it into production, and hence the real value is never realised.  
       The two main problems preventing wider adoption of analytical solutions are:
     </p>
     <ul>
-      <li><b>Unreliable source data </b> - If developed models are built on uncontrolled data sources, 
-        e.g. local spreadsheets and databases errors, inconsistencies and access issues will occur. 
-        It is essential to provide robust and validated data repositories to secure the capability longer term.
+      <li><b>Unreliable source data </b> - While manual collection and bespoke data preparation can support isolated analysis a more robust data pipeline is required to allow an application to scale. 
+        It is therefore essential to develop robust and validated data repositories to secure the data capture and preparation for the longer term.
       </li>
-      <li><b>Accessibility</b> – If the developed solutions are not accessible and intuitive to prospective users there true value will never be realised.
-          Furthermore the look and feel of the applications must match the company values, especially when providing services directly to your customers.
+      <li><b>Accessibility</b> – If the developed solutions are not accessible and intuitive to prospective users their true value will never be realised.
+          Furthermore, when providing services directly to your customers, it is essential that the look and feel of the application match the company values.
       </li>
     </ul>
     <p>
       Developing an intuitive user interface (UI) for both the consumption and collection of data 
       is essential.  Validating data entry, managing access and permissions and providing 
-      coherence with the wider corporate data warehouse strategy are essential.  
+      coherence with the wider corporate data warehouse strategy is essential.  
       As the business becomes more dependent on the applications the 
       code and models developed need to be reliable, maintainable and reproducible.
     </p>
     <p>
-      All this can be achieved through the adoption of good software development practices and appropriate tool selection.
-      In this section we outline
+      In this page we discuss some of the tools and software practices that should be used to ensure effective solutions are developed.
     </p>
     <ul>
-      <li><a href="#DevOps">Effective Development</a> - software industry best practice way of working</li>
-      <li><a href="#Data_Architecture">Structuring your data</a> – understanding how to store data</li>
-      <li><a href="#WebApps">Designing the solution</a> – defining the architecture of a web app</li>
-      <li><a href="#Tech_Stack">Selecting the tools</a> – Selecting the tools to develop an application</li>
-      <li><a href="#Hosting">Choosing a Hosting Environment</a> – Make an application accessible</li>
+      <li><a href="#DevOps">Effective Development</a> - A brief overview of best practice ways of working</li>
+      <li><a href="#Data_Architecture">Structuring your data</a> – An understanding of how to store data and types of database</li>
+      <li><a href="#WebApps">Designing the solution</a> – Defining the architecture of a web app</li>
+      <li><a href="#Tech_Stack">Selecting the tools</a> – Selecting the tools used to develop an application</li>
+      <li><a href="#Hosting">Choosing a Hosting Environment</a> – Options when looking to make an application available to a wider community</li>
     </ul>
 
     <p>
@@ -99,24 +97,32 @@
     <div id="DevOps" style="background-color: white; padding:8px; border:2px solid black;">
       <h2>Effective Development</h2>
       <img src="images/DevOps.png" class="smlscr_image right_image">
-      <p>Version control</p>
-      <p>Code Formatting</p>
-      <p>Testing</p>
-      <p>DevOps has become the software industry best practice way of working. Combining cultural philosophies, practices, 
+      <p>DevOps has become the software industry best practice way of working, combining cultural philosophies, practices, 
         and tools to develop and evolve applications faster and more reliably.
       </p>
       <p>
-        At its heart the objective is to improve communication and feedback, automate processes where possible and identify issues early.    
-        By breaking a large problem into smaller units, constantly validating the output with users and performing rigorous testing gives the best possible chance of success.
+        At its heart the objective is about crating flowing between the various process stages, represented by a figure of eight as shown in the diagram.
+        Through improving communication and feedback, identify issues early and automating processes where possible to give the team the best possible chance of success.
       </p> 
-      <p>The lifecycle of a production solution can be represented as a figure of eight as the requirements continue to evolve over time.  
-        Here we will introduce a few key concepts to help business leaders to understand however for a more comprehensive account of DevOps practices refer to the DevOps Handbook.
+      <p>We outline a few key concepts that should be understood, however for a more comprehensive account of DevOps practices refer to <a href"https://www.amazon.co.uk/DevOps-Handbook-World-Class-Reliability-Organizations-ebook/dp/B09G2GS39R/">The DevOps Handbook</a>.
       </p>
       
 
-      <ul>
+      <ul style="clear:both">
         <li><b>Minimum Viable Product (MVP) </b> - When developing a new application we always seek to produce something with enough features to get internal business users using the system or attract early-adopter customers with whom we can validate the  concepts early.  Once created we can then iteratively develop the capability learning from the feedback received.</li>
-        <li><b>Agile </b> – When operating with a high degree of uncertainty traditional project management techniques don’t work.  Agile is an approach to project management in which small 2-3 week sprints of activity are planned and aim to deliver some demonstrable output, which can be tested with the user.</li>
+        <li><b>Agile </b> – When operating with a high degree of uncertainty traditional project management techniques don’t work.  Agile is an approach to project management in which small 2-3 week sprints of activity are planned, each of which deliver demonstrable capability, which can be tested with the user.</li>
+        <li><b>Version control systems</b> - such as <a href="https://git-scm.com/">Git</a> provide a means of storing, sharing and tracking changes to source code in a special kind of database. This repository is an invaluable source of that needs to be protected from both catastrophic events and the casual degradation of human error and unintended consequences.</li>
+        <li><b>Code Formatting</b>  While the software your code communicates with doesn’t care how the code looks, other developers who may have to work on it in the future certainly do. When everyone is writing code that looks the same, your brain can relax a bit as the understanding comes faster.  Using opinionated formating tools, like <a href="https://black.readthedocs.io/en/stable/">Black</a> can enforce rules automatically to simplify the process of writing well structured code.</li>
+        <li><b>Testing</b> - is fundemental to ensure good quality code is being written and allows changes to be quickly validated  The main types of testing used are:
+          <ul>
+            <li>Unit Testing - refers to taking a component of a program and testing it in isolation by writing functionally independent components unit tests can be easily automated to validate changes, test dependancies and handeling of edge cases.</li>
+            <li>Functional Testing - checks the compliance of the system overall against a defined set of criteria. In other words does the software as a whole do what it’s supposed to do?</li>
+            <li>Regression Testing - running previously written tests whenever a new change is introduced to the code allowing you to remain confident that your code continues to function as expected as it grows in complexity and capability.</li>
+          </ul>
+          
+           
+          
+
         <li><b>Continuous integration</b> – is a software development practice where developers regularly merge their code changes into a central repository, after which automated tests validate the code quality.  A robust approach to ensure good test coverage enables bugs to be found quicker, improve software quality, and reduce the time it takes to validate and release new software updates.</li>
         <li><b>MLOPS</b>– Extends the concept of DevOps to machine learning models where integration not only covers testing and validating code but is now extended to test and validate the data in the system including the retraining and serving of models as required.</li>
       </ul>     
