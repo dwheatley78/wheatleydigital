@@ -56,7 +56,7 @@
 
   <p>
     My name is David and I am the founder of <span id="brand">EMPEDATA</span>, I'd love to tell you about our company and how we got started but 
-    before I do maybe you'd like to tell me about yourself and if there is anything in particular we can help you with? 
+    before I do maybe you'd like to tell me a bit about yourself? 
   </p>
 
   
@@ -170,14 +170,14 @@
 <script>
   const d = new Date();
   let hour = d.getHours();
-  if (hour > 18) {
-    greeting = "Hi! Thanks for taking time out of your evening to check out our site and I look forward to working with you";
+  if (hour > 17) {
+    greeting = "Hi! Thanks for taking time out of your evening, Let's see what we can do to help you today";
     }
-  else if (hour > 12) {
-    greeting = "Hi and good afternoon, I hope your day is going well";
+  else if (hour > 11) {
+    greeting = "Good afternoon, how are you doing? How can we help you today?";
     }
   else if (hour > 0) {
-    greeting = "We're really excited to see you this morning";
+    greeting = "Good morning, lets see if we can help get your day off to a good start!";
     }
   document.getElementById("p1").innerHTML = greeting;
 </script>
