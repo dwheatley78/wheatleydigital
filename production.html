@@ -83,10 +83,11 @@
       In this section we outline
     </p>
     <ul>
-      <li><a href="#DevOps">DevOps</a> - software industry best practice way of working</li>
-      <li><a href="#WebApps">WebApps</a> – defining the architecture of a web app</li>
-      <li><a href="#Tech_Stack">Tech Stack</a> – Selecting the tools to develop an application</li>
-      <li><a href="#Hosting">Hosting</a> – Make an application accessible</li>
+      <li><a href="#DevOps">Effective Development</a> - software industry best practice way of working</li>
+      <li><a href="#Data_Architecture">Structuring your data</a> – understanding how to store data</li>
+      <li><a href="#WebApps">Designing the solution</a> – defining the architecture of a web app</li>
+      <li><a href="#Tech_Stack">Selecting the tools</a> – Selecting the tools to develop an application</li>
+      <li><a href="#Hosting">Choosing a Hosting Environment</a> – Make an application accessible</li>
     </ul>
 
     <p>
@@ -96,7 +97,11 @@
     </p>
     <br>      
     <div id="DevOps" style="background-color: white; padding:8px; border:2px solid black;">
-      <h2>DevOps</h2>
+      <h2>Effective Development</h2>
+      <img src="images/DevOps.png" class="smlscr_image right_image">
+      <p>Version control</p>
+      <p>Code Formatting</p>
+      <p>Testing</p>
       <p>DevOps has become the software industry best practice way of working. Combining cultural philosophies, practices, 
         and tools to develop and evolve applications faster and more reliably.
       </p>
@@ -107,26 +112,56 @@
       <p>The lifecycle of a production solution can be represented as a figure of eight as the requirements continue to evolve over time.  
         Here we will introduce a few key concepts to help business leaders to understand however for a more comprehensive account of DevOps practices refer to the DevOps Handbook.
       </p>
-      <img src="images/DevOps.png" class="center" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal01').style.display='block'">
-      <div id="modal01" class="modal" onclick="this.style.display='none'">
-        <span class="button hover-light-grey blue xlarge display-topright">&times;</span>
-        <div class="modal-content animate-zoom">
-          <img src="images/DevOps.png" style="width:100%">
-        </div>
-      </div>
+      
+
       <ul>
         <li><b>Minimum Viable Product (MVP) </b> - When developing a new application we always seek to produce something with enough features to get internal business users using the system or attract early-adopter customers with whom we can validate the  concepts early.  Once created we can then iteratively develop the capability learning from the feedback received.</li>
         <li><b>Agile </b> – When operating with a high degree of uncertainty traditional project management techniques don’t work.  Agile is an approach to project management in which small 2-3 week sprints of activity are planned and aim to deliver some demonstrable output, which can be tested with the user.</li>
         <li><b>Continuous integration</b> – is a software development practice where developers regularly merge their code changes into a central repository, after which automated tests validate the code quality.  A robust approach to ensure good test coverage enables bugs to be found quicker, improve software quality, and reduce the time it takes to validate and release new software updates.</li>
-        <li><b>Application Programming Interface (API)</b>) –In computer programming a guiding design principle is to introduce Separation of concerns (SoC).  Breaking the programme into distinct services that communicates with other services through a well-defined interface such as an API.  This approach allows areas of the code to be developed in parallel and minimises the risk of unintended consequences so long as the interfaces between services are maintained.</li>
         <li><b>MLOPS</b>– Extends the concept of DevOps to machine learning models where integration not only covers testing and validating code but is now extended to test and validate the data in the system including the retraining and serving of models as required.</li>
       </ul>     
     </div>
     <br>
 
+    <div id="Data_Architecture" style="background-color: white; padding:8px; border:2px solid black;">
+      <h2>Structuring your data</h2>
+      <p>3 terms are often used when talking about data storage:</p>
+
+      <h4>Data Lake</h4>
+      <p>
+        Contains raw data, of various formats, in its native form
+      </p>
+  
+      <h4>Data Warehouse</h4>
+      <p>
+        A Data warehouse is a central repository that merges information from different sources and consolidates it through the extract, transform and load process, 
+        also known as ETL process, into a comprehensive database used  for analytical and business techniques. At a very high level, the ETL process extracts the data from 
+        multiple sources, transforms it into a cleaned format to be used for business processes, and finally loads that data into the data repository. 
+        A data warehouse stores current data and the historical information that has been cleansed, conform categorized. When data gets loaded into the data warehouse, 
+        it is modelled and structured, ready for a specific purpose.
+      </p>
+      <h4>Data Marts</h4>
+      <p>
+        Data Marts can be created in 3 different ways all of which aim to provide the requried data to the end-users and make it accessible to the wider organisation. These data marts accelerate the business process and offer a cost and time-efficient way to take the data-driven decision.
+        <ul>
+          <li>Dependent data marts - built by drawing data from the existing central warehouse generally used for isolated security and solo performance.</li>
+          <li>Independent data marts - Created by drawing from operational or external data sources normally used to capture business or customer data that would otherwise reside with individuals and be inaccessible to the wider organisation. </li>
+          <li>Hybrid data mart - combines input from a data warehouse, operational systems and external systems.</li>
+        </ul>
+      </p>
+      <h4>Types of database</h4>
+        <ul>
+          <li>SQL - </li>
+          <li>NOSQL - </li>
+          <li>Graph - </li>
+        </ul>
+    </div>
+    <br>
+
 
       <div id="WebApps" style="background-color: white; padding:8px; border:2px solid black;">
-        <h2>WebApps</h2>
+        <h2>Designing a solution</h2>
+        <img src="images/MVC.png" class="smlscr_image right_image">
         <p>When building applications the main objective is to make the functionality and data contained within it available to a 
           range of users, both internal and external to the organisation.  Web apps provide secure access to a range of users over the Internet through their web browser.  
           This ability to  avoid the need to install specialist software on peoples devices, allowing all updates to be deployed remotely and centralising the data store 
@@ -140,21 +175,25 @@
           For more complex solutions a more traditional approach to building applications will be requried, splitting the functionality across server and client side processing.
           For the majoirty of applications we favour a Model View Controller (MVC) architecture, which balances the benefits of inrtoducing a separation of concerns between the frontend and backend components 
           while avoiding some of the complexity utilising microservices can cause.
+        </p>
+        
+        <p> The use of Application Programming Interfaces (API's) allows a programme to be broken into distinct services that communicates with other services through a well-defined interface such as an API.  This approach allows areas of the code to be developed in parallel and minimises the risk of unintended consequences so long as the interfaces between services are maintained.
+       
+        <p>
           Following  the user interface, which is controlled using a combination of HTML, CSS and Javascript runs in the browser, 
           whereas the business logic, authentication and interaction with the databases occurs on the server side.  In the following section we explore our prefered technology stack when building tehse applications.
         </p> 
+        
         <ul>
           <li><b>Model</b> - The backend that contains all the data logic</li>
           <li><b>View </b> – The frontend or graphical user interface (GUI)</li>
           <li><b>Controller</b> – The brains of the application that controls how data is displayed.</li>
         </ul>
-        <img src="images/MVC.png" class="center" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal02').style.display='block'">
-        <div id="modal02" class="modal" onclick="this.style.display='none'">
-          <span class="button hover-light-grey blue xlarge display-topright">&times;</span>
-          <div class="modal-content animate-zoom">
-            <img src="images/MVC.png" class="center" style="width:65%">
-          </div>
-        </div>           
+
+        <b>Application Programming Interface (API)</b>) –In computer programming a guiding design principle is to introduce Separation of concerns (SoC).  Breaking the programme into distinct services that communicates with other services through a well-defined interface such as an API.  This approach allows areas of the code to be developed in parallel and minimises the risk of unintended consequences so long as the interfaces between services are maintained.
+       
+        
+        <br>       
       </div>
       <br>
 
@@ -164,7 +203,7 @@
 
 
       <div id="Tech_Stack" style="background-color: white; padding:8px; border:2px solid black;">
-        <h2>Tech Stack</h2>
+        <h2>Selecting the tools</h2>
         <p>
           The options when selecting the languages, libraries and frameworks with which to develop an 
           application can be overwhelming. While specific applications may necessarily drive towards different solutions it is 
@@ -178,15 +217,10 @@
           Another key consideration is to select popular open-source frameworks for which there is a rich source of training materials and support while avoiding costly licence fees.  
           For these reasons, our default stack uses Django, React and PostgreSQL, which collectively provide a highly capable and supportable solution.  
         </p>  
+
           
         <p>A brief outline of each of these is provided below.</p>
-        <img src="images/stack.png" class="center" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal03').style.display='block'">
-        <div id="modal03" class="modal" onclick="this.style.display='none'">
-          <span class="button hover-light-grey blue xlarge display-topright">&times;</span>
-          <div class="modal-content animate-zoom">
-            <img src="images/stack.png" class="center" style="width:65%">
-          </div>
-        </div>       
+    
         <ul>
           <li><b>PostgreSQL</b> – provide a highly capable database to store the required data.  It supports a wide variety of data types, provides integrity controls to prevent invalid or orphan records and powerful indexing methods to optimize performance.  Advanced features such as full-text search speed up finding information and the ability to store non-relational data such as JSON and XML formats actually turns PostgreSQL into NoSQL database providing the flexibility to meet a the evolving requirements of your applications.</li>
           <li><b>Django</b> - is a Python backend (server-side framework) able to integrate easily with existing analytical and machine learning models.  Django provides a host of built in advanced functionality such as admin panels, file upload support, authentication, comment boxes, contact forms, app management and a versatile toolkit for constructing web APIs to significantly reduce the time and effort in building robust web applications.</li>
@@ -195,37 +229,9 @@
       </div>
       <br>
 
-      <div id="Data_Architecture" style="background-color: white; padding:8px; border:2px solid black;">
-        <h2>Data Architecture</h2>
-        <p>3 terms are often used when talking about data storage:</p>
-
-        <h4>Data Lake</h4>
-        <p>
-          Contains raw data, of various formats, in its native form
-        </p>
-    
-        <h4>Data Warehouse</h4>
-        <p>
-          A Data warehouse is a central repository that merges information from different sources and consolidates it through the extract, transform and load process, 
-          also known as ETL process, into a comprehensive database used  for analytical and business techniques. At a very high level, the ETL process extracts the data from 
-          multiple sources, transforms it into a cleaned format to be used for business processes, and finally loads that data into the data repository. 
-          A data warehouse stores current data and the historical information that has been cleansed, conform categorized. When data gets loaded into the data warehouse, 
-          it is modelled and structured, ready for a specific purpose.
-        </p>
-        <h4>Data Marts</h4>
-        <p>
-          Data Marts can be created in 3 different ways all of which aim to provide the requried data to the end-users and make it accessible to the wider organisation. These data marts accelerate the business process and offer a cost and time-efficient way to take the data-driven decision.
-          <ul>
-            <li>Dependent data marts - built by drawing data from the existing central warehouse generally used for isolated security and solo performance.</li>
-            <li>Independent data marts - Created by drawing from operational or external data sources normally used to capture business or customer data that would otherwise reside with individuals and be inaccessible to the wider organisation. </li>
-            <li>Hybrid data mart - combines input from a data warehouse, operational systems and external systems.</li>
-          </ul>
-        </p>
-      </div>
-      <br>
-
+      
       <div id="Hosting" style="background-color: white; padding:8px; border:2px solid black;">
-        <h2>Hosting</h2>
+        <h2>Choosing a Hosting Environment</h2>
         <p>There are fundamentally two types of hosting arrangement available.</p>
         <p>
           <b>Statically hosting</b>- enables web pages serve up the same page to HTML, CSS and JavaScript to all users who enter the site, in reality this is nothing more than a file store.  As no processing is required on the server these pages are generally faster and can be hosted at minimal, or no, cost using a variety of service providers including our favourite GitHub Pages.

@@ -120,17 +120,15 @@ body {
     clear:both;
     background: none;
     width:350px; 
-
     border-radius:12px;
     }
   
   .right_image {
     float: right;
-    padding-left:12px;
   }
   .left_image {
     float: left;
-    padding-right:12px;
+    padding-right: 10px;
   }
 }
 
@@ -147,11 +145,10 @@ body {
   
   .right_image {
     float: right;
-    padding-left:12px;
   }
   .left_image {
     float: left;
-    padding-right:12px;
+    padding-right:10px;
   }
 }
 
@@ -162,17 +159,15 @@ body {
     clear:both;
     background: none;
     width:350px; 
-
     border-radius:12px;
     }
   
   .right_image {
     float: right;
-    padding-left:12px;
   }
   .left_image {
     float: left;
-    padding-right:12px;
+    padding-right:10px;
   }
 
 }
@@ -260,7 +255,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 70%;
 }
 
   
