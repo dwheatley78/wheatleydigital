@@ -58,9 +58,7 @@
   <div id="main_content" class="container">
     <h1>Developing a Data Platform</h1>
     <p>
-      Data analysis can provide rich insights for an organisation, however the real value is only realised once these tools are made available to a wider user base.
-      However it is estimated that only around 10% of machine learning models developed actually make it into production, and hence the real value is never realised.  
-      The two main problems preventing wider adoption of analytical solutions are:
+      Data analysis can provide rich insights for an organisation; however, the real value is only realised once these tools are made available to a wider user base. However, it is estimated that only around 10% of machine learning models developed actually make it into production, and hence the real value is never realised. The two main problems preventing wider adoption of analytical solutions are: 
     </p>
     <ul>
       <li><b>Unreliable source data </b> - While manual collection and bespoke data preparation can support isolated analysis a more robust data pipeline is required to allow an application to scale. 
@@ -112,11 +110,11 @@
         <li><b>Minimum Viable Product (MVP) </b> - When developing a new application we always seek to produce something with enough features to get internal business users using the system or attract early-adopter customers with whom we can validate the  concepts early.  Once created we can then iteratively develop the capability learning from the feedback received.</li>
         <li><b>Agile </b> – When operating with a high degree of uncertainty traditional project management techniques don’t work.  Agile is an approach to project management in which small 2-3 week sprints of activity are planned, each of which deliver demonstrable capability, which can be tested with the user.</li>
         <li><b>Version control systems</b> - such as <a href="https://git-scm.com/">Git</a> provide a means of storing, sharing and tracking changes to source code in a special kind of database. This repository is an invaluable source of that needs to be protected from both catastrophic events and the casual degradation of human error and unintended consequences.</li>
-        <li><b>Code Formatting</b>  While the software your code communicates with doesn’t care how the code looks, other developers who may have to work on it in the future certainly do. When everyone is writing code that looks the same, your brain can relax a bit as the understanding comes faster.  Using opinionated formating tools, like <a href="https://black.readthedocs.io/en/stable/">Black</a> can enforce rules automatically to simplify the process of writing well structured code.</li>
-        <li><b>Testing</b> - is fundemental to ensure good quality code is being written and allows changes to be quickly validated  The main types of testing used are:
+        <li><b>Code Formatting</b>  While the software your code communicates with doesn’t care how the code looks, other developers who may have to work on it in the future certainly do. When everyone is writing code that looks the same, your brain can relax a bit as the understanding comes faster.  Using opinionated formatting  tools, like <a href="https://black.readthedocs.io/en/stable/">Black</a> can enforce rules automatically to simplify the process of writing well structured code.</li>
+        <li><b>Testing</b> - is fundamental to ensure good quality code is being written and allows changes to be quickly validated.  The main types of testing used are:
           <ul>
-            <li>Unit Testing - refers to taking a component of a program and testing it in isolation by writing functionally independent components unit tests can be easily automated to validate changes, test dependancies and handeling of edge cases.</li>
-            <li>Functional Testing - checks the compliance of the system overall against a defined set of criteria. In other words does the software as a whole do what it’s supposed to do?</li>
+            <li>Unit Testing - refers to taking a component of a program and testing it in isolation by writing functionally independent components unit tests can be easily automated to validate changes,  test dependencies and handling of edge cases.</li>
+            <li>Functional Testing - checks the compliance of the system overall against a defined set of criteria. In other words, does the software as a whole do what it’s supposed to do?</li>
             <li>Regression Testing - running previously written tests whenever a new change is introduced to the code allowing you to remain confident that your code continues to function as expected as it grows in complexity and capability.</li>
           </ul>
           
@@ -183,26 +181,23 @@
       <div id="WebApps" style="background-color: white; padding:8px; border:2px solid black;">
         <h2>Designing a solution</h2>
         <img src="images/MVC.png" class="smlscr_image right_image">
-        <p>When building applications the main objective is to make the functionality and data contained within it available to a 
-          range of users, both internal and external to the organisation.  Web apps provide secure access to a range of users over the Internet through their web browser.  
-          This ability to  avoid the need to install specialist software on peoples devices, allowing all updates to be deployed remotely and centralising the data store 
-          make WebApps an ideal solution for most applications.  
+        <p>When building applications, the main objective is to make the functionality and data contained within it available to a 
+          range of users, both internal and external to the organisation.  Web Apps provide secure access to a range of users over the Internet through their web browser.  
+          This ability to  avoid the need to install specialist software on peoples' devices, allowing all updates to be deployed remotely and centralising the data store 
+          make Web Apps an ideal solution for most applications.  
         </p>
         <p>
-          <a href="https://streamlit.io/">Streamlit</a> is a really useful Python library that enables simple WebApps to be produced without any front end web development, 
+          <a href="https://streamlit.io/">Streamlit</a> is a really useful Python library that enables simple Web Apps to be produced without any front end web development, 
           making them an ideal means of sharing analytical models across an internal team.
         </p>
         <p>
-          For more complex solutions a more traditional approach to building applications will be requried, splitting the functionality across server and client side processing.
-          For the majoirty of applications we favour a Model View Controller (MVC) architecture, which balances the benefits of inrtoducing a separation of concerns between the frontend and backend components 
-          while avoiding some of the complexity utilising microservices can cause.
+          For more complex solutions a more traditional approach to building applications will be required, splitting the functionality across server and client-side processing. For the majority of applications, we favour a Model View Controller (MVC) architecture, which balances the benefits of introducing a separation of concerns between the frontend and backend components while avoiding some of the complexity utilising microservices can cause. 
         </p>
         
         <p> The use of Application Programming Interfaces (API's) allows a programme to be broken into distinct services that communicates with other services through a well-defined interface such as an API.  This approach allows areas of the code to be developed in parallel and minimises the risk of unintended consequences so long as the interfaces between services are maintained.
        
         <p>
-          Following  the user interface, which is controlled using a combination of HTML, CSS and Javascript runs in the browser, 
-          whereas the business logic, authentication and interaction with the databases occurs on the server side.  In the following section we explore our prefered technology stack when building tehse applications.
+          Following the user interface, which is controlled using a combination of HTML, CSS and JavaScript runs in the browser, whereas the business logic, authentication and interaction with the databases occurs on the server side. In the following section we explore our preferred technology stack when building these applications. 
         </p> 
         
         <ul>
@@ -238,9 +233,9 @@
         <p>A brief outline of each of these is provided below.</p>
     
         <ul>
-          <li><b>PostgreSQL</b> – provide a highly capable database to store the required data.  It supports a wide variety of data types, provides integrity controls to prevent invalid or orphan records and powerful indexing methods to optimize performance.  Advanced features such as full-text search speed up finding information and the ability to store non-relational data such as JSON and XML formats actually turns PostgreSQL into NoSQL database providing the flexibility to meet a the evolving requirements of your applications.</li>
-          <li><b>Django</b> - is a Python backend (server-side framework) able to integrate easily with existing analytical and machine learning models.  Django provides a host of built in advanced functionality such as admin panels, file upload support, authentication, comment boxes, contact forms, app management and a versatile toolkit for constructing web APIs to significantly reduce the time and effort in building robust web applications.</li>
-          <li><b>React </b> – is a JavaScript frontend (client-side framework used to build single page User Interfaces (UI).   getting and setting data via requests to the Django backend.  As with Django, React comes with multiple component libraries, add-on packages and full template offerings to save developers a lot of time capable of producing engaging and intuitive user interfaces.</li>
+          <li><b>PostgreSQL</b> – provide a highly capable database to store the required data. It supports a wide variety of data types, provides integrity controls to prevent invalid or orphan records and powerful indexing methods to optimize performance. Advanced features such as full-text search speed up finding information and the ability to store non-relational data such as JSON and XML formats actually turns PostgreSQL into NoSQL database providing the flexibility to meet the evolving requirements of your applications. </li>
+          <li><b>Django</b> - is a Python backend (server-side framework) able to integrate easily with existing analytical and machine learning models.  Django provides a host of built-in advanced functionality such as admin panels, file upload support, authentication, comment boxes, contact forms, app management and a versatile toolkit for constructing web APIs to significantly reduce the time and effort in building robust web applications.</li>
+          <li><b>React </b> – is a JavaScript frontend (client-side) framework used to build single page User Interfaces (UI).   Getting and setting data via requests to the Django backend.  As with Django, React comes with multiple component libraries, add-on packages and full template offerings to save developers a lot of time capable of producing engaging and intuitive user interfaces.</li>
         </ul>
       </div>
       <br>
