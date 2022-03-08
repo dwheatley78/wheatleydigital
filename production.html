@@ -131,36 +131,51 @@
 
     <div id="Data_Architecture" style="background-color: white; padding:8px; border:2px solid black;">
       <h2>Structuring your data</h2>
-      <p>3 terms are often used when talking about data storage:</p>
-
-      <h4>Data Lake</h4>
-      <p>
-        Contains raw data, of various formats, in its native form
+      <p>The objective of a good data architecture is to ensure that all the information requires running your business is accurate, consistent and accessible.
       </p>
-  
-      <h4>Data Warehouse</h4>
-      <p>
-        A Data warehouse is a central repository that merges information from different sources and consolidates it through the extract, transform and load process, 
-        also known as ETL process, into a comprehensive database used  for analytical and business techniques. At a very high level, the ETL process extracts the data from 
-        multiple sources, transforms it into a cleaned format to be used for business processes, and finally loads that data into the data repository. 
-        A data warehouse stores current data and the historical information that has been cleansed, conform categorized. When data gets loaded into the data warehouse, 
-        it is modelled and structured, ready for a specific purpose.
+      <p>The first step in this process is often ensure that key information is stored centrally instead of distributed across a variety of personal computers 
+        and drives, known as a Data Lake.  By creating this data lake, storing raw data, of various formats, in its native form in one common location functions
+        from around the business can begin to develop the various analytical models discussed in the analyse page.
       </p>
-      <h4>Data Marts</h4>
-      <p>
-        Data Marts can be created in 3 different ways all of which aim to provide the requried data to the end-users and make it accessible to the wider organisation. These data marts accelerate the business process and offer a cost and time-efficient way to take the data-driven decision.
-        <ul>
-          <li>Dependent data marts - built by drawing data from the existing central warehouse generally used for isolated security and solo performance.</li>
-          <li>Independent data marts - Created by drawing from operational or external data sources normally used to capture business or customer data that would otherwise reside with individuals and be inaccessible to the wider organisation. </li>
-          <li>Hybrid data mart - combines input from a data warehouse, operational systems and external systems.</li>
-        </ul>
+      <p>Having created a Data Lake, it will invariably become apparent that different versions of the same data exist, that they are contradict each other and 
+        that that significant work is still required to prepare the data into a format suitable for analysis.
       </p>
-      <h4>Types of database</h4>
-        <ul>
-          <li>SQL - </li>
-          <li>NOSQL - </li>
-          <li>Graph - </li>
-        </ul>
+      <p>A Data Warehouse merges information from these different sources and consolidates them through an extract, transform and load process, also known as ETL 
+        process, into a comprehensive database. At a very high level, the ETL process extracts the data from multiple sources, transforms it into a cleaned format, 
+        which can then be used for business processes, and finally that data into a structure data repository. When data is loaded into the data warehouse, it is 
+        modelled and structured, ready for a specific purpose.
+      </p>
+      <p>The problem arises, as new unstructured data needs to be ingested from the Data Lake into the Data Warehouse, which can become impossible to control. 
+        The solution is to build dedicated applications that collect and validate the data at the point of entry and store the information in Data Marts.
+      </p>
+      <p>As discussed in the production page these applications are aligned to core business processes and customer services to drive efficiency and 
+        effectiveness while the Data Marts themselves effectively combine to form the Data Warehouse. Depending on the data requirements of the application the data 
+        marts can be considered as either:
+      </p>
+      <ul>
+        <li>Independent - Created by drawing from operational or external data sources normally used to capture business or customer data that would otherwise 
+          reside with individuals and be inaccessible to the wider organisation.
+        </li>
+        <li>Hybrid - combines input from a data warehouse, operational systems and external systems</li>
+        <li>Dependent - built by drawing data from the existing central warehouse generally used for isolated security and solo performance.</li>
+      </ul>
+      <p>Ultimately, the data being collected needs to be stored in a database; however, there are a variety of database types to choose from, each with their own 
+        strengths and limitations.
+      </p>
+      <ul>
+        <li>Relational database are the go to solution, providing a strict structure / schema, ensuring the data contains a predefined list of components ensuring 
+          that the data held is predictable, easily assessable and significantly reducing the chance of errors.
+        </li>
+        <li>Non-relational database organization are more forgiving in their structure. Instead of tables with columns and rows, they have collections of different 
+          categories allowing records of varying shape to be stored.  In recent years traditional SQL databases such as Postgres have adapted to store storage of 
+          JSON and Array datatypes enabling them to provide a Hybrid database to deliver the best of both.
+        </li>
+        <li>Graph databases are a relatively new form of database that captures both the entities and relationships between different data points. These databases 
+          rose to prominence with the growth of network analytics, as used extensively by Facebook when analysing social connections and Google for optimising 
+          search results, and are equally valuable for smaller companies e.g. When modelling a supply chain. Neo4J offers an effective Graph database solution 
+          which can contribute to a wider Data Warehouse capability.
+        </li>
+      </ul>
     </div>
     <br>
 
@@ -194,12 +209,7 @@
           <li><b>Model</b> - The backend that contains all the data logic</li>
           <li><b>View </b> – The frontend or graphical user interface (GUI)</li>
           <li><b>Controller</b> – The brains of the application that controls how data is displayed.</li>
-        </ul>
-
-        <b>Application Programming Interface (API)</b>) –In computer programming a guiding design principle is to introduce Separation of concerns (SoC).  Breaking the programme into distinct services that communicates with other services through a well-defined interface such as an API.  This approach allows areas of the code to be developed in parallel and minimises the risk of unintended consequences so long as the interfaces between services are maintained.
-       
-        
-        <br>       
+        </ul>      
       </div>
       <br>
 
