@@ -118,17 +118,23 @@ body {
   .smlscr_image {
     position: relative;
     clear:both;
-    background: none;
-    width:350px; 
+    background: none; 
     border-radius:12px;
     }
   
   .right_image {
     float: right;
+    margin-right: 100px;
   }
   .left_image {
     float: left;
     padding-right: 10px;
+  }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
   }
 }
 
@@ -150,6 +156,12 @@ body {
     float: left;
     padding-right:10px;
   }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
 }
 
 /********** Small devices only **********/
@@ -168,6 +180,12 @@ body {
   .left_image {
     float: left;
     padding-right:10px;
+  }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
   }
 
 }
@@ -206,6 +224,14 @@ body {
     font-size: 1em;
     margin-right: 10px;
   }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
 }
   /* End Header */ 
   /* END HEADER */
@@ -249,13 +275,5 @@ body {
   color:red;
 }
 
-
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-}
 
   
