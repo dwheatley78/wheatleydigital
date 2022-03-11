@@ -58,14 +58,16 @@
   <div id="main_content" class="container">
     <h1>Developing a Data Platform</h1>
     <p>
-      Data analysis can provide rich insights for an organisation; however, the real value is only realised once these tools are made available to a wider user base. However, it is estimated that only around 10% of machine learning models developed actually make it into production, and hence the real value is never realised. The two main problems preventing wider adoption of analytical solutions are: 
+      Data analysis can provide rich insights for an organisation; however, the real value is only realised once these tools are made available to a wider user base. 
+      It is estimated that only around 10% of machine learning models developed actually make it into production, and hence the real value is never realised. 
+      The two main problems preventing wider adoption of analytical solutions are: 
     </p>
     <ul>
       <li><b>Unreliable source data </b> - While manual collection and bespoke data preparation can support isolated analysis a more robust data pipeline is required to allow an application to scale. 
-        It is therefore essential to develop robust and validated data repositories to secure the data capture and preparation for the longer term.
+        It is therefore essential to develop robust and validated data repositories to secure the data capture and preparation process for the longer term success of a solution.
       </li>
       <li><b>Accessibility</b> – If the developed solutions are not accessible and intuitive to prospective users their true value will never be realised.
-          Furthermore, when providing services directly to your customers, it is essential that the look and feel of the application match the company values.
+          Furthermore, when providing services directly to your customers, it is essential that the look and feel of the application match the company values you wish to portray.
       </li>
     </ul>
     <p>
@@ -76,7 +78,7 @@
       code and models developed need to be reliable, maintainable and reproducible.
     </p>
     <p>
-      In this page we discuss some of the tools and software practices that should be used to ensure effective solutions are developed.
+      On this page we discuss some of the tools and software practices that can help ensure effective solutions are developed.
     </p>
     <ul>
       <li><a href="#DevOps">Effective Development</a> - A brief overview of best practice ways of working</li>
@@ -99,18 +101,31 @@
         and tools to develop and evolve applications faster and more reliably.
       </p>
       <p>
-        At its heart the objective is about crating flowing between the various process stages, represented by a figure of eight as shown in the diagram.
-        Through improving communication and feedback, identify issues early and automating processes where possible to give the team the best possible chance of success.
+        At its heart DevOps is about creating flow between the various process stages, represented by a figure of eight shown.
+        Through improving communication and feedback, identify issues early and automating processes where possible gives the team the best possible chance of success.
       </p> 
-      <p>We outline a few key concepts that should be understood, however for a more comprehensive account of DevOps practices refer to <a href"https://www.amazon.co.uk/DevOps-Handbook-World-Class-Reliability-Organizations-ebook/dp/B09G2GS39R/">The DevOps Handbook</a>.
+      <p>We outline a few key concepts that should be understood, however for a more comprehensive account of DevOps practices refer to 
+        <a href="https://itrevolution.com/the-devops-handbook/"  target="_blank">The DevOps Handbook</a>.
       </p>
       
 
       <ul style="clear:both">
-        <li><b>Minimum Viable Product (MVP) </b> - When developing a new application we always seek to produce something with enough features to get internal business users using the system or attract early-adopter customers with whom we can validate the  concepts early.  Once created we can then iteratively develop the capability learning from the feedback received.</li>
-        <li><b>Agile </b> – When operating with a high degree of uncertainty traditional project management techniques don’t work.  Agile is an approach to project management in which small 2-3 week sprints of activity are planned, each of which deliver demonstrable capability, which can be tested with the user.</li>
-        <li><b>Version control systems</b> - such as <a href="https://git-scm.com/">Git</a> provide a means of storing, sharing and tracking changes to source code in a special kind of database. This repository is an invaluable source of that needs to be protected from both catastrophic events and the casual degradation of human error and unintended consequences.</li>
-        <li><b>Code Formatting</b>  While the software your code communicates with doesn’t care how the code looks, other developers who may have to work on it in the future certainly do. When everyone is writing code that looks the same, your brain can relax a bit as the understanding comes faster.  Using opinionated formatting  tools, like <a href="https://black.readthedocs.io/en/stable/">Black</a> can enforce rules automatically to simplify the process of writing well structured code.</li>
+        <li><b>Agile </b> – When operating with a high degree of uncertainty traditional project management techniques don’t work.  Agile, as defined in more detail in the book
+          <a href="https://www.scruminc.com/new-scrum-the-book/" target="_blank">Scrum The Art of Doing Twice The Work In Half the Time</a>, is an approach to project management 
+          in which small 2-3 week sprints of activity are planned, each of which deliver demonstrable capability, which can be tested with the user.
+        </li>
+        <li><b>Minimum Viable Product (MVP) </b> - When developing a new application we need produce something with just enough features to encourage users 
+          to adopt the solution.  These users then support its iterative evolution constantility testing enhancements and learning from the feedback received.
+        </li>
+        
+        <li><b>Version control systems</b> - Systems such as <a href="https://git-scm.com/" target="_blank">Git</a> provide a means of storing, sharing and tracking changes to source 
+          code in a special kind of database. This repository is an invaluable source of that needs to be protected from both catastrophic events and the casual degradation of 
+          human error and unintended consequences.
+        </li>
+        
+        <li><b>Code Formatting</b>  While the software your code communicates with doesn’t care how the code looks, other developers who may have to work on it in the future 
+          certainly do. When everyone is writing code that looks the same, your brain can relax a bit as the understanding comes faster.  Using opinionated formatting  tools, 
+          like <a href="https://black.readthedocs.io/en/stable/">Black</a> can enforce rules automatically to simplify the process of writing well structured code.</li>
         <li><b>Testing</b> - is fundamental to ensure good quality code is being written and allows changes to be quickly validated.  The main types of testing used are:
           <ul>
             <li>Unit Testing - refers to taking a component of a program and testing it in isolation by writing functionally independent components unit tests can be easily automated to validate changes,  test dependencies and handling of edge cases.</li>
@@ -130,31 +145,30 @@
     <div id="Data_Architecture" style="background-color: white; padding:8px; border:2px solid black;">
       <h2>Structuring your data</h2>
       <p>The objective of a good data architecture is to ensure that all the information requires running your business is accurate, consistent and accessible.
-      </p>
-      <p>The first step in this process is often ensure that key information is stored centrally instead of distributed across a variety of personal computers 
-        and drives, known as a Data Lake.  By creating this data lake, storing raw data, of various formats, in its native form in one common location functions
+        The first step in this process is often ensure that key information is stored centrally instead of distributed across a variety of personal computers 
+        and drives, known as a <b>Data Lake</b>.  By creating this <b>Data Lake</b>, storing raw data, of various formats, in its native form in one common location functions
         from around the business can begin to develop the various analytical models discussed in the analyse page.
       </p>
-      <p>Having created a Data Lake, it will invariably become apparent that different versions of the same data exist, that they are contradict each other and 
+      <p>Having created a <b>Data Lake</b>, it will invariably become apparent that different versions of the same data exist, that they are contradict each other and 
         that that significant work is still required to prepare the data into a format suitable for analysis.
       </p>
-      <p>A Data Warehouse merges information from these different sources and consolidates them through an extract, transform and load process, also known as ETL 
+      <p>A <b>Data Warehouse</b> merges information from these different sources and consolidates them through an extract, transform and load process, also known as ETL 
         process, into a comprehensive database. At a very high level, the ETL process extracts the data from multiple sources, transforms it into a cleaned format, 
-        which can then be used for business processes, and finally that data into a structure data repository. When data is loaded into the data warehouse, it is 
+        which can then be used for business processes, and finally that data into a structure data repository. When data is loaded into the <b>Data Warehouse</b>, it is 
         modelled and structured, ready for a specific purpose.
       </p>
-      <p>The problem arises, as new unstructured data needs to be ingested from the Data Lake into the Data Warehouse, which can become impossible to control. 
-        The solution is to build dedicated applications that collect and validate the data at the point of entry and store the information in Data Marts.
+      <p>The problem arises, as new unstructured data needs to be ingested from the <b>Data Lake</b> into the <b>Data Warehouse</b>, which can become impossible to control. 
+        The solution is to build dedicated applications that collect and validate the data at the point of entry and store the information in <b>Data Marts</b>.
       </p>
       <p>As discussed in the production page these applications are aligned to core business processes and customer services to drive efficiency and 
-        effectiveness while the Data Marts themselves effectively combine to form the Data Warehouse. Depending on the data requirements of the application the data 
+        effectiveness while the <b>Data Marts</b> themselves effectively combine to form the <b>Data Warehouse</b>. Depending on the data requirements of the application the data 
         marts can be considered as either:
       </p>
       <ul>
         <li>Independent - Created by drawing from operational or external data sources normally used to capture business or customer data that would otherwise 
           reside with individuals and be inaccessible to the wider organisation.
         </li>
-        <li>Hybrid - combines input from a data warehouse, operational systems and external systems</li>
+        <li>Hybrid - combines input from a <b>Data Warehouse</b>, operational systems and external systems</li>
         <li>Dependent - built by drawing data from the existing central warehouse generally used for isolated security and solo performance.</li>
       </ul>
       <p>Ultimately, the data being collected needs to be stored in a database; however, there are a variety of database types to choose from, each with their own 
@@ -168,10 +182,9 @@
           categories allowing records of varying shape to be stored.  In recent years traditional SQL databases such as Postgres have adapted to store storage of 
           JSON and Array datatypes enabling them to provide a Hybrid database to deliver the best of both.
         </li>
-        <li>Graph databases are a relatively new form of database that captures both the entities and relationships between different data points. These databases 
-          rose to prominence with the growth of network analytics, as used extensively by Facebook when analysing social connections and Google for optimising 
-          search results, and are equally valuable for smaller companies e.g. When modelling a supply chain. Neo4J offers an effective Graph database solution 
-          which can contribute to a wider Data Warehouse capability.
+        <li>Graph databases are a relatively new form of database that capture both the entities and relationships between different data points. These databases 
+          rose to prominence with the growth of network analytics, as used extensively by Facebook and Google. Neo4J offers an effective Graph database solution 
+          which can contribute to your wider <b>Data Warehouse</b> capability.
         </li>
       </ul>
     </div>
@@ -278,7 +291,7 @@
         <br>
   
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            <div class="tile" id="powerspec-tile" onclick="document.getElementById('id01').style.display='block'"><span>Specification tool</span></div>
+            <div class="tile" id="powerspec-tile" onclick="document.getElementById('id02').style.display='block'"><span>Specification tool</span></div>
           </div>
 
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -306,51 +319,21 @@
   
         <div id="Objective" class="modal_container project1">
           <br>
-          <p>Autonomous aircraft, requiring no human interventions during operation, is a rapidly evolving sector.
-            The global autonomous aircraft market was estimated to be USD 4.56 billion in 2019 and is projected to reach USD 16.23 billion by 2027.</p>
-            
-          <p>With such competition and growth potential manufacturers are looking towards enhanced service strategies as a means of delivering a competative advantage</p>
-          <p>In responce to this opportunity we were commissioned to perform a comprehensive review intelligent health management solutions
-            and develop a prototype solution utilising advanced analytics to demonstrate an approach to deliver adaptive vehicle health management, 
-            providing greater process control, reduced operating costs and enhanced availability.
+          <p>
+            Deatils
           </p>
           <br>
         </div>
   
         <div id="Hypothesis" class="modal_container project1">
           <br>
-          <p>The approach taken involved decomposing this top-level objective into three targeted
-            value propositions. 
-            <ul>
-              <li>Accurately predicting the remaining useful life of aircraft components based on the provided sensor data</li>
-              <li>Providing dynamic fault diagnostics advice to the maintainer based on the observations</li>
-              <li>Simulating the degradation of the aircraft and the potential maintenance decisions to determine the optimum responce 
-                based on defined objective funcitons and within defined operational constraints.</li>
-            </ul>
+          <p>Deatils</p>
           <br>
         </div>
   
         <div id="Outcome" class="modal_container project1">
           <br>
-          <p>Aviation will always mandate stringent safety requirements, however the ability to
-            reduce uncertainty regarding the health of components presents an enormous
-            opportunity to reduce cost and drive operational efficiencies.
-          </p>
-          <p>
-            The novel approach developd here, normalising the aircraft sensors data based on flight condition, to train a Long-Term-ShortTerm-Memory (LSTM) model  
-            demonstrated the ability to predicting the degradation state of these complex systems, with supporting confidence intervals, and
-            demonstrate how a move to a condition-based maintenance strategy could be realised. 
-          </p>
-          <p>
-            The use of Bayesian Belief Networks (BBNs) provided the requried adaptive diagnostic advice to the
-            maintainer in an intuitive and visual way.  This approach had the additional benefit of enabling any divergence from the designed system reliability</p>
-          <p>
-            Performing a monte-carlo analysis on the simulation combined with a dual annealing optimisation function enabled:
-            <ul>
-              <li>An optimised stocking policy to be proposed, based on both financial and aircraft availability constraints.</li>
-              <li>Opportunity maintenance to be identified (proactively replacing an item early) to reduce cost and better utilise limited manpower and hangar capacity</li>
-            </ul>
-          </p>
+          <p>Deatils</p>
         </div>
   
         <div class="modal_container light-grey padding">
