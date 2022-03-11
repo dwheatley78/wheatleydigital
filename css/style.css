@@ -247,19 +247,33 @@ body {
     border-radius: 0;
     border: 0;
   }
-  #email2 span {
+  #footer1 {
+    color:white;
+    float: left;
+    font-size: 1.2em;
+    
+  }
+  
+  #footer1_sub {
+    color:rgb(65, 190, 234);
+    float: left;
+    font-size: .7em;
+    text-align: right;
+    clear:both;
+  }
+  #footer2{
     color:white;
     float: right;
     font-size: 1.2em;
     
   }
   
-  #email2 div {
+  #footer2_sub {
     color:rgb(65, 190, 234);
     float: right;
     font-size: .7em;
     text-align: right;
-    margin-bottom:30px;
+
     clear:both;
   }
 
