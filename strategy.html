@@ -37,7 +37,49 @@
 <body>
 
   <a name="top"></a>
-  <header id="nav-placeholder">HEADER</header>
+  <nav id="header-nav" class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="index.html" class="pull-left visible-xs visible-sm visible-md visible-lg">
+          <div id="logo-img" alt="logo image"></div>
+        </a>
+        <div class="navbar-brand">
+          <a href="index.html"><p class="brand">EMPEDATA</p></a>
+          <a href="index.html"><p>.com</p></a>
+        </div>
+
+        <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      
+      <div id="collapsable-nav" class="collapse navbar-collapse">
+        <ul id="nav-list" class="nav navbar-nav navbar-right">
+          <li>
+            <a class="highlight" href="strategy.html">
+              <span class="glyphicon glyphicon-dashboard"></span><br class="hidden-xs">Strategise</a>
+          </li>
+          <li>
+            <a class="highlight" href="analysis.html">
+              <span class="glyphicon glyphicon-stats"></span><br class="hidden-xs">Analyse</a>
+          </li>
+          <li>
+              <a class="highlight" href="production.html">
+                <span class="glyphicon glyphicon-road"></span><br class="hidden-xs">Productionise</a>
+          </li>
+          <li>
+            <a class="highlight" href="contact.html">
+              <span class="glyphicon glyphicon-user"></span><br class="hidden-xs">Contact</a>
+        </li>
+
+
+        </ul><!-- #nav-list -->
+      </div><!-- .collapse .navbar-collapse -->
+    </div><!-- .container -->
+  </nav><!-- #header-nav -->
 
   
 
@@ -285,7 +327,17 @@
 </body>
 
 
-<footer id="footer-placeholder">FOOTER</footer>
+<footer>
+  <div id="email2" class="container">
+    <a href="./contact.html">
+      <span font-size=100px>Click to get in touch</span>
+      <div>Discover the <b>EMPEDATA</b> difference</div>
+    </a>
+    <a href='#top'>
+      <img src="images/back-to-top.png" alt="Back to top" style="width: 50px;"/>
+    </a>
+  </div>
+</footer>
   
 </body>
 </html>
@@ -293,13 +345,3 @@
 
 
 
-<script>
-  $.get("navbar.html", function(data){
-      $("#nav-placeholder").replaceWith(data);
-  });
-
-  $.get("footerbar.html", function(data){
-      $("#footer-placeholder").replaceWith(data);
-  });
-
-</script>
