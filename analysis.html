@@ -50,14 +50,14 @@
     <p>
       Every business needs to see return on investment and it is therefore essential to demonstrate that your digital transformation programme can deliver value fast!
       The <span id="brand">EMPEDATA</span> capability demonstration package is the perfect way to get started.
-      Delivered over 4 weeks this affordable package (around £5000) will provide a key capability to your business, without longer-term commitment and serve
+      Delivered over 4 weeks this affordable package will provide a key capability to your business, without longer-term commitment and serve
         as a catalyst for your future digital transformation aspirations.  The 4-week plan involves:
     </p>  
       <ul>
         <li><b>Week 1</b> - Working closely with you to scope a business opportunity, identify potential data sources and document an agreed set of success criteria.</li>
         <li><b>Week 2</b> - Collating, cleaning and processing the available data into a format suitable for analysis</li>
         <li><b>Week 3</b> - Develop the analytical models that provide actionable insight.</li>
-        <li><b>Week 4</b> - Enhance the presentation and visualisations, document and present the work performed.</li>
+        <li><b>Week 4</b> - Finalise models, enhance visualisations, document and present the work performed.</li>
       </ul>
 
     <p>
@@ -156,7 +156,7 @@
       </div>
 
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-        <div class="tile" id="NLP-tile"><span>Language Processing</span></div>
+        <div class="tile" id="NLP-tile" onclick="document.getElementById('coming_soon').style.display='block'"><span>Language Processing</span></div>
       </div>
 
     </div><!-- End of #home-tiles -->
@@ -285,7 +285,19 @@
   </div>
 
   
-
+  <div id="coming_soon" class="modal">
+    <div class="modal-content animate-zoom">
+      <div class="modal_container modal_background">
+        <span onclick="document.getElementById('coming_soon').style.display='none'" class="button blue display-topright">&times;</span>
+        <img class="modal_img" src="./images/EMPEDATA.png">
+        <div class="typing">
+            <div class="typing-effect">
+                COMING SOON
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <script>

@@ -291,56 +291,32 @@
         <br>
   
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            <div class="tile" id="powerspec-tile" onclick="document.getElementById('id02').style.display='block'"><span>Specification tool</span></div>
+            <div class="tile" id="powerspec-tile" onclick="document.getElementById('coming_soon').style.display='block'"><span>Specification tool</span></div>
           </div>
 
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            <div class="tile" id="headx-tile" onclick="document.getElementById('id02').style.display='block'"><span>Data Platform</span></div>
+            <div class="tile" id="headx-tile" onclick="document.getElementById('coming_soon').style.display='block'"><span>Data Platform</span></div>
           </div>
   
   
         </div><!-- End of #home-tiles -->
       </div>
   
-  
-  
-    <div id="id01" class="modal">
-      <div class="modal-content card-4 animate-zoom">
-        <header class="modal_container blue"> 
-          <span onclick="document.getElementById('id01').style.display='none'" class="button blue xlarge display-topright">&times;</span>
-          <h2>Aircraft Prognostics</h2>
-        </header>
-  
-        <div class="bar border-bottom">
-          <button class="tablink bar-item button" onclick="openProject(event, 'Objective','project1')">Objective</button>
-          <button class="tablink bar-item button" onclick="openProject(event, 'Hypothesis','project1')">Approach</button>
-          <button class="tablink bar-item button" onclick="openProject(event, 'Outcome','project1')">Outcome</button>
-        </div>
-  
-        <div id="Objective" class="modal_container project1">
-          <br>
-          <p>
-            Deatils
-          </p>
-          <br>
-        </div>
-  
-        <div id="Hypothesis" class="modal_container project1">
-          <br>
-          <p>Deatils</p>
-          <br>
-        </div>
-  
-        <div id="Outcome" class="modal_container project1">
-          <br>
-          <p>Deatils</p>
-        </div>
-  
-        <div class="modal_container light-grey padding">
-          <button class="button right white border" onclick="document.getElementById('id01').style.display='none'">Close</button>
+      <div id="coming_soon" class="modal">
+        <div class="modal-content animate-zoom">
+          <div class="modal_container modal_background">
+            <span onclick="document.getElementById('coming_soon').style.display='none'" class="button blue display-topright">&times;</span>
+            <img class="modal_img" src="./images/EMPEDATA.png">
+            <div class="typing">
+                <div class="typing-effect">
+                    COMING SOON
+                </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>  
+
+
   
     <script>
       document.getElementsByClassName("tablink")[0].click();

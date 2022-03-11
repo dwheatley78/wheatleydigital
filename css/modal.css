@@ -49,4 +49,47 @@ button{overflow:visible}
 .blue,.hover-blue:hover{color:#fff!important;background-color:rgb(54, 133, 196)!important}
 .black,.hover-black:hover{color:#fff!important;background-color:#000!important}
 .light-grey,.hover-light-grey:hover,.light-gray,.hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+
+
+.w3-card-4,.w3-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
  
+
+    .modal_background {
+    background-color:rgb(40, 40, 40);
+    }
+    .modal_img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+  }
+  
+  .typing {
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .typing-effect {
+      width: 12ch;
+      animation: typing 2s steps(22), effect .5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      font-family: 'Oxygen', sans-serif;
+      font-size: 2em;
+      color: white;
+    }
+    
+    @keyframes typing {
+      from {
+        width: 0
+      }
+    }
+        
+    @keyframes effect {
+      50% {
+        border-color: transparent
+      }
+    }
