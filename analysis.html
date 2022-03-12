@@ -158,18 +158,32 @@
     
     <div style="background-color: white; padding:8px; border:2px solid black;">
       <h2 style="padding:0px; float:left;">Machine learning techniques</h2>
+     
+     
       <p style="padding:3px;clear:both;">Machine learning algorithms are used to make a prediction or classification and focus on making the best fit instead of 
-        understanding  causality.  An Error Function serves to evaluate the quality of a model prediction to which weights are then adjusted to reduce 
-        the discrepancy between the known example and the model estimate. The algorithm will repeat this evaluate and optimize process, updating 
-        weights autonomously until a threshold of accuracy has been met.  These disipline broadly sub divide into:
+        understanding the underlying causality.  The main Python library for machine learning is <a href="https://scikit-learn.org/">Sci-kit learn</a>, which simplifies to 
+        process of training a wide variety of machine learning algorithms as well as providing pre-processing and techniques to comparing, validate and select the parameters and models
+        that give the best results.
       </p>
-      <ul>
-        <li><b>Supervised learning</b>- The models use a labelled datasets to train algorithms that to classify data or predict outcomes accurately. As input data is fed into the model, 
-          it adjusts its weights until the model has been fitted appropriately.</li>
-        <li><b>Unsupervised learning</b> uses algorithms to analyse and cluster unlabelled  datasets. These algorithms discover hidden patterns or data groupings without the need 
-          for human intervention. Its ability to discover similarities and differences in information make it the ideal solution for exploratory data analysis</li>
-        <li><b>Semi-supervised learning</b> - uses a smaller labelled data set to guide classification and feature extraction from a larger, unlabelled data set</li>
-      </ul>
+             
+      <img src="./images/machine_learning_map.jpg" class="center">
+      <p>As shown in the above diagram, machine learning algorithms can be divided into 4 distinct groups.</p>
+      <b>Supervised learning</b>- Covers models in which a labelled datasets is used to train algorithms that can either classify data or predict outcomes. 
+        As input data is fed into the model an error function serves to evaluate the quality of a model prediction to which weights are then adjusted to reduce 
+          the discrepancy. The algorithm then repeats this evaluation and optimisation process, updating weights autonomously until a threshold of accuracy has been met.  
+          Once the optimum values have been derived from the training set the algorithm can then apply to same weights to previously unseen data to make a prediction.
+
+        <ul>
+          <li><b>Classification</b> These algorithms are used to identify which category an object belongs. Commonly used techniques include Support vector machines, logistic regression, nearest neighbours and random forest.</li>
+          <li><b>Regression</b>- In contrast regression algorithms predict a specific value based on the provided inputs.</li>
+        </ul>
+        
+        <b>Unsupervised learning</b> uses algorithms to analyse and cluster unlabelled  datasets. These algorithms discover hidden patterns or data groupings.  Their ability to 
+        discover similarities and differences in information make them the ideal solution for exploratory data analysis.
+        <ul>
+          <li><b>Clustering</b> - Automatically groups similar objects into sets and is widely used in applications like customer segmentation.  Commonly used algorithms include k-Means, spectral clustering </li>
+          <li><b>Dimension reduction</b> - Reducing the number of random variables to consider to enable complex object to be visualised and recommendation engines</li>          
+        </ul>
     </div>
     <br/>
 
@@ -180,6 +194,7 @@
         enable more complex relationships to be inferred.  While ANN's can be applied to all types of datasets they truely excel when modelling complex relationships
         such as images, sound and language where the significance of a piece of data is a function of the datapoints around it. 
       </p>
+      <img src="./images/neutral-network-diagram.png" class="center">
       <ul>
         <li><b>Convolutional Neural Networks</b> Used extensively for image processing to perform classification and even develop generative algorithms.</li>
         <li><b>Recurrent Neural Networks</b> - Used to analyse sequences of data.  Natural language is a popular example of RNNs in which the algoritm learns to 
