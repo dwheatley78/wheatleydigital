@@ -104,14 +104,21 @@
       </ul>
 
     <p>
-      In the sections below we provide a brief outline a variety of analytical techniques and       
-      a <a href="#home-tiles">project portfolio</a> to showcase examples of how we have used these techniques to solve real problems.
-      We also provide a curated list of books, online tutorials and articles on our <a href="./skills.html">skills page</a>, which you may find useful when developing 
-      training packages for your internal teams. 
+      In the sections below we provide a brief outline of the 4 main catagories of analytical analysis as well as a <a href="#home-tiles">project portfolio</a> to showcase examples 
+      of how we have applied the to real business issues:</p>
+    <ul>
+      <li>Business intelligence</li>
+      <li>Mathmatical modelling</li>
+      <li>Machine Learning</li>
+      <li>Deep Learning</li>
+    </ul>  
+    <p>
+      
     </p>
     <p>
       If you'd like to discuss more about developing analytical skills in your team, or to take up the offer of the <span id="brand">EMPEDATA</span> capability demonstration package
-      please <a href="./contact.html">get in touch</a></p>
+      please <a href="./contact.html">get in touch</a>.  Alternatively check out the <a href="./skills.html">skills page</a> for a curated list of books, online tutorials and articles
+      to provide a more comprehnisve understanding. </p>
     </p>
 
     <br>
@@ -160,19 +167,19 @@
       <h2 style="padding:0px; float:left;">Machine learning techniques</h2>
      
      
-      <p style="padding:3px;clear:both;">Machine learning algorithms are used to predict an output value or classify an object based on the provided inputs data. In contrast with mathematical modelling machine learning 
-        focuses on making the best fit instead of understanding the underlying causality.  The main Python library for machine learning is <a href="https://scikit-learn.org/">Sci-kit learn</a>, which simplifies to 
-        process of training a wide variety of machine learning algorithms as well as providing pre-processing techniques and methods for comparing and validating parameters to select the model
+      <p style="padding:3px;clear:both;">Machine learning algorithms are used to predict an output value or classify an object based on the provided input variables. In contrast with mathematical modelling machine learning 
+        focuses on making the best fit, not the underlying causality.  The main Python library for machine learning is <a href="https://scikit-learn.org/">Sci-kit learn</a>, which enables
+        a wide variety of machine learning algorithms to be trained and fitted to a given dataset, as well as providing pre-processing techniques and methods for comparing and validating parameters to simplify the process of selecting the model
         that gives the best results.
       </p>
              
       <img src="./images/machine_learning_map.jpg" class="center">
       <p>As shown in the above diagram, machine learning algorithms can be divided into 4 distinct categories.</p>
       
-      <b>Supervised learning</b> - Covers models in which a labelled datasets is used to train algorithms that can either classify data or predict outcomes. 
-        As input data is fed into the model an error function serves to evaluate the quality of a model prediction to which weights are then adjusted to reduce 
-          the discrepancy. The algorithm then repeats this evaluation and optimisation process, updating weights autonomously until a threshold accuracy has been satisfied.  
-          Once derived, these model weights are then applied to a previously unseen data set to allow predictions of the probable output to be made.
+      <b>Supervised learning</b> - Covers models in which a labelled datasets is used to train algorithms to either classify or predict output values of a given dataset comes. 
+        As input data is fed into the model an error function serves to evaluate the quality of the model prediction and adjusts the weights accordingly to reduce 
+          the discrepancy. The algorithm then repeats this evaluation and optimisation process, updating weights until an accuracy threshold  has been satisfied.  
+          Once derived, these model weights can then be applied to a previously unseen dataset to allow output predictions to be made.
         <ul>
           <li><b>Classification</b> - These algorithms are used to identify which category an object belongs to. Commonly used techniques include Support vector machines, logistic regression, nearest neighbours and random forest.</li>
           <li><b>Regression</b>- In contrast regression algorithms predict a specific value based on the provided inputs.</li>
@@ -191,20 +198,25 @@
 
     <div style="background-color: white; padding:8px; border:2px solid black;">
       <h2 style="padding:0px; float:left;">Deep learning techniques</h2>
-      <p style="padding:3px;clear:both;"> An artificial neural network (ANN) uses multiple layers between the inputs and outputs of a model to 
-        enable more complex relationships to be inferred.  While ANN's can be applied to all types of datasets they truely excel when modelling complex relationships
-        such as images, sound and language where the significance of a piece of data is a function of the datapoints around it. Popular libraries for implimenting 
-        deep learning include <a href="https://www.tensorflow.org/">Tensorflow</a>, developed by Google and <a href="https://pytorch.org/">Pytorch</a> from Facebook.
+      <p style="padding:3px;clear:both;"> 
+        An artificial neural network (ANN) uses multiple layers between the inputs and outputs of a model to enable more complex relationships to be inferred. 
+        While ANN's can be applied to all types of datasets they truly excel when modelling complex entities such as images, sound and language, 
+        where the significance of a piece of data is a function of the datapoints around it. Popular libraries for implementing deep learning include 
+        <a href="https://www.tensorflow.org/">Tensorflow</a>, developed by Google and <a href="https://pytorch.org/">Pytorch</a> from Facebook.
       </p>
       <img src="./images/neutral-network-diagram.png" class="center">
+      <p>The four main types of ANN are:</p>
       <ul>
-        <li><b>Convolutional Neural Networks</b> Used extensively for image processing to perform classification and even develop generative algorithms.</li>
-        <li><b>Recurrent Neural Networks</b> - Used to analyse sequences of data.  Natural language is a popular example of RNNs in which the algoritm learns to 
-          recognise meaning in written or spoken language and has the ability to categorise positive, neutral and negative sentiment in text.</li>
-          <p>Pretrained libraries such as <a href="https://spacy.io/">Spacy</a> provide a powerful, pretrained model, that can allows the differnet parts of speech to be directly tagged and 
-            word similarity to be assed for a provided piece of text.</p>
-          <li><b>Reinforcement Learning</b> - Is a behavioural machine learning model that instead of being trained using sample data the model learns to maximise reward as it goes using trial and error. 
-            The algorithm l sequence of successful outcomes will be reinforced to develop the best recommendation or policy for a given problem.</li>  
+        <li><b>Convolutional Neural Networks</b> - sed extensively for image processing a CNN is able to reduce an image into a form which is easier to process, 
+          without losing features which are critical for obtaining a good prediction. Through passing the image through a range of filters and aggregating 
+          the values assigned to cells low-level features such as edges, colour, gradient orientation can be captured. These low-level features are then 
+          combined in subsequent layers to obtain a high-level understanding of the image content. 
+        </li>
+        <li><b>Recurrent Neural Networks</b> - Used to analyse sequences of data which is particularly pertinent in language processing or interpreting streamed IOT sensor data.  Pretrained libraries 
+          such as <a href="https://spacy.io/">Spacy</a> provide a powerful pretrained models that can be used to identify different parts of speech, sentiment and word similarity
+          for any given piece of text directly.</p>
+          <li><b>Reinforcement Learning</b> - Is a behavioural machine learning model that instead of being trained using sample data learns to maximise reward using trial and error. 
+            As the algorithm progressively learns which sequence behaviours returns the most successful outcome to devise an optimal policy for a given problem.</li>  
         <li><b>Generative Adversarial Networks</b> - discover and learn the regularities or patterns in input data in such a way that the model can be 
           used to generate new examples that plausibly could have been drawn from the original dataset.  This technique has been used to translate photographs across domains, 
           such as day to night or summer to winter, generate high-resolution versions of input images or even create new artistic images in the style of a particular artist, 
