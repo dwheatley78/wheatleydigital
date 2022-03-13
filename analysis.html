@@ -134,7 +134,7 @@
       </p>
         <ul>
           <li><b>Mixed Integer Linear Programming (MILP)</b> -  By defining the variables, constraints and objective function of a problem the algorithms identify the optimum solution for a given problem.
-          The <a href="https://www.gurobi.com/">Gurobi</a>web site provides some fascinating case studies where MILP has been used to great effect and, at a significant cost, is probably the most capable optimisation software available.
+          The <a href="https://www.gurobi.com/">Gurobi</a> web site provides some fascinating case studies where MILP has been used to great effect and, at a significant cost, is probably the most capable optimisation software available.
           Open-source Python alternatives such as <a href="http://www.pyomo.org/">Pyomo</a> and <a href="https://scipy.org/">Scipy</a> can provide similar capabilities without the expense.</li>
           
           <li><b>Econometrics</b> - The goal of econometrics is to understand cause-effect and statistical significance of relationships, often within the scope of policy evaluation.  this information is invaluable 
@@ -160,29 +160,30 @@
       <h2 style="padding:0px; float:left;">Machine learning techniques</h2>
      
      
-      <p style="padding:3px;clear:both;">Machine learning algorithms are used to make a prediction or classification and focus on making the best fit instead of 
-        understanding the underlying causality.  The main Python library for machine learning is <a href="https://scikit-learn.org/">Sci-kit learn</a>, which simplifies to 
-        process of training a wide variety of machine learning algorithms as well as providing pre-processing and techniques to comparing, validate and select the parameters and models
-        that give the best results.
+      <p style="padding:3px;clear:both;">Machine learning algorithms are used to predict an output value or classify an object based on the provided inputs data. In contrast with mathematical modelling machine learning 
+        focuses on making the best fit instead of understanding the underlying causality.  The main Python library for machine learning is <a href="https://scikit-learn.org/">Sci-kit learn</a>, which simplifies to 
+        process of training a wide variety of machine learning algorithms as well as providing pre-processing techniques and methods for comparing and validating parameters to select the model
+        that gives the best results.
       </p>
              
       <img src="./images/machine_learning_map.jpg" class="center">
-      <p>As shown in the above diagram, machine learning algorithms can be divided into 4 distinct groups.</p>
-      <b>Supervised learning</b>- Covers models in which a labelled datasets is used to train algorithms that can either classify data or predict outcomes. 
+      <p>As shown in the above diagram, machine learning algorithms can be divided into 4 distinct categories.</p>
+      
+      <b>Supervised learning</b> - Covers models in which a labelled datasets is used to train algorithms that can either classify data or predict outcomes. 
         As input data is fed into the model an error function serves to evaluate the quality of a model prediction to which weights are then adjusted to reduce 
-          the discrepancy. The algorithm then repeats this evaluation and optimisation process, updating weights autonomously until a threshold of accuracy has been met.  
-          Once the optimum values have been derived from the training set the algorithm can then apply to same weights to previously unseen data to make a prediction.
-
+          the discrepancy. The algorithm then repeats this evaluation and optimisation process, updating weights autonomously until a threshold accuracy has been satisfied.  
+          Once derived, these model weights are then applied to a previously unseen data set to allow predictions of the probable output to be made.
         <ul>
-          <li><b>Classification</b> These algorithms are used to identify which category an object belongs. Commonly used techniques include Support vector machines, logistic regression, nearest neighbours and random forest.</li>
+          <li><b>Classification</b> - These algorithms are used to identify which category an object belongs to. Commonly used techniques include Support vector machines, logistic regression, nearest neighbours and random forest.</li>
           <li><b>Regression</b>- In contrast regression algorithms predict a specific value based on the provided inputs.</li>
         </ul>
         
-        <b>Unsupervised learning</b> uses algorithms to analyse and cluster unlabelled  datasets. These algorithms discover hidden patterns or data groupings.  Their ability to 
+        <b>Unsupervised learning</b> - Uses algorithms to analyse and cluster unlabelled  datasets. These algorithms discover hidden patterns or data groupings.  Their ability to 
         discover similarities and differences in information make them the ideal solution for exploratory data analysis.
         <ul>
           <li><b>Clustering</b> - Automatically groups similar objects into sets and is widely used in applications like customer segmentation.  Commonly used algorithms include k-Means, spectral clustering </li>
-          <li><b>Dimension reduction</b> - Reducing the number of random variables to consider to enable complex object to be visualised and recommendation engines</li>          
+          <li><b>Dimension reduction</b> - Reducing the number of random variables simplifies the dataset enabling complex multidimensional data to be more easily visualised and reduce the computational cost of processing. 
+            This approach forms the basis of collaborative filtering algorithms used extensively in recommendation engine</li>          
         </ul>
     </div>
     <br/>
@@ -192,15 +193,22 @@
       <h2 style="padding:0px; float:left;">Deep learning techniques</h2>
       <p style="padding:3px;clear:both;"> An artificial neural network (ANN) uses multiple layers between the inputs and outputs of a model to 
         enable more complex relationships to be inferred.  While ANN's can be applied to all types of datasets they truely excel when modelling complex relationships
-        such as images, sound and language where the significance of a piece of data is a function of the datapoints around it. 
+        such as images, sound and language where the significance of a piece of data is a function of the datapoints around it. Popular libraries for implimenting 
+        deep learning include <a href="https://www.tensorflow.org/">Tensorflow</a>, developed by Google and <a href="https://pytorch.org/">Pytorch</a> from Facebook.
       </p>
       <img src="./images/neutral-network-diagram.png" class="center">
       <ul>
         <li><b>Convolutional Neural Networks</b> Used extensively for image processing to perform classification and even develop generative algorithms.</li>
         <li><b>Recurrent Neural Networks</b> - Used to analyse sequences of data.  Natural language is a popular example of RNNs in which the algoritm learns to 
           recognise meaning in written or spoken language and has the ability to categorise positive, neutral and negative sentiment in text.</li>
-        <li><b>Reinforcement Learning</b> - Provide behavioural machine learning models that instead of being trained using sample data the model learns to maximise reward as it goes using trial and error. 
-          The algorithm l sequence of successful outcomes will be reinforced to develop the best recommendation or policy for a given problem.</li>     
+          <p>Pretrained libraries such as <a href="https://spacy.io/">Spacy</a> provide a powerful, pretrained model, that can allows the differnet parts of speech to be directly tagged and 
+            word similarity to be assed for a provided piece of text.</p>
+          <li><b>Reinforcement Learning</b> - Is a behavioural machine learning model that instead of being trained using sample data the model learns to maximise reward as it goes using trial and error. 
+            The algorithm l sequence of successful outcomes will be reinforced to develop the best recommendation or policy for a given problem.</li>  
+        <li><b>Generative Adversarial Networks</b> - discover and learn the regularities or patterns in input data in such a way that the model can be 
+          used to generate new examples that plausibly could have been drawn from the original dataset.  This technique has been used to translate photographs across domains, 
+          such as day to night or summer to winter, generate high-resolution versions of input images or even create new artistic images in the style of a particular artist, 
+        people that </li>     
       </ul>
     </div>
 
