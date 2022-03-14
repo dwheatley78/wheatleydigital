@@ -68,7 +68,7 @@
             <span class="glyphicon glyphicon-stats"></span><br class="hidden-xs">Analyse</a>
         </li>
         <li>
-            <a class="highlight" href="production.html">
+            <a style="color:red">
               <span class="glyphicon glyphicon-road"></span><br class="hidden-xs">Productionise</a>
         </li>
         <li>
@@ -118,8 +118,7 @@
       provides access to a range of supporting books, tutorials and articles. The topics covered in the sections below are:
     </p>
     <ul>
-      <li><a href="#WebApps">Designing the solution</a> – An overview of web application architecture</li>
-      <li><a href="#Tech_Stack">Selecting the tools</a> – Our preferred  tools with which to develop web applications</li>
+      <li><a href="#WebApps">Designing the solution</a> – An overview of web application architecture and development tools</li>
       <li><a href="#DevOps">Effective Development</a> - A brief overview of software development best practice</li>
       <li><a href="#Data_Architecture">Structuring your data</a> – An understanding of how to store data and different types of database</li>
       <li><a href="#Hosting">Choosing a Hosting Environment</a> – Available options to deliver your application to a wider community</li>
@@ -129,62 +128,64 @@
     <div id="WebApps" style="background-color: white; padding:8px; border:2px solid black;">
       <h2>Designing a solution</h2>
       <img src="images/MVC.png" class="smlscr_image right_image">
-      <p>When building applications, the main objective is to make the functionality and data contained within it available to a 
-        range of users, both internal and external to the organisation.  Web Apps provide secure access to a range of users over the Internet through their web browser.  
-        This ability to  avoid the need to install specialist software on peoples' devices, allowing all updates to be deployed remotely and centralising the data store 
-        make Web Apps an ideal solution for most applications.  
-      </p>
       <p>
-        <a href="https://streamlit.io/" target="_blank">Streamlit</a> is a really useful Python library that enables simple Web Apps to be produced without any front end web development, 
-        making them an ideal means of sharing analytical models across an internal team.
+        Web Apps can provide functionality and secure access to data to a variety of users, both internal and external to the organisation through their web browser. 
+        The ability to avoid the need to install specialist software on people's devices, allowing updates to be easily deployed and centralising the data store make 
+        Web Apps the ideal solution for most data platform applications. 
       </p>
+
       <p>
-        For more complex solutions a more traditional approach to building applications will be required, splitting the functionality across server and client-side processing. For the majority of applications, we favour a Model View Controller (MVC) architecture, which balances the benefits of introducing a separation of concerns between the frontend and backend components while avoiding some of the complexity utilising microservices can cause. 
+        For the majority of applications, a Model View Controller (MVC) architecture, which splits the functionality across server and client-side processing.  
+        Looking at these three elements in more detail:
       </p>
-      
-      <p> The use of Application Programming Interfaces (API's) allows a programme to be broken into distinct services that communicates with other services through a well-defined interface such as an API.  This approach allows areas of the code to be developed in parallel and minimises the risk of unintended consequences so long as the interfaces between services are maintained.
-     
-      <p>
-        Following the user interface, which is controlled using a combination of HTML, CSS and JavaScript runs in the browser, whereas the business logic, authentication and interaction with the databases occurs on the server side. In the following section we explore our preferred technology stack when building these applications. 
-      </p> 
-      
       <ul>
         <li><b>Model</b> - The backend that contains all the data logic</li>
         <li><b>View </b> – The frontend or graphical user interface (GUI)</li>
         <li><b>Controller</b> – The brains of the application that controls how data is displayed.</li>
-      </ul>      
-    </div>
-    <br>
+      </ul>
 
-
-
-
-
-
-    <div id="Tech_Stack" style="background-color: white; padding:8px; border:2px solid black;">
-      <h2>Selecting the tools</h2>
       <p>
-        The options when selecting the languages, libraries and frameworks with which to develop an 
-        application can be overwhelming. While specific applications may necessarily drive towards different solutions it is 
+        While certain full stack tools will enable a complete web application to be built using a single framework if can be beneficial 
+        to separate the UI and data processing and storage element of the application using an Application Programming Interfaces (API's). 
+        APIs allow a programme to be broken into distinct services that communicates with other services introducing a proper separation of concerns 
+        and allowing the different areas of the code to be developed in parallel with minimal risk of unintended consequences so long as the interfaces 
+        between services are maintained. 
+      </p>
+     
+      <p>
+        When selecting the languages, libraries and frameworks with which to develop an 
+        application can be overwhelming. While specific applications may necessitate different solutions it is 
         useful to default stack that can guarantee affordability, supportability, reliability, and security.  
       </p>
       <p>
-        In the context of supporting data driven digital transformation the ability to incorporate machine learning models and analysis (detailed in the ANALYSE section of site) is paramount.  
-        We therefore look to use a Python framework to write our backend processes, maximising the ability to reuse code and minimising the breadth of knowledge required to manage these developed solutions.
-      </p> 
-      <p>
-        Another key consideration is to select popular open-source frameworks for which there is a rich source of training materials and support while avoiding costly licence fees.  
-        For these reasons, our default stack uses Django, React and PostgreSQL, which collectively provide a highly capable and supportable solution.  
-      </p>  
+        In the context of supporting data driven digital transformation the ability to incorporate machine learning models and <a href="./analysis">analysis</a> 
+         is paramount.  We therefore look to use a Python framework to write our backend processes, managing the business logic, authentication and 
+        interaction with the databases occurs on the server side.  Utilising Python has the benefit of reduced production times, rich user community and the
+        additional benefit of maximising the ability to reuse of the analytical code and minimising the breadth of knowledge required to manage these developed solutions.
+        To develop a user interface a combination of HTML, CSS and JavaScript are required for which a range of libraries and frameworks exist to simplify the development:
+      </p>
 
-        
-      <p>A brief outline of each of these is provided below.</p>
-  
+      <p>
+        As mentioned at the outset it is important to select well supported open-source frameworks for which there is a rich source of training materials and costly licence fees can be avoided.  
+        For these reasons, our default stack uses Django, React and PostgreSQL, which collectively provide a highly capable and supportable solution.  
+      </p>      
       <ul>
-        <li><a href="https://www.postgresql.org/">PostgreSQL</a> – provide a highly capable database to store the required data. It supports a wide variety of data types, provides integrity controls to prevent invalid or orphan records and powerful indexing methods to optimize performance. Advanced features such as full-text search speed up finding information and the ability to store non-relational data such as JSON and XML formats actually turns PostgreSQL into NoSQL database providing the flexibility to meet the evolving requirements of your applications. </li>
-        <li><a href="https://www.djangoproject.com/">Django</a> - is a Python backend (server-side framework) able to integrate easily with existing analytical and machine learning models.  Django provides a host of built-in advanced functionality such as admin panels, file upload support, authentication, comment boxes, contact forms, app management and a versatile toolkit for constructing web APIs to significantly reduce the time and effort in building robust web applications.</li>
-        <li><a href="https://reactjs.org/">React</a> – is a JavaScript frontend (client-side) framework used to build single page User Interfaces (UI).   Getting and setting data via requests to the Django backend.  As with Django, React comes with multiple component libraries, add-on packages and full template offerings to save developers a lot of time capable of producing engaging and intuitive user interfaces.</li>
-      </ul>
+        <li>
+          <a href="https://streamlit.io/" target="_blank">Streamlit</a> is a really useful Python library that enables simple Web Apps to be produced without any front end web development, 
+          making them an ideal means of sharing analytical models across an internal team.
+        </li>
+        <li><a href="https://www.djangoproject.com/">Django</a> - is a Python backend (server-side framework) able to integrate easily with existing analytical and machine learning models.  
+          Django provides a host of built-in advanced functionality such as admin panels, file upload support, authentication, comment boxes, contact forms, app management and a versatile 
+          toolkit for constructing web APIs to significantly reduce the time and effort in building robust web applications.</li>
+        <li>Full Django</li>
+        <li><a href="https://reactjs.org/">React</a> – is a JavaScript frontend (client-side) framework used to build single page User Interfaces (UI).   
+          Getting and setting data via requests to a Django backend.  As with Django, React comes with multiple component libraries, add-on packages and 
+          full template offerings to save developers a lot of time and is capable of producing engaging and intuitive user interfaces.</li>
+        </ul> 
+  
+
+  
+
     </div>
     <br>
 
@@ -192,12 +193,14 @@
     <div id="DevOps" style="background-color: white; padding:8px; border:2px solid black;">
       <h2>Effective Development</h2>
       <img src="images/DevOps.png" class="smlscr_image right_image">
-      <p>DevOps has become the software industry best practice way of working, combining cultural philosophies, practices, 
+      <p>
+        Equally as important as the applications construction are the processes used to build and deploy the service.
+        In the last 10 years DevOps has established itself as the software industry best practice way of working, combining cultural philosophies, practices, 
         and tools to develop and evolve applications faster and more reliably.
       </p>
       <p>
-        At its heart DevOps is about creating flow between the various process stages, represented by a figure of eight shown.
-        Through improving communication and feedback, identify issues early and automating processes where possible gives the team the best possible chance of success.
+        At its heart DevOps is about creating flow between the various process stages, represented by a figure of eight.
+        Through improving communication and feedback, identify issues early and automating processes where possible to provide the team the best possible chance of success.
       </p> 
       <p>We outline a few key concepts that should be understood, however for a more comprehensive account of DevOps practices refer to 
         <a href="https://itrevolution.com/the-devops-handbook/"  target="_blank">The DevOps Handbook</a>.
@@ -207,10 +210,10 @@
       <ul style="clear:both">
         <li><b>Agile </b> – When operating with a high degree of uncertainty traditional project management techniques don’t work.  Agile, as defined in more detail in the book
           <a href="https://www.scruminc.com/new-scrum-the-book/" target="_blank">Scrum The Art of Doing Twice The Work In Half the Time</a>, is an approach to project management 
-          in which small 2-3 week sprints of activity are planned, each of which deliver demonstrable capability, which can be tested with the user.
+          in which small 2-3 week sprints of activity are planned, each of which delivers demonstrable capability.
         </li>
-        <li><b>Minimum Viable Product (MVP) </b> - When developing a new application we need produce something with just enough features to encourage users 
-          to adopt the solution.  These users then support its iterative evolution constantility testing enhancements and learning from the feedback received.
+        <li><b>Minimum Viable Product (MVP) </b> - When developing a new application, we need produce something with just enough features to encourage users 
+          to adopt the solution.  These users then support the iterative development of the application testing enhancements and enabling the developers to learn from the feedback received.
         </li>
         
         <li><b>Version control systems</b> - Systems such as <a href="https://git-scm.com/" target="_blank">Git</a> provide a means of storing, sharing and tracking changes to source 
@@ -219,20 +222,26 @@
         </li>
         
         <li><b>Code Formatting</b>  While the software your code communicates with doesn’t care how the code looks, other developers who may have to work on it in the future 
-          certainly do. When everyone is writing code that looks the same, your brain can relax a bit as the understanding comes faster.  Using opinionated formatting  tools, 
-          like <a href="https://black.readthedocs.io/en/stable/">Black</a> can enforce rules automatically to simplify the process of writing well structured code.</li>
+          certainly do. When everyone is writing code that looks the same, your brain can relax a bit as the understanding comes faster.  Using opinionated formatting tools 
+          can enforce rules automatically to simplify the process of writing well structured code.</li>
         <li><b>Testing</b> - is fundamental to ensure good quality code is being written and allows changes to be quickly validated.  The main types of testing used are:
           <ul>
-            <li>Unit Testing - refers to taking a component of a program and testing it in isolation by writing functionally independent components unit tests can be easily automated to validate changes,  test dependencies and handling of edge cases.</li>
-            <li>Functional Testing - checks the compliance of the system overall against a defined set of criteria. In other words, does the software as a whole do what it’s supposed to do?</li>
-            <li>Regression Testing - running previously written tests whenever a new change is introduced to the code allowing you to remain confident that your code continues to function as expected as it grows in complexity and capability.</li>
+            <li>Unit Testing - refers to taking a component of a program and testing it in isolation these tests can then be 
+              automated to validate changes,  test dependencies and handling of edge cases.</li>
+            <li>Functional Testing - checks the compliance of the system overall against a defined set of criteria. In other words, does the software as a whole do what it’s 
+              supposed to do?</li>
+            <li>Regression Testing - running previously written tests whenever a new change is introduced to the code allowing you to remain confident that your code continues
+               to function as expected as it grows in complexity and capability.</li>
           </ul>
           
            
           
 
-        <li><b>Continuous integration</b> – is a software development practice where developers regularly merge their code changes into a central repository, after which automated tests validate the code quality.  A robust approach to ensure good test coverage enables bugs to be found quicker, improve software quality, and reduce the time it takes to validate and release new software updates.</li>
-        <li><b>MLOPS</b>– Extends the concept of DevOps to machine learning models where integration not only covers testing and validating code but is now extended to test and validate the data in the system including the retraining and serving of models as required.</li>
+        <li><b>Continuous integration</b> – is a software development practice where developers regularly merge their code changes into a central repository, 
+          after which automated tests validate the code quality.  A robust approach that ensures good test coverage enables bugs to be found quicker, improve software quality, 
+          and reduce the time it takes to validate and release new software updates.</li>
+        <li><b>MLOPS</b>– Extends the concept of DevOps to machine learning models where integration not only covers testing and validating code but is now extended to test 
+          and validate the data in the system including the retraining and serving of models as required.</li>
       </ul>     
     </div>
     <br>
@@ -241,23 +250,20 @@
       <h2>Structuring your data</h2>
       <p>The objective of a good data architecture is to ensure that all the information requires running your business is accurate, consistent and accessible.
         The first step in this process is often ensure that key information is stored centrally instead of distributed across a variety of personal computers 
-        and drives, known as a <b>Data Lake</b>.  By creating this <b>Data Lake</b>, storing raw data, of various formats, in its native form in one common location functions
-        from around the business can begin to develop the various analytical models discussed in the analyse page.
+        and drives, known as a <b>Data Lake</b>.  By creating this <b>Data Lake</b>, storing raw data, of various formats, in its native form in one common location.
       </p>
-      <p>Having created a <b>Data Lake</b>, it will invariably become apparent that different versions of the same data exist, that they are contradict each other and 
-        that that significant work is still required to prepare the data into a format suitable for analysis.
-      </p>
-      <p>A <b>Data Warehouse</b> merges information from these different sources and consolidates them through an extract, transform and load process, also known as ETL 
-        process, into a comprehensive database. At a very high level, the ETL process extracts the data from multiple sources, transforms it into a cleaned format, 
-        which can then be used for business processes, and finally that data into a structure data repository. When data is loaded into the <b>Data Warehouse</b>, it is 
+      <p>Having created a <b>Data Lake</b>, it will invariably become apparent that different versions of the same data exist, that contradict each other and 
+        that that significant work is still required to prepare the data into a format suitable for analysis. A <b>Data Warehouse</b> merges information from 
+        these different sources and consolidates them through an extract, transform and load (RTL) process, into a comprehensive database. At a very high level, 
+        the ETL process extracts the data from multiple sources, transforms it into a cleaned format, 
+        which can then be used for business processes. When data is loaded into the <b>Data Warehouse</b>, it is 
         modelled and structured, ready for a specific purpose.
       </p>
-      <p>The problem arises, as new unstructured data needs to be ingested from the <b>Data Lake</b> into the <b>Data Warehouse</b>, which can become impossible to control. 
-        The solution is to build dedicated applications that collect and validate the data at the point of entry and store the information in <b>Data Marts</b>.
-      </p>
-      <p>As discussed in the production page these applications are aligned to core business processes and customer services to drive efficiency and 
-        effectiveness while the <b>Data Marts</b> themselves effectively combine to form the <b>Data Warehouse</b>. Depending on the data requirements of the application the data 
-        marts can be considered as either:
+      <p>The problem arises, as new unstructured data needs to be ingested into the <b>Data Warehouse</b>, which can become impossible to control. 
+        The solution is to build an application, aligned to core business processes and customer services, to   
+        collect and validate the data at the point of entry This data is then stored in a dedicated database, known as a <b>Data Mart</b>.
+        which form part of the wider <b>Data Warehouse</b>. Depending on the data requirements of the application the <b>Data Mart</b> 
+        can be considered as either:
       </p>
       <ul>
         <li>Independent - Created by drawing from operational or external data sources normally used to capture business or customer data that would otherwise 
@@ -270,12 +276,16 @@
         strengths and limitations.
       </p>
       <ul>
-        <li>Relational database are the go to solution, providing a strict structure / schema, ensuring the data contains a predefined list of components ensuring 
-          that the data held is predictable, easily assessable and significantly reducing the chance of errors.
+        <li>Relational databases are the go-to solution, providing a strict structure / schema, ensuring the data contains a predefined list of components, 
+          easily accessible and significantly reduces the chance of errors.
         </li>
         <li>Non-relational database organization are more forgiving in their structure. Instead of tables with columns and rows, they have collections of different 
-          categories allowing records of varying shape to be stored.  In recent years traditional SQL databases such as Postgres have adapted to store storage of 
-          JSON and Array datatypes enabling them to provide a Hybrid database to deliver the best of both.
+          categories allowing records of varying shape to be stored. 
+          <p><a href="https://www.postgresql.org/">PostgreSQL</a> – provides a highly capable database to store the required data. It supports a wide variety of data types, 
+            provides integrity controls to prevent invalid or orphan records and powerful indexing methods to optimise performance. Advanced features such as full-text search 
+            speed up finding information and the ability to store non-relational data such as JSON and XML formats enable PostgreSQL to provide NoSQL database capabilities providing the 
+            flexibility to meet the evolving requirements of your applications.
+          </p>
         </li>
         <li>Graph databases are a relatively new form of database that capture both the entities and relationships between different data points. These databases 
           rose to prominence with the growth of network analytics, as used extensively by Facebook and Google. Neo4J offers an effective Graph database solution 
@@ -293,13 +303,13 @@
         <h2>Choosing a Hosting Environment</h2>
         <p>There are fundamentally two types of hosting arrangement available.</p>
         <p>
-          <b>Statically hosting</b>- enables web pages serve up the same page to HTML, CSS and JavaScript to all users who enter the site, in reality this is nothing more than a file store.
+          <b>Statically hosting</b> - enables web pages serve up the same page to HTML, CSS and JavaScript to all users who enter the site, in reality this is nothing more than a file store.
             As no processing is required on the server these pages are generally faster and can be hosted at minimal, or no, cost using a variety of service providers including our 
-            favourite GitHub Pages.
+            favourite <a href="https://pages.github.com/">GitHub Pages</a>.
         </p> 
-        <p><b>Dynamic hosting</b> -enables the processing of content and storage of data on the server.  Dynamic hosting can be provided on any corporate network or by a cloud 
-          service provider however these services can become complex to manage.  If you have a team already set, up to configure and manage servers these options provide the 
-          greatest flexibility however they can be difficult to manage and control cost if you don’t have the prerequisite skills.
+        <p><b>Dynamic hosting</b> - enables the processing of content and storage of data on the server.  Dynamic hosting can be provided on any corporate network or by a cloud 
+          service provider.  If you already have an IT team  capable of setting up, configure and managing servers this option provides the 
+          greatest flexibility.
         </p>
         
         <p>An alternative solution is to opt for a PaaS (platform as a service) offering a more managed, low configuration services, making it incredibly easy to get up and running 
