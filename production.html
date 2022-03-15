@@ -60,19 +60,19 @@
     <div id="collapsable-nav" class="collapse navbar-collapse">
       <ul id="nav-list" class="nav navbar-nav navbar-right">
         <li>
-          <a class="highlight" href="strategy.html">
+          <a class="highlight_b" href="strategy.html">
             <span class="glyphicon glyphicon-dashboard"></span><br class="hidden-xs">Strategise</a>
         </li>
         <li>
-          <a class="highlight" href="analysis.html">
+          <a class="highlight_g" href="analysis.html">
             <span class="glyphicon glyphicon-stats"></span><br class="hidden-xs">Analyse</a>
         </li>
         <li>
-            <a style="color:red">
+            <a style="color:rgb(243,107,45)">
               <span class="glyphicon glyphicon-road"></span><br class="hidden-xs">Productionise</a>
         </li>
         <li>
-          <a class="highlight" href="contact.html">
+          <a class="highlight_r" href="contact.html">
             <span class="glyphicon glyphicon-user"></span><br class="hidden-xs">Contact</a>
       </li>
 
@@ -97,32 +97,32 @@
           Furthermore, when providing services directly to your customers, it is essential that the look and feel of the application match the company values you wish to portray.
       </li>
     </ul>
-    <img src="images/production_cats.png" class="center">
+    <img src="images/webapp_cats.png" class="center">
     <p>
       Web Applications provide the perfect solution to both these issues but in order to be successful it is essential that they satisfy the following 5 core requirements . 
     </p>
     <ul>
-      <li><b>Affordability</b> - Avoid expensive licence fees by using freely available open-source tools </li>
-      <li><b>Maintainability</b> - Ensure code is well documented and written using popular, well supported languages</li>
-      <li><b>Scalability</b> - It is essential that solutions can grow to support your longer-term aspirations</li>
-      <li><b>Usability</b> - The user interface (UI) must be intuitive, engaging and provide the necessary data validation.</li>      
-      <li><b>Security</b> - Ensure that the application stores data securely and provides robust access and permission management</li>
+      <li><b>Affordability</b> - Avoid expensive licence fees by using freely available open-source tools.</li>
+      <li><b>Maintainability</b> - Ensure code is well documented and written using popular, well-supported, programming languages.</li>
+      <li><b>Scalability</b> - Solutions should be designed with growth in mind, ensuring they can continue to satisfy your longer-term digital aspirations.</li>
+      <li><b>Usability</b> - User interfaces (UI) must be intuitive, engaging and provide the necessary data validation.</li>      
+      <li><b>Security</b> - Data must be stored securely and robust access and permission management provided by the application.</li>
 
     </ul>
 
 
     <p>
-      On this page we discuss the methodologies and tools used by <span id="brand">EMPEDATA</span> to develop effective applications that satisfy all of the above criteria.
+      On this page we discuss the methodologies and tools used by <span id="brand">EMPEDATA</span> to develop effective applications that satisfy the above criteria.
 
       As with our <a href="./analysis.html">analytics</a> page, we also provide a <a href="#home-tiles">project portfolio</a> to show case solutions we have built and 
       a <a href="./skills.html">skills page</a> with links to a range of books, tutorials and articles to further your understanding of the topic.
     </p>
-    <p>On page we cover:</p>
+    <p>The main topics we cover here are:</p>
     <ul>
-      <li><a href="#WebApps">Designing an application</a> – An overview of web application architecture and development tools</li>
-      <li><a href="#DevOps">Effective development</a> - A brief overview of software development best practice</li>
-      <li><a href="#Data_Architecture">Structuring your data</a> – An understanding of how to store data and different types of database available</li>
-      <li><a href="#Hosting">Choosing a hosting environment</a> – Options for delivering your application to a wider community</li>
+      <li><a href="#WebApps">Designing an application</a> – Web application architecture and development tools.</li>
+      <li><a href="#DevOps">Effective development</a> - A brief overview of software development best practice.</li>
+      <li><a href="#Data_Architecture">Structuring your data</a> – How to store data and different types of database available.</li>
+      <li><a href="#Hosting">Choosing a hosting environment</a> – Options for delivering your application to a wider user community.</li>
     </ul>
 
 
@@ -130,17 +130,17 @@
       <h2>Designing an application</h2>
       <img src="images/MVC.png" class="smlscr_image right_image">
       <p>
-        Web Apps can provide the required functionality and secure data access to a variety of users through their web browser. 
-        The ability to avoid having to install specialist software on people's devices, allowing updates to be easily deployed and centralising the data store make 
-        Web Apps the ideal solution to satisfy the requirement of most data platforms. 
+        Web Apps can provide functionality and secure data access to a variety of users through their web browsers. 
+        The ability to avoid installing specialist software on people's devices, allowing updates to be easily deployed and centralising the data store make 
+        Web Apps the ideal data platform solution. 
       </p>
       <p>
-        For simple analytical applications the <a href="https://streamlit.io/" target="_blank">Streamlit</a> library enables web apps to be created entirely using Python
+        For simple analytical applications the <a href="https://streamlit.io/" target="_blank">Streamlit</a> library enables web apps to be created entirely using Python,
         without the need for separate front end web development, making them ideal for sharing analytical models amongst an internal team.
       </p>
       <p>
         For the majority of applications however, it will be necessary to develop a user interface using a combination of HTML, CSS and JavaScript.
-        A Model View Controller (MVC) architecture, provides separation of concerns between three elements provides and gives an appropriate balance between complexity and control:
+        A Model View Controller (MVC) architecture an appropriate balance between complexity and control by introducing some separation of concerns between the three core elements :
       </p>
       <ul>
         <li><b>Model</b> - The backend that contains all the data logic.</li>
@@ -150,20 +150,20 @@
       
       <p>
         Our preferred web development framework for server-side applications is <a href="https://www.djangoproject.com/">Django</a>.
-        Django is a Python library making integration with existing analytical / machine learning models it also provides built-in functionality such as admin panels, 
+        Django is a Python library, simplifying the integration with existing analytical / machine learning models and provides built-in functionality such as admin panels, 
         file upload support, authentication, comment boxes, contact forms and app management which all significantly reduce the time and effort required to build robust 
         web applications.</li>
       </p>
       <p>
-        In some circumstances if can be beneficial to further separate the UI and data processing and storage element of the application using an Application Programming Interfaces (API's). 
-        APIs allow a programme to be broken into distinct services that communicate with other services allowing the benefits of the seperate languages to be realised and
-        developed in parallel with minimal risk of unintended consequences so long as the interfaces 
-        between services are maintained. To support this approach Django also provides a versatile toolkit for constructing web APIs 
+        In some circumstances if can be beneficial to further separate the UI and data processing and storage element of the application using an Application Programming Interface (API). 
+        APIs allow a programme to be broken into distinct services that communicate with other services allowing the separate sections to be developed in parallel with minimal risk of unintended consequences, so long as the interfaces 
+        between services are maintained. To support this approach Django also provides a versatile toolkit for constructing web APIs. 
       </p>
       <p>
-        The frontend (client-side) functionality of web application is provuded using JavaScript for which a variery of frameworks exist to provide predefined functionality and templates to save developers a lot of time 
-        The most popular Javascript framework at present is <a href="https://reactjs.org/">React</a>, developed by Facebook.  React creates a single page application populated using data transfered via requests to the Django backend.
-        One of the strongest features of React is the focus on developing common, reusable UI components to deliver engaging and intuitive user interfaces and ensure consitancy across applications. 
+        The frontend (client-side) functionality of web application is provided using JavaScript for which a variety of frameworks exist.  
+        These frameworks enable developers to take advantage of existing functionality and templates, reducing development time and increasing software quality.
+         <a href="https://reactjs.org/">React</a> is currently the most used front-end web application framework and focuses on developing common, reusable UI components to deliver engaging 
+        and intuitive user interfaces and ensure consistency across applications.
       </p>        
     </div>
     <br>
@@ -179,7 +179,7 @@
       </p>
       <p>
         At its heart DevOps is about creating flow between the various process stages, represented by a figure of eight.
-        Through improving communication and feedback, identifing issues early and automating processes where possible to provide the team the best possible chance of success.
+        Through improving communication and feedback, identifying issues early and automating processes where possible to provide the team the best possible chance of success.
       </p> 
       <p>We outline a few key concepts that should be understood, however for a more comprehensive account of DevOps practices refer to 
         <a href="https://itrevolution.com/the-devops-handbook/"  target="_blank">The DevOps Handbook</a>.
@@ -201,8 +201,8 @@
         </li>
         
         <li><b>Code Formatting</b>  While software doesn’t care how the code looks, other developers who may have to work on it in the future 
-          certainly do. When everyone is writing code that looks the same, it becomes easier to underand and ammend.  Using opinionated formatting tools 
-          can  styling enforce rules to simplify the process of writing well structured code.</li>
+          certainly do. When everyone is writing code that looks the same, it becomes easier to understand and amend.  Using opinionated formatting tools 
+          can  styling enforce rules to simplify the process of writing well-structured code.</li>
         <li><b>Testing</b> - is fundamental to ensure good quality code is being written and allows changes to be quickly validated.  The main types of testing used are:
           <ul>
             <li>Unit Testing - refers to taking a component of a program and testing it in isolation, these tests can then be 
@@ -233,12 +233,12 @@
       </p>
       <p>Having created a <b>Data Lake</b>, it will become apparent that different, contradictory, versions of the same data exist necessitating significant work
         to convert it into a format suitable for analysis. To manage this situation it is necessary to create a process to extract the data from multiple sources, 
-        transform it into a cleaned format and load load it into a structured database, called a <b>Data Warehouse</b>.  This process of transforming the date so 
-        that it is optimised for specific business purpose is commonly referd to as an ETL process.
+        transform it into a cleaned format and load it into a structured database, called a <b>Data Warehouse</b>.  This process of transforming the date so 
+        that it is optimised for specific business purpose is commonly referred to as an ETL process.
       </p>
       <p>The problem arises, as new unstructured data needs to be ingested into the <b>Data Warehouse</b>. 
-        The solution is build an application, as defined above, to collect and validate the data at the point of entry This data is then stored in a dedicated database, 
-        known as a <b>Data Mart</b>, which in tern forms a component of the wider <b>Data Warehouse</b> capablity. Depending on the data requirements of the application the <b>Data Mart</b> 
+        The solution is to build an application, as defined above, to collect and validate the data at the point of entry This data is then stored in a dedicated database, 
+        known as a <b>Data Mart</b>, which in turn forms a component of the wider <b>Data Warehouse</b> capability. Depending on the data requirements of the application the <b>Data Mart</b> 
         can be considered as either:
       </p>
       <ul>
@@ -263,14 +263,17 @@
           rose to prominence with the growth of network analytics, as used extensively by Facebook and Google. 
         </li>          
       </ul>
-      <p>In terms of selecting a database to use we again look to satisfy the success criteria as originally outlined.  Our recommendation for nearly all applications is to use
-        <a href="https://www.postgresql.org/">PostgreSQL</a> which is a highly capable open-sourcedatabase that supports a wide variety of data types. It
-        provides integrity controls to prevent invalid or orphan records and powerful indexing methods to optimise performance, advanced features such as full-text search 
-         and the ability to store non-relational data such as JSON and XML formats which enables PostgreSQL to also satisfy the demands of all but the most speciallist applications.
+      <p> 
+        Our choice of database when building web application is a combination of <a href="https://www.postgresql.org/">PostgreSQL</a> and <a href="https://neo4j.com/">Neo4j</a>
+        These products both satisfy the 5 criteria of tool selection outlined at the top of this page  and can be easily integrated into your Django applications to form part 
+        of your wider <b>Data Warehouse</b> capability.
       </p>
       <p>
-         Both PostgreSQL and Neo4j can be easily integrated into your Django applications and form part of your wider <b>Data Warehouse</b> capability.
+        PostgreSQL is traditionally considered as a highly capable open-source relational database although recent enhancements have enabled it to be used to store non-relational
+         data such as JSON and XML formats. Additional strength includes integrity controls that can prevent invalid or orphan records, a powerful indexing method to optimise
+          performance and advanced features such as full-text search.  
       </p>
+
     </div>
     <br>
 
