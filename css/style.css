@@ -38,7 +38,7 @@ body {
     padding-top: 25px;
   }
   
-  .navbar-brand .brand { /* WHEATLEY */
+  .navbar-brand .brand { /* EMPEDATA */
     font-family: 'Oxygen', sans-serif;
     color: white;
     font-size: 2em;
@@ -124,7 +124,7 @@ body {
   }
   .navbar-header button.navbar-toggle {
     clear: both;
-    margin-top: -30px;
+    margin-top: -45px;
   }
 
 
