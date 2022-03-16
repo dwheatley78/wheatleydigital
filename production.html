@@ -202,16 +202,15 @@
         </li>
         
         <li><b>Code Formatting</b>  While software doesn’t care how the code looks, other developers who may have to work on it in the future 
-          certainly do. When everyone is writing code that looks the same, it becomes easier to understand and amend.  Using opinionated formatting tools 
-          styling rules can be enforced simplifying the process of writing well-structured code.</li>
+          certainly do. When everyone is writing code that looks the same, it becomes easier to understand and amend.  Opinionated formatting tools 
+          can be used to enforce styling rules and simplifies the process of writing well-structured code.</li>
         <li><b>Testing</b> - is fundamental to ensure good quality code is being written and allows changes to be quickly validated.  The main types of testing are:
           <ul>
             <li>Unit Testing - refers to taking a component of a program and testing it in isolation, these tests can then be 
               automated to validate changes,  test dependencies and handling of edge cases.</li>
             <li>Functional Testing - checks the compliance of the overall system against a defined set of criteria. In other words, does the software do what it’s 
               supposed to do?</li>
-            <li>Regression Testing - running previously written tests whenever a new change is introduced to confirm it continues to function as expected as the application grows in 
-              complexity and capability.</li>
+            <li>Regression Testing - running previously written tests whenever a new change is introduced to confirm it continues to function as expected.</li>
           </ul>
           
            
@@ -233,12 +232,12 @@
         and drives.  Storing raw data, of various formats, in its native form in one common location is known as a <b>Data Lake</b>.
       </p>
       <p>Having created a <b>Data Lake</b>, it will probably become apparent that different, contradictory, versions of the same data exist and require significant work
-        to convert it into a format suitable for analysis. To manage this situation it is necessary to create a process to extracting the data from multiple sources, 
+        to convert it into a format suitable for analysis. To manage this situation it is necessary to create a process for extracting the data from multiple sources, 
         transforming it into a cleaned format and loading it into a structured database, called a <b>Data Warehouse</b>.  This process of transforming and storing the data 
-        in a format optimised for specific business purpose is commonly referred to as an ETL process.
+        in a format optimised for a specific business purpose is commonly referred to as an ETL process.
       </p>
       <p>The problem arises as new unstructured data needs to be ingested into the <b>Data Warehouse</b>. 
-        The solution is to build an application, as defined above, to collect and validate the data at the point of entry This data is then stored in a dedicated database, 
+        The solution is to build an application, as defined above, to collect and validate the data at the point of entry. This data is then stored in a dedicated database, 
         known as a <b>Data Mart</b>, which in turn forms a component of the wider <b>Data Warehouse</b> capability. Depending on the data requirements of the application the <b>Data Mart</b> 
         may be considered as either:
       </p>
@@ -265,16 +264,21 @@
         </li>          
       </ul>
       <p> 
-        Our choice of database when building web application is a combination of <a href="https://www.postgresql.org/">PostgreSQL</a> and <a href="https://neo4j.com/">Neo4j</a>
-        These products are both, satisfy the 5 criteria of tool selection outlined at the top of this page and can be easily integrated into your Django applications to form part 
-        of your wider <b>Data Warehouse</b> capability.
+        A combination of <a href="https://www.postgresql.org/">PostgreSQL</a> and <a href="https://neo4j.com/">Neo4j</a>
+        satisfy the requirements of all web application data platforms.  They both satisfy all of the 5 tool selection 
+        criteria outlined at the top of this page and can be easily integrated with Django. 
       </p>
-      <p>
-        Neo4j is the world’s leading  graph database graph database while PostgreSQL is a hybrid database, built on a relational architecture but with recent enhancements 
-        that have enabled it to store JSON and XML data formats though which it can also provide NOSQL capabilities. 
-        Additional strengths of PostgreSQL include its integrity controls that can prevent invalid or orphan records, powerful indexing methods to optimise performance and advanced 
-        features such as full-text search.  
-      </p>
+      <ul>
+        <li>
+          Neo4j is the world’s leading graph database graph database and is capable of providing fast high integrity graph storage.  
+          It comes with a dedicated query language that provides fast read and write performance and wealth of training materials to help you get started. 
+        </li>
+        <li>
+          PostgreSQL is a hybrid database, while traditionally considered as a relational database, Postgres has recently included the ability to store 
+          JSON and XML data formats, which provides the required NOSQL capabilities. Additional strengths of PostgreSQL include integrity controls that 
+          can prevent invalid or orphan records and high performance through advanced indexing and full-text search methods. 
+        </li>
+      </ul>
 
     </div>
     <br>
@@ -287,7 +291,7 @@
         <h2>Choosing a Hosting Environment</h2>
         <p>There are fundamentally two types of hosting arrangement available.</p>
         <p>
-          <b>Statically hosting</b> - enables web pages serve up the same HTML, CSS and JavaScript to all users who enter the site, in reality this is nothing more than a file store.
+          <b>Statically hosting</b> - enables web pages to serve up the same HTML, CSS and JavaScript to all users who enter the site.
             As no processing is required on the server these pages are generally faster and can be hosted at minimal or no cost.
         </p> 
         <p><b>Dynamic hosting</b> - enables the processing of content and storage of data on the server.  Dynamic hosting can be provided on any corporate network or by a cloud 
