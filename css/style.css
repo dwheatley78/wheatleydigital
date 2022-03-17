@@ -16,7 +16,6 @@ body {
 
   h4{
     color:rgb(65, 190, 234);
-
   }
   
   /** HEADER **/
@@ -307,4 +306,46 @@ body {
 }
 
 
-  
+  /* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: rgb(40,40,40);
+  color: white;
+
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border:2px solid black;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: rgb(65, 190, 234);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+
+.active:after {
+  content: "\2212";
+}

@@ -85,7 +85,7 @@
   <p id="p1">Hi!</p>
 
   <p>
-    My name is David and I am the founder of <span id="brand">EMPEDATA</span> I'd love to tell you more about our company and how we got started, but 
+    My name is David and I am the founder of <span id="brand">EMPEDATA</span>, I'd love to tell you more about our company and how we got started, but 
     before I do maybe you'd like to tell me a bit about yourself? 
   </p>
 
@@ -136,10 +136,11 @@
 
   </form>
   <br>
-  
-  <div style="background-color: white; padding:8px; border:2px solid black;">
-    <h2>Allow me to introduce myself</h2>
-    
+
+  <h3 class="accordion">Allow me to introduce myself</h3>
+  <div class="panel">
+    <br/>
+   
     <img src="./images/david.png" alt="David" style="height: 175px; float: left;"/>
     <p>
       Hi my name is David, I've spent over 15 years creating empowered environments and driving organisational change across operational, logistical and engineering businesses functions thoughout Europe, 
@@ -160,11 +161,10 @@
        in to find out more!
     </p>
   </div>
-  <br>
-  
-  <div style="background-color: white; padding:8px; border:2px solid black;">
-    <h2>The <span id="brand">EMPEDATA</span> difference</h2>
-    
+
+  <h3 class="accordion">The <span id="brand">EMPEDATA</span> difference</h3>
+  <div class="panel">
+    <br/>   
     <img src="./images/EMPEDATA.png" alt="David" style="height: 75px; float: left;"/>
     <p>
       Driving transformation is inevitably a voyage into the unknown, but it doesn't need to be intimidating.  
@@ -219,16 +219,24 @@
   </div>
 </footer>
   
-</body>
-</html>
-
-
-
-
-
-
-
 <script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+  </script>
+  
+  <script>
   const d = new Date();
   let hour = d.getHours();
   if (hour > 17) {
@@ -242,6 +250,16 @@
     }
   document.getElementById("p1").innerHTML = greeting;
 </script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
 
 
 
