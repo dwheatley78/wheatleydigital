@@ -87,5 +87,15 @@
     background-position: center;
 }
 
+#email-tile {
+  background: url('../images/email_network.png') no-repeat;
+  background-position: center;
+}
+
+#twitter-tile {
+  background: url('../images/twitter_sentiment.png') no-repeat;
+  background-position: center;
+}
+
 
   

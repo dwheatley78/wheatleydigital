@@ -46,7 +46,7 @@ button{overflow:visible}
 .padding{padding:8px 16px!important}
 .right{float:right!important}
 .button:hover{color:#000!important;background-color:#ccc!important}
-.blue,.hover-blue:hover{color:#fff!important;background-color:rgb(54, 133, 196)!important}
+.blue,.hover-blue:hover{color:#fff!important;background-color:rgb(40, 40, 40)!important}
 .black,.hover-black:hover{color:#fff!important;background-color:#000!important}
 .light-grey,.hover-light-grey:hover,.light-gray,.hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
 
