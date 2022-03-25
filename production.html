@@ -105,6 +105,89 @@
         <li><b>Security</b> - Data must be securely stored and robust access and permission management be provided.</li>
       </ul>
     </p>
+
+    <h3 class="accordion">Effective development</h3>
+    <div class="panel">
+      <br/>    
+      <img src="images/DevOps.png" alt="devops figure of eight" class="smlscr_image right_image">
+      <p>
+        Equally as important as the applications construction are the processes used to build and deploy the service.
+        In the last 10 years DevOps has established itself as software industry best practice, combining cultural philosophies, methodologies, 
+        and tools to develop and evolve applications faster and more reliably.
+      </p>
+      <p>
+        DevOps has connotations of large scale, cloud based applications servicing millions of customers and deploying updates every minute.
+        While this is true of some organisations, such as Amazon, DevOps is principally about creating flow between the various process stages of an
+        applications lifecycle, represented by the figure of eight shown.
+        Through improving communication and feedback, identifying issues early and automating processes where possible to give the team the best possible chance of success.
+      </p> 
+      <p>We outline a few key concepts that should be understood, however for a more comprehensive account of DevOps practices we recommend
+        <a href="https://itrevolution.com/the-devops-handbook/"  target="_blank">The DevOps Handbook</a> by Gene Kim.
+      </p>
+     
+      <h4>Scrum</h4>
+      <ul style="clear:both">
+        <li><b>Agile </b> – When operating in a development environment, where there is a high degree of uncertainty, traditional project management techniques don’t work.  Agile, as defined in more detail in the book
+          <a href="https://www.scruminc.com/new-scrum-the-book/" target="_blank">Scrum The Art of Doing Twice The Work In Half the Time</a>, is an approach to project management 
+          in which small 2-3 week sprints of activity are planned, each of which delivers a demonstrable package of capability.
+        </li>
+       
+        <li><b>Project Backlog</b> – A level list of everything that needs to be built or done to make the vision a reality in order of priority.</li>
+        <li><b>Sprint planning</b> – Refining the backlog to ensure all the necessary information is available to estimate the relative size of a task 
+          and deciding how much of this work can be accomplished in the fixed time window of the sprint.
+        <li><b>Daily Standup</b> –   A daily review of a Kanban board that tracks the sprint activities between "to do", "doing" and "done" in 
+          which the team members report on what they did yesterday, what they plan to do today and any obstacles they are facing.</li>
+        <li><b>Sprint Demo</b> – At the end of the sprint the team show what they have accomplished to any interested stakeholders.</li>
+        <li><b>Retrospectives</b> – A meeting in which the team examines how the sprint went and what could have potentially gone better with the goal of identifying opportunities to improve.</li>
+      </ul>
+      <h4>Process automation</h4>
+       <ul>
+        <li><b>Version control systems</b> - Systems such as <a href="https://git-scm.com/" target="_blank">Git</a> provide a means of storing, sharing and tracking changes to source 
+          code in a special kind of database. This repository is an invaluable source of information that needs to be protected from both catastrophic events and the casual degradation by 
+          human error.
+        </li>
+        <li><b>Code Formatting</b>  While software doesn’t care how the code looks, other developers who may have to work on it in the future 
+          certainly do. When everyone is writing code that looks the same, it becomes easier to understand and amend.  Opinionated formatting tools 
+          can be used to enforce styling rules and simplifies the process of writing well-structured code.</li>
+        <li><b>Testing</b> - is fundamental to ensure good quality code is being written and allows changes to be quickly validated.  The main types of testing are:
+          <ul>
+            <li>Unit Testing - refers to taking a component of a program and testing it in isolation, these tests can then be 
+              automated to validate changes,  test dependencies and handling of edge cases.</li>
+            <li>Functional Testing - checks the compliance of the overall system against a defined set of criteria. In other words, does the software do what it’s 
+              supposed to do?</li>
+            <li>Regression Testing - running previously written tests whenever a new change is introduced to confirm it continues to function as expected.</li>
+          </ul>
+        <li><b>Continuous integration</b> – is a software development practice where developers regularly merge their code changes into a central repository, 
+          after which automated tests validate the code quality.  A robust approach to integration ensures bugs are found quicker 
+          and reduces the time it takes to release software updates.  Our prefered tool is <a href="https://docs.github.com/en/actions" target="_blank">GitHub Action</a></li>
+      </ul>
+
+        <h4>Depoying your application</h4>
+
+        <ul>
+          <li>
+            <b>Statically hosting</b> - enables web pages to serve up the same HTML, CSS and JavaScript to all users who enter the site.
+              As no processing is required on the server these pages are generally faster and can be hosted at minimal or no cost, such as <a href="https://pages.github.com/" target="_black">GitHub Pages</a>.
+          </li> 
+
+          <li><b>Dynamic hosting</b> - enables the processing of content and storage of data on the server.  Dynamic hosting can be provided on any corporate network or by a cloud 
+            service provider such as <a href="https://azure.microsoft.com/en-gb/features/azure-portal/"target="_blank">Microsoft Azure</a> or 
+            <a href="https://aws.amazon.com/" target="_blank">Amazon AWS</a>.  If you already have an IT team  capable of setting up, 
+            configuring and managing servers these options provide the greatest flexibility.
+          </li>
+          
+          <li><b>Platform as a Service (PaaS)</b> - offer a more managed, low configuration service, making it incredibly easy to get up and running 
+            and provides total upfront transparency of costs. Our favoured solution is to use <a href="https://www.heroku.com/"   target="_blank">Heroku</a>, which comes with the added benefit of providing a “Free Tier” which, while 
+            there are significant constraints in terms of speed and storage capacity, provides an ideal sandpit environment in which to demonstrate capability without commitment.
+          </li>
+        
+      </ul>  
+      <h4>MLOPS</h4>
+      <p>
+        Extends the concept of DevOps to machine learning models where integration not only covers testing and validating code, but is now extended to test 
+          and validate the data in the system, including the retraining and serving of models as required. 
+      </p>  
+    </div>
     
 
     <h3 class="accordion">Designing an application</h3>
@@ -151,61 +234,7 @@
     </div>
 
 
-    <h3 class="accordion">Effective Development</h3>
-    <div class="panel">
-      <br/>    
-      <img src="images/DevOps.png" alt="devops figure of eight" class="smlscr_image right_image">
-      <p>
-        Equally as important as the applications construction are the processes used to build and deploy the service.
-        In the last 10 years DevOps has established itself as software industry best practice, combining cultural philosophies, methodologies, 
-        and tools to develop and evolve applications faster and more reliably.
-      </p>
-      <p>
-        At its heart DevOps is about creating flow between the various process stages, represented by the figure of eight shown.
-        Through improving communication and feedback, identifying issues early and automating processes where possible to give the team the best possible chance of success.
-      </p> 
-      <p>We outline a few key concepts that should be understood, however for a more comprehensive account of DevOps practices we recommend
-        <a href="https://itrevolution.com/the-devops-handbook/"  target="_blank">The DevOps Handbook</a> by Gene Kim.
-      </p>
-      
-
-      <ul style="clear:both">
-        <li><b>Agile </b> – When operating in a development environment, where there is a high degree of uncertainty, traditional project management techniques don’t work.  Agile, as defined in more detail in the book
-          <a href="https://www.scruminc.com/new-scrum-the-book/" target="_blank">Scrum The Art of Doing Twice The Work In Half the Time</a>, is an approach to project management 
-          in which small 2-3 week sprints of activity are planned, each of which delivers a demonstrable package of capability.
-        </li>
-        <li><b>Minimum Viable Product (MVP) </b> - When developing a new application, it is key to produce something with just enough functionality to encourage users 
-          to adopt the solution.  These users can then be used to support the iterative development of new functionality, testing enhancements and enabling the developers to learn from the feedback received.
-        </li>
-        
-        <li><b>Version control systems</b> - Systems such as <a href="https://git-scm.com/" target="_blank">Git</a> provide a means of storing, sharing and tracking changes to source 
-          code in a special kind of database. This repository is an invaluable source of information that needs to be protected from both catastrophic events and the casual degradation by 
-          human error.
-        </li>
-        
-        <li><b>Code Formatting</b>  While software doesn’t care how the code looks, other developers who may have to work on it in the future 
-          certainly do. When everyone is writing code that looks the same, it becomes easier to understand and amend.  Opinionated formatting tools 
-          can be used to enforce styling rules and simplifies the process of writing well-structured code.</li>
-        <li><b>Testing</b> - is fundamental to ensure good quality code is being written and allows changes to be quickly validated.  The main types of testing are:
-          <ul>
-            <li>Unit Testing - refers to taking a component of a program and testing it in isolation, these tests can then be 
-              automated to validate changes,  test dependencies and handling of edge cases.</li>
-            <li>Functional Testing - checks the compliance of the overall system against a defined set of criteria. In other words, does the software do what it’s 
-              supposed to do?</li>
-            <li>Regression Testing - running previously written tests whenever a new change is introduced to confirm it continues to function as expected.</li>
-          </ul>
-          
-           
-          
-
-        <li><b>Continuous integration</b> – is a software development practice where developers regularly merge their code changes into a central repository, 
-          after which automated tests validate the code quality.  A robust approach to integration ensures bugs are found quicker 
-          and reduces the time it takes to release software updates.</li>
-        <li><b>MLOPS</b>– Extends the concept of DevOps to machine learning models where integration not only covers testing and validating code, but is now extended to test 
-          and validate the data in the system, including the retraining and serving of models as required.</li>
-      </ul>     
-    </div>
-
+    
 
     <h3 class="accordion">Structuring your data</h3>
     <div class="panel">
@@ -264,24 +293,6 @@
       </ul>
     </div>
 
-    <h3 class="accordion">Choosing a Hosting Environment</h3>
-    <div class="panel">
-      <br/>   
-        <p>There are fundamentally two types of hosting arrangement available.</p>
-        <p>
-          <b>Statically hosting</b> - enables web pages to serve up the same HTML, CSS and JavaScript to all users who enter the site.
-            As no processing is required on the server these pages are generally faster and can be hosted at minimal or no cost.
-        </p> 
-        <p><b>Dynamic hosting</b> - enables the processing of content and storage of data on the server.  Dynamic hosting can be provided on any corporate network or by a cloud 
-          service provider.  If you already have an IT team  capable of setting up, configuring and managing servers this option provides the 
-          greatest flexibility.
-        </p>
-        
-        <p>An alternative solution is to opt for a PaaS (platform as a service) which offers a more managed, low configuration service, making it incredibly easy to get up and running 
-          and provides total upfront transparency of costs. Our favoured solution is to use <a href="https://www.heroku.com/"   target="_blank">Heroku</a>, which comes with the added benefit of providing a “Free Tier” which, while 
-          there are significant constraints in terms of speed and storage capacity, provides an ideal sandpit environment in which to demonstrate capability without commitment.
-        </p>
-      </div>
 
       <h3 class="accordion">Learning resources</h3>
       <div class="panel">
