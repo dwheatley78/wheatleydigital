@@ -107,7 +107,7 @@
       <br/>    
       <img src="images/DevOps.png" alt="devops figure of eight" class="smlscr_image right_image">
       <p>
-        Equally as important as the applications construction are the processes used to build and deploy the service.
+        Equally as important as the capability the applications provide are the processes used to build and deploy the service.
         In the last 10 years DevOps has established itself as software industry best practice, combining cultural philosophies, methodologies, 
         and tools to develop and evolve applications faster and more reliably.
       </p>
@@ -115,7 +115,7 @@
         DevOps has connotations of large scale, cloud based applications servicing millions of customers and deploying updates every minute.
         While this is true of some organisations, such as Amazon, DevOps is principally about creating flow between the various process stages of an
         applications lifecycle, represented by the figure of eight shown.
-        Through improving communication and feedback, identifying issues early and automating processes where possible to give the team the best possible chance of success.
+        Through improving communication and feedback, identifying issues early and automating processes where possible the team are given the best possible chance of success.
       </p> 
       <p>We outline a few key concepts that should be understood, however for a more comprehensive account of DevOps practices we recommend
         <a href="https://itrevolution.com/the-devops-handbook/"  target="_blank">The DevOps Handbook</a> by Gene Kim.
@@ -125,16 +125,16 @@
       <ul style="clear:both">
         <li><b>Agile </b> – When operating in a development environment, where there is a high degree of uncertainty, traditional project management techniques don’t work.  Agile, as defined in more detail in the book
           <a href="https://www.scruminc.com/new-scrum-the-book/" target="_blank">Scrum The Art of Doing Twice The Work In Half the Time</a>, is an approach to project management 
-          in which small 2-3 week sprints of activity are planned, each of which delivers a demonstrable package of capability.
+          in which small 2-3 week sprints of activity are planned, each of which deliver a demonstrable package of capability.
         </li>
        
-        <li><b>Project Backlog</b> – A level list of everything that needs to be built or done to make the vision a reality in order of priority.</li>
-        <li><b>Sprint planning</b> – Refining the backlog to ensure all the necessary information is available to estimate the relative size of a task 
+        <li><b>Project Backlog</b> – A list of everything that needs to be built or done to make the vision a reality in order of priority.</li>
+        <li><b>Sprint planning</b> – A process of refining the backlog to ensure all the necessary information is available to estimate the relative size of a task 
           and deciding how much of this work can be accomplished in the fixed time window of the sprint.
-        <li><b>Daily Standup</b> –   A daily review of a Kanban board that tracks the sprint activities between "to do", "doing" and "done" in 
-          which the team members report on what they did yesterday, what they plan to do today and any obstacles they are facing.</li>
+        <li><b>Kanban</b> –   A visual board used to track the sprint activity status between "to do", "doing" and "done".</li>
+        <li><b>Daily Stand-up</b> –   A daily review of a Kanban board in which the team members report on what they did yesterday, what they plan to do today and any obstacles they are facing.</li>
         <li><b>Sprint Demo</b> – At the end of the sprint the team show what they have accomplished to any interested stakeholders.</li>
-        <li><b>Retrospectives</b> – A meeting in which the team examines how the sprint went and what could have potentially gone better with the goal of identifying opportunities to improve.</li>
+        <li><b>Retrospectives</b> – A meeting in which the team examines how the sprint went and what could have potentially gone better, with the goal of identifying opportunities to improve.</li>
       </ul>
       <h4>Process automation</h4>
        <ul>
@@ -142,9 +142,9 @@
           code in a special kind of database. This repository is an invaluable source of information that needs to be protected from both catastrophic events and the casual degradation by 
           human error.
         </li>
-        <li><b>Code Formatting</b>  While software doesn’t care how the code looks, other developers who may have to work on it in the future 
+        <li><b>Code Formatting</b> - While software doesn’t care how the code looks, other developers who may have to work on it in the future 
           certainly do. When everyone is writing code that looks the same, it becomes easier to understand and amend.  Opinionated formatting tools 
-          can be used to enforce styling rules and simplifies the process of writing well-structured code.</li>
+          can be used to enforce styling rules and simplify the process of writing well-structured code.</li>
         <li><b>Testing</b> - is fundamental to ensure good quality code is being written and allows changes to be quickly validated.  The main types of testing are:
           <ul>
             <li>Unit Testing - refers to taking a component of a program and testing it in isolation, these tests can then be 
@@ -153,17 +153,17 @@
               supposed to do?</li>
             <li>Regression Testing - running previously written tests whenever a new change is introduced to confirm it continues to function as expected.</li>
           </ul>
-        <li><b>Continuous integration</b> – is a software development practice where developers regularly merge their code changes into a central repository, 
+        <li><b>Continuous integration</b> – A software development practice where developers regularly merge their code changes into a central repository, 
           after which automated tests validate the code quality.  A robust approach to integration ensures bugs are found quicker 
-          and reduces the time it takes to release software updates.  Our prefered tool is <a href="https://docs.github.com/en/actions" target="_blank">GitHub Action</a></li>
+          and reduces the time it takes to release software updates.  Our preferred tool for performing continuous integration is <a href="https://docs.github.com/en/actions" target="_blank">GitHub Actions</a>.</li>
       </ul>
 
-        <h4>Depoying your application</h4>
+        <h4>Deploying your application</h4>
 
         <ul>
           <li>
             <b>Statically hosting</b> - enables web pages to serve up the same HTML, CSS and JavaScript to all users who enter the site.
-              As no processing is required on the server these pages are generally faster and can be hosted at minimal or no cost, such as <a href="https://pages.github.com/" target="_black">GitHub Pages</a>.
+              As no processing is required on the server these pages are generally faster and can be hosted at minimal, or no cost, on services such as <a href="https://pages.github.com/" target="_black">GitHub Pages</a>.
           </li> 
 
           <li><b>Dynamic hosting</b> - enables the processing of content and storage of data on the server.  Dynamic hosting can be provided on any corporate network or by a cloud 
@@ -173,8 +173,8 @@
           </li>
           
           <li><b>Platform as a Service (PaaS)</b> - offer a more managed, low configuration service, making it incredibly easy to get up and running 
-            and provides total upfront transparency of costs. Our favoured solution is to use <a href="https://www.heroku.com/"   target="_blank">Heroku</a>, which comes with the added benefit of providing a “Free Tier” which, while 
-            there are significant constraints in terms of speed and storage capacity, provides an ideal sandpit environment in which to demonstrate capability without commitment.
+            and provides upfront transparency of costs. Our favoured solution is <a href="https://www.heroku.com/"   target="_blank">Heroku</a>, which comes with the added benefit
+             of providing a “Free Tier” which we regularly use as a sandpit environment to demonstrate capability without commitment.
           </li>
         
       </ul>  
@@ -238,8 +238,7 @@
       <p>The objective of a good data architecture is to ensure that all the information required to run your business satisfies the 3A's:
       <ul>
         <li><b>Actionable</b> -  It must be able to demonstrate cause and effect, enabling people to learn from actions.</li>
-        <li><b>Accessible</b> - It is essential that the information gathered is available to everyone who needs to know the 
-          information contained and that it easily integrates into other applications.</li>
+        <li><b>Accessible</b> - It is essential that the information gathered is available to everyone who needs it and that it can be easily integrated into other applications.</li>
         <li><b>Auditable</b> - Data often tells a story that is uncomfortable or challenging for people within the business.  It is therefore essential 
           that absolute confidence can be placed in the reliability of the source.</li>
       </ul>
@@ -310,10 +309,10 @@
     <img src="./images/EMPEDATA.png" alt="logo" style="height: 75px; float: left;"/>
     <p>
       We know, as an SME, you need solutions that are reliable and affordable! 
-      That's why <span id="brand">EMPEDATA</span> focus on simplicity and clarity using powerful open-source
-      tools to deliver robust solutions.  The application code is yours meaning you are free to make any changes
+      That's why <span id="brand">EMPEDATA</span> focus on simplicity and clarity, using powerful open-source
+      tools to deliver robust solutions.  The application code we create is yours, meaning you are free to make any changes
        as your business needs develop, while the comprehensive documentation
-       and the built-in unit tests we provide ensure any changes  can be quickly assessed and validated. 
+       and the built-in unit tests we provide ensure any changes can be quickly assessed and validated. 
        Where possible our solutions are built using Python because:
 
     </p>
@@ -374,7 +373,7 @@
           <li><a href="https://mui.com/"><span>Material UI</span></a> - Used the basis for UI components</li>
         </ul>
 
-        <h4>Recomended books</h4>
+        <h4>Recommended books</h4>
         <ul>
           <li><a href="https://itrevolution.com/the-devops-handbook/"  target="_blank">The DevOps Handbook</a> by Gene Kim </li>
           <li><a href="https://git-scm.com/" target="_blank">Pro Git</a> by Scott Chacon and Ben Straub</li> 
