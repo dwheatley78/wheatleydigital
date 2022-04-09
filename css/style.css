@@ -118,7 +118,8 @@ body {
   .smlscr_image {
     position: relative;
     clear:both;
-    background: none; 
+    background: none;
+    width:350px;  
     border-radius:12px;
     }
   
@@ -146,7 +147,6 @@ body {
     clear:both;
     background: none;
     width:350px; 
- 
     border-radius:12px;
     }
   

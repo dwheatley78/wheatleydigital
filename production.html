@@ -189,18 +189,22 @@
     <h3 class="accordion">Designing an application</h3>
     <div class="panel">
       <br/>
-      <img src="images/MVC.png" alt="model view controller" class="smlscr_image right_image">
+      
       <p>
         Web Apps can provide functionality and secure data access to a variety of users through their web browsers 
-        without the need to install specialist software, allowing updates to be easily deployed and centralising the data storage. 
+        without the need to install specialist software, allowing updates to be easily deployed and centralising the data storage. Depending on the 
+        requirements of the applications we adopt one of three different approaches:
       </p>
+      <h4>Streamlit</h4>
       <p>
         For simple analytical applications the <a href="https://streamlit.io/" target="_blank">Streamlit</a> library enables web apps to be created entirely using Python
         without the need for separate front end web development.  This is a simple, low-cost solution for sharing analytical models amongst an internal team however it 
         is unable to deliver the functionality required by more demanding applications.
       </p>
+      <img src="images/MVC.png" alt="model view controller" class="smlscr_image right_image">
+      <h4>Model View Controller (MVC) architecture</h4>
       <p>
-        For the majority of our data platform applications we use a Model View Controller (MVC) architecture which provides an appropriate balance between complexity and 
+        When your application extends beyond sharing analytical models adopting a Model View Controller (MVC) architecture provides a balance between complexity and 
         control by introducing some separation of concerns between the three core elements:
       </p>
       <ul>
@@ -210,14 +214,18 @@
       </ul>
       
       <p>
-        Our preferred web development framework for server-side applications is <a href="https://www.djangoproject.com/"  target="_blank">Django</a>.
-        Django is a Python library, simplifying the integration with existing analytical/machine learning models, as discussed on the <a href="./analysis.html">Analyse</a> page, 
-        and provides built-in functionality such as admin panels, file upload support, authentication, contact forms and app management which all significantly 
-        reduces the time and effort required to build robust 
-        web applications.</li>
+        Our preferred web development framework for server-side applications is <a href="https://www.djangoproject.com/"  target="_blank">Django</a>, which is used to power a range of 
+        well know platforms, including YouTube, Spotify, Instagram and Dropbox.  Django promotes itself as <em>"the web framework for perfectionists with deadlines"</em>, providing  
+        baked-in functionality such as admin panels, file upload support, authentication, contact forms and app management which all significantly 
+        reduces the time and effort required to build robust web applications.
       </p>
+      <p>The ability to directly integrate the Python machine learning and mathmatical models, discussed in the <a href="./analysis.html">Analyse</a> section, provides another significant 
+        benefit of selecting Django.</p>
+      <h4>Service-Oriented-Architecture (SOA)</h4>
+      <img src="images/SOA.png" alt="model view controller" class="smlscr_image right_image">
       <p>
         In some circumstances if can be beneficial to further separate the UI and data processing elements of the application using an Application Programming Interface (API). 
+        
         APIs allow a programme to be broken into distinct services, enabling them to be developed in parallel with minimal risk of unintended consequences, so long as the interfaces 
         between services are maintained. To support this approach Django provides a versatile toolkit for constructing web APIs. 
       </p>
@@ -226,7 +234,8 @@
         These frameworks enable developers to take advantage of pre-existing functionality and templates, reducing development time and increasing software quality.
          <a href="https://reactjs.org/">React</a> is currently the most used front-end web application framework with a focus on developing common reusable UI components to deliver engaging 
         and intuitive user interfaces and ensure consistency across all applications.
-      </p>        
+      </p> 
+      <p style="clear:both"></p>       
     </div>
 
 
