@@ -308,7 +308,19 @@
     <h3 class="accordion">Security</h3>
     <div class="panel">
       <br/>      
-      <p>We are currently writing this section!  Please come back soon to check it out</p>
+      <p>There are two main security considerations when building a web application.  The first is to ensure that users are only granted access to the content 
+        and features that they are entitled to, through a robust login and permission management system. The second is to guard against malicious attacks that 
+        can potentially compromise your site.  
+      </p>
+      <p>One of the main benefits of using Django is the comprehensively tested libraries and built-in security features it provides 
+        that protect against a variety of attacks including:
+      </p>
+      <ul>
+        <li><b>SQL injection</b>- occurs when a malicious user can execute arbitrary SQL code on a database which can result in records being deleted or data leakage</li>
+        <li><b>Cross-site scripting (XSS)</b>- The attacker is able to inject small bits of code onto web pages that can subsequently be displayed on other people's browsers. </li>
+        <li><b>Cross-Site Request Forgery (CSRF)</b>- exploits that trust a site has in a user submitting a web request that they did not intend. This may cause actions to be 
+          performed on the website that can include inadvertent client or server data leakage</li>
+      </ul> 
     </div>
 
 
