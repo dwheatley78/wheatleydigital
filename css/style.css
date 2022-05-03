@@ -172,12 +172,14 @@ body {
   /*style="text-align: center; background-image: url('../images/production.png'); background-position: center; background-repeat: repeat-y;"*/
 
   /* Set a specific height */
-  min-height: 200px;
+  min-height: 250px;
+
 
 
   /* Create the parallax scrolling effect */
+  background-size:100% 100vh;
   background-attachment: fixed;
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
   color:white;
