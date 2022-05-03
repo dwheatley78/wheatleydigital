@@ -165,6 +165,26 @@ body {
   }
 }
 
+
+.parallax {
+  /* The image used */
+  background-image: url('../images/parallax.png');
+  /*style="text-align: center; background-image: url('../images/production.png'); background-position: center; background-repeat: repeat-y;"*/
+
+  /* Set a specific height */
+  min-height: 200px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+  text-align: center;
+  text-decoration: none;
+
+}
+
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
   .smlscr_image {
