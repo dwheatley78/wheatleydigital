@@ -255,6 +255,180 @@
 
     </div>
 
+    <h3 class="accordion">Machine learning in production</h3>
+    <div class="panel">
+      <br/>      
+      <p>
+        Training a machine learning model is only a small part of the process involved in creating a productionsied machine learning service.  MLOps is the discipline of managing
+        the complete machine learning lifecycle from data ingestion and model development through to monitoring and maintaining the model in a production environment, ensuring it
+        continues to operate as expected. The diagram below illustrates the 7 principle steps involved in a machine learning pipeline and includes details of the tools provided by
+        the <a href="https://www.tensorflow.org/tfx/tutorials">TensorFlow Extended (TFX)</a> platform, that can used to deliver a robust and repeatable process as the model size and complexity increases.
+      </p>
+
+      <img src="./images/TFX.png" alt="TensorFlow Extended" class="center">
+
+      <p>
+        In a production environment machine learning models are constantly impacted by external factors which can result in degradation of performance.  The main changes are impacting a model performance include:
+        <ul>
+          <li><b>Data drift -</b> Changes in data over time.  This can be driven by seasonality, trends or potential a step change in how data is recorded. </li>
+          <li><b>Concept drift – </b>Changes in the desired outcomes overtime, which can be driven by changes in policy.</li>
+          <li><b>Model resilience –</b> Ensuring that the model can handle problems with data collection and system problems.</li>
+        </ul>
+      </p>
+
+    </div>
+
+    <h3 class="accordion">Data Validation</h3>
+    <div class="panel">
+      <br/>      
+      <p>
+        In order to validate data it is necessary to have a baseline against which the data can be compared.  A data schema is used to define the data fields, types and various 
+        parameters such as a categorical vocabulary or continuous data limits.  <a href="https://www.tensorflow.org/tfx/data_validation/get_started">TensorFlow Data Validation (TFDV)</a> allows the automatic generation of a schema and the various 
+        parameters including baseline statistics that can then be evaluated over time to observe any changes and trigger alerts or model retraining as required.      
+      </p>
+
+      <img src="./images/TFX_schema.png" alt="TensorFlow Schema" class="center">
+      
+
+    </div>
+
+
+    <h3 class="accordion">Feature Engineering</h3>
+    <div class="panel">
+      <br/>      
+      <p>
+        Feature engineering is about manipulating the raw data into a format that provides the greatest possible predictive power.  The key feature engineering processes include:        
+      </p>
+      <img src="./images/Feature_eng.png" alt="Feature Engineering" class="center">
+        <ul>
+          <li><b>Data cleansing –</b> Managing errors, omissions and formatting inconstancies in the data.</li>
+          <li><b>Feature tuning –</b> Scaling and normalising the data to improve predictive power by ensuring variables are compared on an equal footing.</li>
+          <li><b>Representation transformation –</b> The process of changing the format, structure or values of data to provide greater meaning. Examples include binning and bucketing 
+            values into discreet groups, using embedding’s to represent meaning within text.</li>
+          <li><b>Feature construction –</b>Inferring new data from the existing.  An example would include converting a date field to create a variable indicating the day of the week 
+            or using two geographical co-ordinates to infer a distance between locations.</li>
+          <li><b>Feature Selection –</b> The performance of a machine learning model is a balance between reducing the number of input variables while ensuring the information required in 
+            those variable is sufficient to infer the required output.  A number of approaches to reduce the complexity of the inputs can be used including.
+            <ul>
+              <li>Univariate feature selection selects the ‘n’ features with the strongest link to the label to be predicted.</li>
+              <li>Wrapper methods look to progressive add or remove features from the model and observes the impact on performance to derive an optimum subset of features.</li>
+              <li>Embedding techniques such as Principal component analysis look to derive new features that encapsulate all the information in a reduced number of dimensions.</li>
+            </ul>
+          </li>
+        </ul>
+        
+      <p>
+        Using Tensorflow transform library enables the above steps can be encapsulated into a pipeline that can be executed consistently on all data items, both the training and predicting data.
+        MetaData can then also be produced to track the lineage of the data flowing between components in the pipeline as artefacts that are stored in a dedicated database 
+      </p>
+      
+
+    </div>
+
+
+    <h3 class="accordion">Model Training</h3>
+    <div class="panel">
+      <br/>      
+      <p>
+        Every type of machine learning model has a number of hyper parameters that need to be selected to optimise the model performance.  Parameters can be either:
+      </p>
+      <ul>
+        <li><b>Model hyperparameters —</b> define the fundamental construct of a model itself, which can include neural network architecture attributes such as filter size, pooling, stride and padding.</li>
+        <li><b>Optimizer hyperparameters —</b> are related to how the model learns the patterns based on data.</li>
+      </ul>
+      <p>
+        When selecting optimiser hyperparameters for simple machine learning models a grid search is often used to fully train the model and evaluate the model using a range of parameters and the selecting 
+        those that deliver the best performance.  However when evaluating deep learning models it is often impractical to perform an exhaustive search so it is necessary to use some other heuristics to shortlist options. 
+      </p>
+      <p>
+        KerasTuner provides a number of search algorithms to explore a defined search space to find the best hyper-parameter values for your models. KerasTuner comes with the following algorithms:
+      </p>
+      <ul>
+      <li><b>Bayesian Optimization -</b> Instead of searching every possible combination, the Bayesian Optimization tuner follows an iterative process, where it chooses the first few at random. 
+        Then, based on the performance of those hyperparameters, the Bayesian tuner selects the next best possible.</li>
+      <li><b>Hyperband -</b>early-stopping to speed up the hyperparameter tuning process. The main idea is to fit a large number of models for a small number of epochs and to only continue 
+        training for the models achieving the highest accuracy on the validation set.</li>     
+      </ul>
+
+      <p>
+        Given the complexity involved in defining an optimum neural network the best option may be to utilise automatic model architectures selection tools available of all the main 
+        cloud platforms.  Click on the following links for a more detailed description of these services:
+      </p>
+      <ul>
+        <li><a href="https://aws.amazon.com/sagemaker/autopilot"></a>Amazon SageMaker Autopilot</a></li>
+        <li><a href="https://azure.microsoft.com/en-in/services/machine-learning/automatedml/"></a>Microsoft Azure Automated Machine Learning</a></li>
+        <li><a href="https://cloud.google.com/automl"></a>Google Cloud AutoML</a></li>
+      </ul>
+
+
+    </div>
+
+
+    <h3 class="accordion">Validating a model / Evaluation Metrics</h3>
+    <div class="panel">
+      <br/>      
+      <p>
+        As discussed earlier a model is typically used to either label a data point or to infer a output value based on the provided inputs. 
+        For either of these types of model a common set of metrics are used to evaluate performance:
+      </p>
+      <p><b>Classification metrics</b></p>
+      <ul>
+        <li><b>Precision -</b> the ratio of true positives over the sum of false positives and true negatives.</li>
+        <li><b>Recall -</b> the ratio of correctly predicted outcomes to all predictions. It is also known as sensitivity or specificity.</li>
+        <li><b>Accuracy -</b> the ratio of correct predictions out of all predictions made by an algorithm. It can be calculated by dividing 
+          precision by recall or as 1 minus false negative rate (FNR) divided by false positive rate (FPR).</li>
+        <li><b>F1-score -</b> combines these three metrics into one single metric that ranges from 0 to 1 and it takes into account both Precision and Recall.</li>
+      </ul>
+
+      <p><b>Regression metrics</b></p>
+      <ul>
+        <li><b>Mean Absolute Error -</b> is the average distance between predicted and actual values however it doesn’t give any idea about the direction of the error 
+          which is whether we are under or over predicting our data.</li>
+        <li><b>Mean Squared Error -</b> uses the square of average difference between predicted and actual values. By taking the square of errors it penalises larger errors more heavily.</li>
+      </ul>
+      <p>Tensorflow provides a couple of tools that simplify the collection of metrics</p>
+      <ul>
+        <li><b>TensorBoard -</b> is a tool for providing the measurements and visualizations needed during the machine learning workflow. It enables tracking experiment metrics like loss and accuracy,
+           visualizing the model graph and other useful features such as projecting embedding’s to a lower dimensional space.</li>
+        <li><b>Tensorflow Model analysis –</b> enables changes to be observed over time to reflect trends and seasonality.  An additional capability this tool provides is the ability to slice the data 
+          to reveal where particular data segments are not well catered for (e.g. specific customer segments)</li>
+      </ul>
+    
+
+    </div>
+
+    <h3 class="accordion">Serving the model</h3>
+    <div class="panel">
+      <br/>      
+      <p>
+        When it comes to serving a model you need to be cognisant of the environment in which it is going to be operated.  Model serving is a constant balancing act between accuracy, latency and cost. 
+        While complex models will usually provide more accurate predictions there size can be prohibitive, especially when running on relatively low powered devices such as mobile phones. 
+      </p>
+      <p>
+        A number of techniques exist to simplify a model for operating on IOT and mobile devices.  The techniques include:
+      </p>
+      <ul>
+        <li>Principal component analysis (PCA) - used to reduce the dimensionality of the inputs to a model and therefor simplify the model architecture required.</li>
+        <li>Quantizing a model - Reduce the size and latency of the model by effectively simplifying the weights applied to each layer.  Quantization can be either performed 
+          before or after initial training.  Post training quantisation involves simplify a model by using integer-only arithmetic, which can be implemented more efficiently than floating point inference.  Alternatively quantisation can be performed during training to constrain the parameters that can be applied.</li>
+        <li>Pruning - reduces the size of a model by removing some of the connections between nodes and therefore reduces the number of parameters in a network.</li>
+        <li>Knowledge distillation is a method of transferring the knowledge learnt using a complex “teacher” model into a more simple light weight “student” model.  
+          The key here is that instead of learning the relationship between the inputs and the labels the ”student” model aims to learn the softer targets of a “teacher” 
+          probability distribution.</li>
+
+      </ul>
+      <p>Where high performance modelling is required distribution strategies may need to be considered to allow the model to be processed over numerous machines.  Here techniques include:</p>
+      <ul>
+        <li>Data parallelism - Data is split into a number of subsets which enables each machine to work on a subset of total data set so that it can be loaded into memory.  
+          Each worker than synchronises the parameter updates to set the model parameters.</li>
+        <li>Model Parallelism- Where the models are extremely large it is possible to partition the model into sections and assign them to different machines.</li>
+        <li>Pre-processing pipeline parallelism –  By paralyzing the activities to fetch read, transform and train a model the idle time of expensive compute resources can be minimised.  
+          Typically cloud implementations of Giant Neural Networks are performed on cloud computers such as Google GPipe or Microsoft PipeDream </li>
+      </ul>     
+
+    </div>
+
+
     <h3 class="accordion">The <span id="brand">EMPEDATA</span> difference</h3>
     <div class="panel">
       <br/>
@@ -273,6 +447,7 @@
       </p>
       <p>To launch your <span id="brand">EMPEDATA</span> demonstrator package today please <a href="./contact.html">get in touch</a>.</p>
     </div>
+
 
     
 
