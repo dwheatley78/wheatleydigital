@@ -131,7 +131,13 @@
       <ul style="clear:both">
         <li><b>Agile </b> – When operating in a development environment, where there is a high degree of uncertainty, traditional project management techniques don’t work.  Agile, as defined in more detail in the book
           <a href="https://www.scruminc.com/new-scrum-the-book/" target="_blank">Scrum The Art of Doing Twice The Work In Half the Time</a>, is an approach to project management 
-          in which small 2-3 week sprints of activity are planned, each of which deliver a demonstrable package of capability.
+          in which small 2-3 week sprints of activity are planned, each of which deliver a demonstrable package of capability. The four core values of Agile software development as stated by the Agile Manifesto are:
+          <ul>
+            <li>Individuals and interactions over processes and tools</li>
+            <li>Working software over comprehensive documentation</li>
+            <li>Customer collaboration over contract negotiation</li>
+            <li>Responding to change over following a plan</li>
+          </ul>
         </li>
        
         <li><b>Project Backlog</b> – A list of everything that needs to be built or done to make the vision a reality in order of priority.</li>
@@ -155,8 +161,7 @@
           <ul>
             <li>Unit Testing - refers to taking a component of a program and testing it in isolation, these tests can then be 
               automated to validate changes,  test dependencies and handling of edge cases.</li>
-            <li>Functional Testing - checks the compliance of the overall system against a defined set of criteria. In other words, does the software do what it’s 
-              supposed to do?</li>
+            <li>Functional Testing - checks the compliance of the overall system against a defined set of criteria. Our favorite testing python library for functional testing is <a href="https://playwright.dev/python/">Playwright</a></li>
             <li>Regression Testing - running previously written tests whenever a new change is introduced to confirm it continues to function as expected.</li>
           </ul>
         <li><b>Continuous integration</b> – A software development practice where developers regularly merge their code changes into a central repository, 
@@ -174,19 +179,19 @@
 
           <li><b>Dynamic hosting</b> - enables the processing of content and storage of data on the server.  Dynamic hosting can be provided on any corporate network or by a cloud 
             service provider such as <a href="https://azure.microsoft.com/en-gb/features/azure-portal/"target="_blank">Microsoft Azure</a> or 
-            <a href="https://aws.amazon.com/" target="_blank">Amazon AWS</a>.  If you already have an IT team  capable of setting up, 
-            configuring and managing servers these options provide the greatest flexibility.
+            <a href="https://aws.amazon.com/" target="_blank">Amazon AWS</a>.
           </li>
           
           <li><b>Platform as a Service (PaaS)</b> - offer a more managed, low configuration service, making it incredibly easy to get up and running 
-            and provides upfront transparency of costs. Our favoured solution is <a href="https://www.heroku.com/"   target="_blank">Heroku</a>, which comes with the added benefit
-             of providing a “Free Tier” which we regularly use as a sandpit environment to demonstrate capability without commitment.
+            and provides upfront transparency of costs. Our favoured solution is <a href="https://www.heroku.com/"   target="_blank">Heroku</a>
           </li>
         
       </ul>  
       <h4>Containers</h4>
       <p>
-        to be added
+        Containers enable an application to be isolated from the rest of the system on which it operates. 
+        All the  libraries,dependencies and files necessary to run the application are provided from a distinct image, meaning they make an application portable and consistent as it moves from development, 
+        to testing, and finally to multiple production environments. <a href="https://www.docker.com/">Docker</a> is by far the most popular software framework for building, running, and managing containers 
       </p>  
     </div>
     
