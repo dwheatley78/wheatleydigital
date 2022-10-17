@@ -319,10 +319,13 @@
     <div class="panel">
       <br/>      
       <p>There are two main security considerations when building a web application.  The first is to ensure that users are only granted access to the content 
-        and features that they are entitled to, through a robust login and permission management system. The second is to guard against malicious attacks that 
-        can potentially compromise your site.  
+        and features that they are entitled to, through a robust login and permission management system. Django provides a robust authorisation system that 
+        can easily be extended to provide comprehensive a role based access control (RBAC) system.  Another key consideration when producing robust production applications is to 
+        perform admin hardening and adding <a href="https://django-two-factor-auth.readthedocs.io/en/stable/">two-factor-authentication</a> as detailed in the provided link.
       </p>
-      <p>One of the main benefits of using Django is the comprehensively tested libraries and built-in security features it provides 
+      <p>        
+        The second is to guard against malicious attacks that can potentially compromise your site.  
+        One of the main benefits of using Django is the comprehensively tested libraries and built-in security features it provides 
         that protect against a variety of attacks including:
       </p>
       <ul>
@@ -331,6 +334,8 @@
         <li><b>Cross-Site Request Forgery (CSRF)</b>- exploits that trust a site has in a user submitting a web request that they did not intend. This may cause actions to be 
           performed on the website that can include inadvertent client or server data leakage</li>
       </ul> 
+      <p>A powerful method for assessing your code quality and identifying any potential security vulnerabilities is to use a static code analysis tool like <a href="https://www.sonarqube.org/features/multi-languages/python/">SonarQube</a>.
+      </p>
     </div>
 
 
