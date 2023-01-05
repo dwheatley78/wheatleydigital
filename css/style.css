@@ -186,11 +186,33 @@ body {
   }
 }
 
+.parallax1 {
+  /* The image used */
+  background-image: url('../images/digital-partnership1.png');
+}
+
+
+.parallax2 {
+  /* The image used */
+  background-image: url('../images/digital-partnership2.png');
+}
+
+.parallax3 {
+  /* The image used */
+  background-image: url('../images/digital-partnership3.png');
+}
+
+.parallax4 {
+  /* The image used */
+  background-image: url('../images/digital-partnership4.png');
+}
+
+.parallax5 {
+  /* The image used */
+  background-image: url('../images/digital-partnership5.png');
+}
 
 .parallax {
-  /* The image used */
-  background-image: url('../images/digital-partnership.png');
-  /*style="text-align: center; background-image: url('../images/production.png'); background-position: center; background-repeat: repeat-y;"*/
 
   /* Set a specific height */
   min-height: 250px;
