@@ -3,15 +3,17 @@
     width: 100%;
     margin-bottom: 15px;
     position: relative;
-    border: 2px solid rgb(40, 40, 40);
+    /*border: 2px solid rgb(40, 40, 40);*/
     overflow: hidden;
   }
-  
+
+
 .tile:hover{
-    box-shadow: 0 5px 10px 5px rgb(54, 133, 196);
+    /*box-shadow: 0 5px 10px 5px rgb(54, 133, 196);*/
     cursor: pointer;
   }
-  
+
+
 .tile span{
     position: absolute;
     bottom: 0;
@@ -20,10 +22,68 @@
     text-align: center;
     font-size: 1.6em;
     text-transform: uppercase;
-    background-color: rgb(40, 40, 40);
+    /*background-color: rgb(40, 40, 40);*/
     color: #fff;
     opacity: .8;
   }
+
+.tile1 {
+  border: 2px solid rgb(0, 173, 239);
+  }
+
+.tile1 span{
+  background-color: rgb(0, 173, 239);
+  color: rgb(33,64,154);
+}
+.tile1:hover{
+  box-shadow: 0 5px 10px 5px rgb(0, 173, 239);
+}
+
+.tile2 {
+  border: 2px solid rgb(52, 173, 28);
+  }
+
+.tile2 span{
+  background-color: rgb(52, 173, 28);
+  color: rgb(108,10,20);
+}
+.tile2:hover{
+  box-shadow: 0 5px 10px 5px rgb(52, 173, 28);
+}
+
+.tile3 {
+  border: 2px solid rgb(243, 107, 45);
+  }
+.tile3 span{
+  background-color: rgb(243, 107, 45);
+  color: rgb(255,255,255);
+}
+.tile3:hover{
+  box-shadow: 0 5px 10px 5px rgb(243, 107, 45);
+}
+
+.tile4 {
+  border: 2px solid rgb(188, 30, 44);
+  }
+.tile4 span{
+  background-color: rgb(188, 30, 44);
+  color: rgb(252,249,8);
+}
+.tile4:hover{
+  box-shadow: 0 5px 10px 5px rgb(188, 30, 44);
+}
+
+.tile5 {
+  border: 2px solid rgb(146, 39, 143);
+  }
+.tile5 span{
+  background-color: rgb(146, 39, 143);
+  color: rgb(246,109,50);
+}
+.tile5:hover{
+  box-shadow: 0 5px 10px 5px rgb(146, 39, 143);
+}
+
   
 #ac_health-tile {
     background: url('../images/helicopter.png') no-repeat;

@@ -55,11 +55,11 @@
     <div id="collapsable-nav" class="collapse navbar-collapse">
       <ul id="nav-list" class="nav navbar-nav navbar-right">
         <li>
-          <a class="highlight" href="strategy.html">
+          <a class="highlight1" href="strategy.html">
             <span class="glyphicon glyphicon-dashboard"></span><br class="hidden-xs">Strategise</a>
         </li>
         <li>
-          <a class="highlight" href="analysis.html">
+          <a class="highlight2" href="analysis.html">
             <span class="glyphicon glyphicon-stats"></span><br class="hidden-xs">Analyse</a>
         </li>
         <li>
@@ -67,7 +67,7 @@
               <span class="glyphicon glyphicon-road"></span><br class="hidden-xs">Productionise</a>
         </li>
         <li>
-          <a class="highlight" href="contact.html">
+          <a class="highlight4" href="contact.html">
             <span class="glyphicon glyphicon-user"></span><br class="hidden-xs">Contact</a>
       </li>
 
@@ -108,6 +108,71 @@
       </ul>
     </p>
 
+
+    <h3 class="accordion">Application Design</h3>
+    <div class="panel">
+      <br/>
+      
+      <p>
+        Web Apps can provide functionality and secure data access to a variety of users through their web browsers 
+        without the need to install specialist software, allowing updates to be easily deployed and centralising the data storage. Depending on the 
+        requirements of the application we adopt one of following four different approaches:
+      </p>
+
+      <h4>1 - Low Code</h4>
+      <br/>    
+      <p>
+        
+      </p>
+      <h4>2 - Streamlit</h4>
+      <p>
+        For simple analytical applications the <a href="https://streamlit.io/" target="_blank">Streamlit</a> library enables web apps to be created using only Python,
+        without the need for separate front-end web development.  This is a simple, low-cost solution for sharing analytical models amongst an internal team, however, it 
+        is unable to deliver the functionality required by more demanding applications.
+      </p>
+      <img src="images/MVC.png" alt="model view controller" class="smlscr_image right_image">
+      <h4>3 - Model View Controller (MVC) architecture</h4>
+      <p>
+        When your application extends beyond just sharing analytical models, adopting a Model View Controller (MVC) architecture provides a balance between complexity and 
+        control by introducing separation of concerns between the three core elements:
+      </p>
+      <ul>
+        <li><b>Model</b> - The backend that contains all the data logic.</li>
+        <li><b>View </b> – The frontend or graphical user interface (GUI).</li>
+        <li><b>Controller</b> – The brains of the application that controls how data is displayed.</li>
+      </ul>
+      
+      <p>
+        Our preferred web development framework for server-side applications is <a href="https://www.djangoproject.com/"  target="_blank">Django</a>, which is used to power a range of 
+        well know platforms, including YouTube, Spotify, Instagram and Dropbox.  Django promotes itself as <em>"the web framework for perfectionists with deadlines"</em>, providing  
+        baked-in functionality such as admin panels, file upload, authentication, forms and app management, all of which significantly 
+        reduces the time and effort required to build robust web applications.
+      </p>
+      <p>The ability to directly integrate the Python machine learning and mathmatical models, discussed in the <a href="./analysis.html">Analyse</a> section, provides another significant 
+        benefit of selecting Django.</p>
+
+      <h4>4 - Service-Oriented-Architecture (SOA)</h4>
+      <img src="images/SOA.png" alt="model view controller" class="smlscr_image right_image">
+      <p>
+        In some circumstances if can be beneficial to further separate the UI and data processing elements of the application using an Application Programming Interface (API). 
+        
+        APIs allow a programme to be broken into distinct services, enabling them to be developed in parallel with minimal risk of unintended consequences, so long as the interfaces 
+        between the services are maintained. To support this approach Django provides a versatile toolkit for constructing web APIs. 
+      </p>
+      <p>
+        The frontend (client-side) functionality of web application is provided using JavaScript for which a variety of frameworks exist.  
+        These frameworks enable developers to take advantage of pre-existing functionality and templates, reducing development time and increasing software quality.
+         <a href="https://reactjs.org/">React</a> is currently the most used front-end web application framework with a focus on developing common reusable UI components to deliver engaging 
+        and intuitive user interfaces and ensure consistency across all applications.
+      </p> 
+      <p style="clear:both"></p>
+
+      <h4>5 - MicroServices (SOA)</h4>
+      <p style="clear:both"></p>
+    </div>
+
+
+
     <h3 class="accordion">Effective development</h3>
     <div class="panel">
       <br/>    
@@ -129,6 +194,7 @@
      
       <h4>Scrum</h4>
       <ul style="clear:both">
+        <img src="images/agile" alt="devops figure of eight" class="smlscr_image right_image">
         <li><b>Agile </b> – When operating in a development environment, where there is a high degree of uncertainty, traditional project management techniques don’t work.  Agile, as defined in more detail in the book
           <a href="https://www.scruminc.com/new-scrum-the-book/" target="_blank">Scrum The Art of Doing Twice The Work In Half the Time</a>, is an approach to project management 
           in which small 2-3 week sprints of activity are planned, each of which deliver a demonstrable package of capability. The four core values of Agile software development as stated by the Agile Manifesto are:
@@ -169,87 +235,57 @@
           and reduces the time it takes to release software updates.  Our preferred tool for performing continuous integration is <a href="https://docs.github.com/en/actions" target="_blank">GitHub Actions</a>.</li>
       </ul>
 
-        <h4>Deploying your application</h4>
 
-        <ul>
-          <li>
-            <b>Statically hosting</b> - enables web pages to serve up the same HTML, CSS and JavaScript to all users who enter the site.
-              As no processing is required on the server these pages are generally faster and can be hosted at minimal, or no cost, on services such as <a href="https://pages.github.com/" target="_black">GitHub Pages</a>.
-          </li> 
-
-          <li><b>Dynamic hosting</b> - enables the processing of content and storage of data on the server.  Dynamic hosting can be provided on any corporate network or by a cloud 
-            service provider such as <a href="https://azure.microsoft.com/en-gb/features/azure-portal/"target="_blank">Microsoft Azure</a> or 
-            <a href="https://aws.amazon.com/" target="_blank">Amazon AWS</a>.
-          </li>
-          
-          <li><b>Platform as a Service (PaaS)</b> - offer a more managed, low configuration service, making it incredibly easy to get up and running 
-            and provides upfront transparency of costs. Our favoured solution is <a href="https://www.heroku.com/"   target="_blank">Heroku</a>
-          </li>
-        
-      </ul>  
-      <h4>Containers</h4>
-      <p>
-        Containers enable an application to be isolated from the rest of the system on which it operates. 
-        All the  libraries,dependencies and files necessary to run the application are provided from a distinct image, meaning they make an application portable and consistent as it moves from development, 
-        to testing, and finally to multiple production environments. <a href="https://www.docker.com/">Docker</a> is by far the most popular software framework for building, running, and managing containers 
-      </p>  
     </div>
-    
 
-    <h3 class="accordion">Designing an application</h3>
+
+   
+    <h3 class="accordion">Deploying your application</h3>
     <div class="panel">
       <br/>
-      
-      <p>
-        Web Apps can provide functionality and secure data access to a variety of users through their web browsers 
-        without the need to install specialist software, allowing updates to be easily deployed and centralising the data storage. Depending on the 
-        requirements of the application we adopt one of following three different approaches:
+
+      <p style="padding:3px;clear:both;">
+        Once up and running the challenge is then to give your site an identity that people will recognise and get them to start using it.
       </p>
-      <h4>Streamlit</h4>
-      <p>
-        For simple analytical applications the <a href="https://streamlit.io/" target="_blank">Streamlit</a> library enables web apps to be created using only Python,
-        without the need for separate front-end web development.  This is a simple, low-cost solution for sharing analytical models amongst an internal team, however, it 
-        is unable to deliver the functionality required by more demanding applications.
-      </p>
-      <img src="images/MVC.png" alt="model view controller" class="smlscr_image right_image">
-      <h4>Model View Controller (MVC) architecture</h4>
-      <p>
-        When your application extends beyond just sharing analytical models, adopting a Model View Controller (MVC) architecture provides a balance between complexity and 
-        control by introducing separation of concerns between the three core elements:
-      </p>
+ 
+      <h4>Selecting a name</h4>
+      <p>An often overlooked consideration, when building Web Apps, is ensuring the identity and brand 
+        they present align with the company values you are trying to portray.  
+        One of the key channels for presenting an identity is the web address with which people will access your service from their browser.   
+        This address should be both memorable and relevant and can be achieved through using one of the following:</p>
       <ul>
-        <li><b>Model</b> - The backend that contains all the data logic.</li>
-        <li><b>View </b> – The frontend or graphical user interface (GUI).</li>
-        <li><b>Controller</b> – The brains of the application that controls how data is displayed.</li>
+        <li><b>New top-level domain</b> - Securing a dedicated top level <code>.com</code> domain name (TLD) can be challenging and expensive, but 
+          the recent growth of new TLD options such as <code>.digital</code> allow you to explore more creative and descriptive options.</li>
+        <li><b>Subdomain</b> - Websites normally use the subdomain <code>www.</code> but additional subdomains can be used to access your new service.  
+          e.g.  <code>https://maps.google.com</code></li>
+        <li><b>Subdirectory</b> -  a subdirectory from your existing  domain can also be used, as in <code>https://www.google.com/maps</code></li>
       </ul>
-      
-      <p>
-        Our preferred web development framework for server-side applications is <a href="https://www.djangoproject.com/"  target="_blank">Django</a>, which is used to power a range of 
-        well know platforms, including YouTube, Spotify, Instagram and Dropbox.  Django promotes itself as <em>"the web framework for perfectionists with deadlines"</em>, providing  
-        baked-in functionality such as admin panels, file upload, authentication, forms and app management, all of which significantly 
-        reduces the time and effort required to build robust web applications.
-      </p>
-      <p>The ability to directly integrate the Python machine learning and mathmatical models, discussed in the <a href="./analysis.html">Analyse</a> section, provides another significant 
-        benefit of selecting Django.</p>
+   
+      <h4>Hosting</h4>
+      <ul>
+        <li>
+          <b>Statically hosting</b> - enables web pages to serve up the same HTML, CSS and JavaScript to all users who enter the site.
+            As no processing is required on the server these pages are generally faster and can be hosted at minimal, or no cost, on services such as <a href="https://pages.github.com/" target="_black">GitHub Pages</a>.
+        </li> 
 
-      <h4>Service-Oriented-Architecture (SOA)</h4>
-      <img src="images/SOA.png" alt="model view controller" class="smlscr_image right_image">
-      <p>
-        In some circumstances if can be beneficial to further separate the UI and data processing elements of the application using an Application Programming Interface (API). 
+        <li><b>Dynamic hosting</b> - enables the processing of content and storage of data on the server.  Dynamic hosting can be provided on any corporate network or by a cloud 
+          service provider such as <a href="https://azure.microsoft.com/en-gb/features/azure-portal/"target="_blank">Microsoft Azure</a> or 
+          <a href="https://aws.amazon.com/" target="_blank">Amazon AWS</a>.
+        </li>
         
-        APIs allow a programme to be broken into distinct services, enabling them to be developed in parallel with minimal risk of unintended consequences, so long as the interfaces 
-        between the services are maintained. To support this approach Django provides a versatile toolkit for constructing web APIs. 
-      </p>
-      <p>
-        The frontend (client-side) functionality of web application is provided using JavaScript for which a variety of frameworks exist.  
-        These frameworks enable developers to take advantage of pre-existing functionality and templates, reducing development time and increasing software quality.
-         <a href="https://reactjs.org/">React</a> is currently the most used front-end web application framework with a focus on developing common reusable UI components to deliver engaging 
-        and intuitive user interfaces and ensure consistency across all applications.
-      </p> 
-      <p style="clear:both"></p>       
+        <li><b>Platform as a Service (PaaS)</b> - offer a more managed, low configuration service, making it incredibly easy to get up and running 
+          and provides upfront transparency of costs. Our favoured solution is <a href="https://www.heroku.com/"   target="_blank">Heroku</a>
+        </li>
+      
+    </ul>  
+    <h4>Containers</h4>
+    <p>
+      Containers enable an application to be isolated from the rest of the system on which it operates. 
+      All the  libraries,dependencies and files necessary to run the application are provided from a distinct image, meaning they make an application portable and consistent as it moves from development, 
+      to testing, and finally to multiple production environments. <a href="https://www.docker.com/">Docker</a> is by far the most popular software framework for building, running, and managing containers 
+    </p>  
+    
     </div>
-
-
     
 
     <h3 class="accordion">Structuring your data</h3>
@@ -339,6 +375,54 @@
     </div>
 
 
+    
+    <h3 class="accordion">Getting noticed</h3>
+    <div class="panel">
+    <br/>
+    <h4>Creating a Brand</h4>
+    <p>Another key channel is the logo used for your site which will feature prominently in the header of the website, on the user's 
+      browser as a favicon and as an icon on their home screens, it may even be used on marketing literature to promote your service. When selecting a logo there are four main principals 
+      that should guide your selection: </p>
+    <ul>
+      <li><b>Appropriateness</b> - The logo should convey your brand message to the target audience.</li>
+      <li><b>Simplicity</b> - A minimal and simple logo tends to attract people more easily.</li>
+      <li><b>Scalability</b> - The logo design should work whether it is the size from a tiny favicon to a giant billboard.</li>
+      <li><b>Timelessness</b> - It takes time to gain brand recognition, so choose a design that will last. </li>
+    </ul>
+    <h4>Styling</h4>   
+    <p>
+      Equally important is a consistent look and feel across your application, which will both improve the user experience and support your brand identity. 
+      CSS frameworks, such as <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> enable professional and highly responsive websites with 
+      standardised icons, buttons and navigation components to be created with relative ease.
+      While for more advanced applications design systems, such as <a href="https://material.io/" target="_blank">Material Design</a> by Google, 
+      provide more sophistication, introducing state management and interactivity to make controls feel tactile and responsive. 
+    </p>
+
+    <h4>Digital Marketing</h4>
+    <ul>
+      <li><b>Search engine optimisation (SEO)</b> - is the process of optimising websites so that they rank well on search engines through organic (non-paid) search. 
+        A search engine works by matching the user search query with information ascertained from the site meta descriptions, titles, loading speeds, links and keywords 
+        to determine the order in which they appear. By structuring your site well, you can increase the likelihood of it being prioritised in the results. 
+        For more information check out the 
+        Google <a href="https://developers.google.com/search/docs/beginner/seo-starter-guide" target="_blank">SEO starter guide</a>
+      </li>
+      <li><b>Paid Search</b> - To rank well on more generic search keywords it will be necessary to invest in paid search advertisements. 
+        Paid search works on a pay-per-click model, meaning you only pay when somebody accesses your site from the displayed advert.
+        The rate you pay for a click varies based on the keywords you select, with more popular terms being considerably more expensive. 
+        For more information the <a href="https://support.google.com/google-ads/answer/6146252"><span>Google Ads</span></a> site provides a useful guide to developing your advertising campaign.
+      </li>
+        <p>
+        When developing your adverts it is important to ensure that the clicks you receive result in conversions, in the form of sales, contact form submissions or other 
+        metrics that are important to your business.  By setting up your advertising properly you can ensure you target specific users, then using website analystics you can track their
+        activity to measure the effectiveness of your campaign.
+      </p>  
+    </li>
+</ul>
+</div>
+
+
+
+
 
     <h3 class="accordion">The <span id="brand">EMPEDATA</span> difference</h3>
   <div class="panel">
@@ -426,11 +510,11 @@
         <br>
   
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            <div class="tile" id="powerspec-tile" onclick="document.getElementById('coming_soon').style.display='block'"><span>Specification tool</span></div>
+            <div class="tile tile1" id="powerspec-tile" onclick="document.getElementById('coming_soon').style.display='block'"><span>Specification tool</span></div>
           </div>
 
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            <div class="tile" id="headx-tile" onclick="document.getElementById('coming_soon').style.display='block'"><span>Data Platform</span></div>
+            <div class="tile tile2" id="headx-tile" onclick="document.getElementById('coming_soon').style.display='block'"><span>Data Platform</span></div>
           </div>
   
   
