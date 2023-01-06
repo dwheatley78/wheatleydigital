@@ -114,24 +114,51 @@
       <br/>
       
       <p>
-        Web Apps can provide functionality and secure data access to a variety of users through their web browsers 
-        without the need to install specialist software, allowing updates to be easily deployed and centralising the data storage. Depending on the 
+        Web based applications can provide users with secure access to data and provide them with functionality to assist employees with their role or provide value to a customer.
+        These applications can be designed to run in local web browsers and optimised for use on a variety of devices such as a PC, tablet or phone.
+      </p>
+      <p>
+        While the approach we take during the <a href="strategy.html">Strategise</a> phase will provide a detailed understanding of the experience to be created, there is 
+        still the difficult decision as to how we will technically deliver the solution.  All computing can be considered as a level of abstraction where the tools we use 
+        simplify or take care of some aspects for the programmer.  The higher the level of abstraction the simpler the software is to build, maintain and share the logic 
+        used with others.  This is however at the cost of flexibility as shown in the following.
+
+
         requirements of the application we adopt one of following four different approaches:
       </p>
 
-      <h4>1 - Low Code</h4>
-      <br/>    
+      <h4>Low Code</h4>   
       <p>
-        
+        Low-code tools use a visual development approach to application building that empowers non-technical users to build, test, manage, and deploy applications without 
+        traditional programming. Low-code platforms achieve this by creating ready-to-use code blocks that can operate within predefined constraints through a simple
+        drag-and-drop interface.
       </p>
-      <h4>2 - Streamlit</h4>
+      <p>
+        Another big advantage of these tools is that they can also provide a comprehensive eco-system that ensures your team can effectively communicate, collaborate and manage projects
+        effectively.
+      </p>
+      <p>
+        In our experience platforms such as  <a href="https://www.mendix.com/">Mendix</a> can reduce the barrier to getting started and allow rapid experimentation, which can all be done 
+        using the free tier.
+        The baked-in security and hosting capabilities provide a safe and simple to set up environment while tutorials and wider eco-system are a great way to ensure your team
+        learn the concepts of effective application development which are directly applicable to traditional programming tools.
+      </p>
+      <p>
+        The limitation of these solutions is the flexibility that they provide both in terms of functionality you can develop and the lock in to a proprietary solution. 
+        While the standard tools will cater for the majority of data manipulation applications these may can be extended using traditional programming techniques
+        , in the case of Mendix this is done using Java.  Similarly for customer facing applications where the User Interface can be critical Mendix does not allow the same
+        level of creative control as a traditional programming approach.  
+      </p>
+
+      <h4>Streamlit</h4>
       <p>
         For simple analytical applications the <a href="https://streamlit.io/" target="_blank">Streamlit</a> library enables web apps to be created using only Python,
         without the need for separate front-end web development.  This is a simple, low-cost solution for sharing analytical models amongst an internal team, however, it 
         is unable to deliver the functionality required by more demanding applications.
       </p>
       <img src="images/MVC.png" alt="model view controller" class="smlscr_image right_image">
-      <h4>3 - Model View Controller (MVC) architecture</h4>
+      
+      <h4>Model View Controller (MVC) architecture</h4>
       <p>
         When your application extends beyond just sharing analytical models, adopting a Model View Controller (MVC) architecture provides a balance between complexity and 
         control by introducing separation of concerns between the three core elements:
@@ -148,10 +175,10 @@
         baked-in functionality such as admin panels, file upload, authentication, forms and app management, all of which significantly 
         reduces the time and effort required to build robust web applications.
       </p>
-      <p>The ability to directly integrate the Python machine learning and mathmatical models, discussed in the <a href="./analysis.html">Analyse</a> section, provides another significant 
+      <p>The ability to directly integrate the Python machine learning and mathematical models, discussed in the <a href="./analysis.html">Analyse</a> section, provides another significant 
         benefit of selecting Django.</p>
 
-      <h4>4 - Service-Oriented-Architecture (SOA)</h4>
+      <h4>Service-Oriented-Architecture (SOA)</h4>
       <img src="images/SOA.png" alt="model view controller" class="smlscr_image right_image">
       <p>
         In some circumstances if can be beneficial to further separate the UI and data processing elements of the application using an Application Programming Interface (API). 
@@ -167,8 +194,15 @@
       </p> 
       <p style="clear:both"></p>
 
-      <h4>5 - MicroServices (SOA)</h4>
+      <h4>MicroServices</h4>
       <p style="clear:both"></p>
+      <p>Microservices are an architectural style that structures an application as a collection of loosely coupled services that are maintained and tested independently.
+        These services can be organized around business capabilities and reused where appropriate.  The isolation of these services also allows dedicated teams
+        to freedom to use the technologies best suited to the task so long as the interfaces to the other services are maintained.
+      </p>
+      <p>The key benefit of a microservice architecture is that it enables the rapid, frequent and reliable delivery of large, complex applications however for smaller 
+        applications the cost of managing and maintaining them is usually prohibitive.
+      </p>
     </div>
 
 
