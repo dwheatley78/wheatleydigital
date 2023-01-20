@@ -109,53 +109,40 @@
     </p>
 
 
-    <h3 class="accordion">Application Design</h3>
+    <h3 class="accordion">Application design</h3>
     <div class="panel">
       <br/>
       
+
       <p>
-        Web based applications can provide users with secure access to data and provide them with functionality to assist employees with their role or provide value to a customer.
-        These applications can be designed to run in local web browsers and optimised for use on a variety of devices such as a PC, tablet or phone.
+        The approach outlined in the <a href="strategy.html">Servitise</a> section defines the desired user experience for either employees or customers, the next stage is to 
+        understand how to create and deliver it! Web applications provide an effective means for delivering capability, centralising and securing data to be consumed on a 
+        varierty of devices but even then there are a number of options available.
       </p>
       <p>
-        While the approach we take during the <a href="strategy.html">Servitise</a> phase will provide a detailed understanding of the experience to be created, there is 
-        still the difficult decision as to how we will technically deliver the solution.  All computing can be considered as a level of abstraction where the tools we use 
-        simplify or take care of some aspects for the programmer.  The higher the level of abstraction the simpler the software is to build, maintain and share the logic 
-        used with others.  This is however at the cost of flexibility as shown in the following.
-
-
-        requirements of the application we adopt one of following four different approaches:
+        The key issue when selecting an appropriate approach will be a balance between the level of customisation required and the size of budget / skills available to deliver and maintain the project.   
       </p>
 
-      <h4>Low Code</h4>   
+      <h4>Dashboards</h4>
       <p>
-        Low-code tools use a visual development approach to application building that empowers non-technical users to build, test, manage, and deploy applications without 
+        For applications focussed on consuming and visualising data a dashboard may be adequate.  These can either be delivered through a Business intelligence tool such as
+        <a href="https://powerbi.microsoft.com/en-gb/">Microsoft PowerBI</a> or for a more custom open source solution we often leverage the <a href="https://streamlit.io/" target="_blank">Streamlit</a> library, which enables web apps to be created using only Python,
+        without the need for separate front-end web development.
+      </p>
+
+      <h4>Low-code applications</h4>   
+      <p>
+        Low-code tools use a visual development approach to application building that empowers non-technical users to build, test, manage, and deploy applications with limited amounts of
         traditional programming. Low-code platforms achieve this by creating ready-to-use code blocks that can operate within predefined constraints through a simple
-        drag-and-drop interface.
+        drag-and-drop interface. These tools also provide a well configured development environment to enable effective collaboration and project management by the team.
       </p>
       <p>
-        Another big advantage of these tools is that they can also provide a comprehensive eco-system that ensures your team can effectively communicate, collaborate and manage projects
-        effectively.
-      </p>
-      <p>
-        In our experience platforms such as  <a href="https://www.mendix.com/">Mendix</a> can reduce the barrier to getting started and allow rapid experimentation, which can all be done 
-        using the free tier.
-        The baked-in security and hosting capabilities provide a safe and simple to set up environment while tutorials and wider eco-system are a great way to ensure your team
-        learn the concepts of effective application development which are directly applicable to traditional programming tools.
-      </p>
-      <p>
-        The limitation of these solutions is the flexibility that they provide both in terms of functionality you can develop and the lock in to a proprietary solution. 
-        While the standard tools will cater for the majority of data manipulation applications these may can be extended using traditional programming techniques
-        , in the case of Mendix this is done using Java.  Similarly for customer facing applications where the User Interface can be critical Mendix does not allow the same
-        level of creative control as a traditional programming approach.  
+        Platforms such as  <a href="https://www.mendix.com/">Mendix</a> can reduce the barrier to getting started and allow rapid experimentation. 
+        The baked-in security and hosting capabilities provide a safe and simple to configure environment, 
+        while the free tier provides a great way to prototype applications. They are however more limited in terms of functionality they can deliver 
+        and can lock you into their proprietary solution.
       </p>
 
-      <h4>Streamlit</h4>
-      <p>
-        For simple analytical applications the <a href="https://streamlit.io/" target="_blank">Streamlit</a> library enables web apps to be created using only Python,
-        without the need for separate front-end web development.  This is a simple, low-cost solution for sharing analytical models amongst an internal team, however, it 
-        is unable to deliver the functionality required by more demanding applications.
-      </p>
       <img src="images/MVC.png" alt="model view controller" class="smlscr_image right_image">
       
       <h4>Model View Controller (MVC) architecture</h4>
@@ -497,8 +484,6 @@
           <li><a href="https://www.w3schools.com/"><span>W3 schools</span></a> - Detailed explanations of the key web development tools (HTML, CSS and JavaScript).</li>
           <li><a href = "https://fullstackopen.com/en/">React</a> - An introduction to introduce you to modern JavaScript-based web development including React</li>
           <li><a href = "https://docs.djangoproject.com/en/4.0/intro/tutorial01/">Django - </a>A guide to backend development using Django</li>
-          <li><a href = "https://github.com/DataTalksClub/data-engineering-zoomcamp/">A data engineering course</a></li>
-          <li><a href = "https://diveintodocker.com/">Dive into Docker course for developers</a></li>
           <li><a href="https://www.fullstackpython.com/">Full Stack Python</a> - Resources to help develop your Python skills to develop web applications</li>
         </ul>
         
