@@ -264,7 +264,7 @@
 
     </div>
 
-    <h3 class="accordion">Machine learning in production</h3>
+    <h3 class="accordion">Machine learning in production (MLOPS)</h3>
     <div class="panel">
       <br/>      
       <p>
@@ -285,10 +285,9 @@
         </ul>
       </p>
 
-    </div>
 
-    <h3 class="accordion">Data validation</h3>
-    <div class="panel">
+
+    <h4">Data validation</h4>
       <br/>      
       <p>
         In order to validate data it is necessary to have a baseline against which the data can be compared.  A data schema is used to define the data fields, types and various 
@@ -297,13 +296,10 @@
       </p>
 
       <img src="./images/TFX_schema.png" alt="TensorFlow Schema" class="center">
-      
-
-    </div>
 
 
-    <h3 class="accordion">Feature engineering</h3>
-    <div class="panel">
+
+    <h4>Feature engineering</h4>
       <br/>      
       <p>
         Feature engineering is about manipulating the raw data into a format that provides the greatest possible predictive power.  The key feature engineering processes include:        
@@ -330,13 +326,11 @@
         Using Tensorflow transform library enables the above steps can be encapsulated into a pipeline that can be executed consistently on all data items, both the training and predicting data.
         MetaData can then also be produced to track the lineage of the data flowing between components in the pipeline as artefacts that are stored in a dedicated database 
       </p>
-      
-
-    </div>
+  
 
 
-    <h3 class="accordion">Model training</h3>
-    <div class="panel">
+    <h4>Model training</h4>
+
       <br/>      
       <p>
         Every type of machine learning model has a number of hyper parameters that need to be selected to optimise the model performance.  Parameters can be either:
@@ -370,11 +364,11 @@
       </ul>
 
 
-    </div>
 
 
-    <h3 class="accordion">Validating a model and metrics</h3>
-    <div class="panel">
+
+    <h4>Validating a model and metrics</h4>
+
       <br/>      
       <p>
         As discussed earlier a model is typically used to either label a data point or to infer a output value based on the provided inputs. 
@@ -404,10 +398,9 @@
       </ul>
     
 
-    </div>
 
-    <h3 class="accordion">Serving a model</h3>
-    <div class="panel">
+
+    <h4>Serving a model</h4>
       <br/>      
       <p>
         When it comes to serving a model you need to be cognisant of the environment in which it is going to be operated.  Model serving is a constant balancing act between accuracy, latency and cost. 
@@ -433,9 +426,9 @@
         <li>Model Parallelism- Where the models are extremely large it is possible to partition the model into sections and assign them to different machines.</li>
         <li>Pre-processing pipeline parallelism –  By paralyzing the activities to fetch read, transform and train a model the idle time of expensive compute resources can be minimised.  
           Typically cloud implementations of Giant Neural Networks are performed on cloud computers such as Google GPipe or Microsoft PipeDream </li>
-      </ul>     
+      </ul>   
+    </div>  
 
-    </div>
 
 
     <h3 class="accordion">The <span id="brand">EMPEDATA</span> difference</h3>
