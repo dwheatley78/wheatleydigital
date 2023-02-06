@@ -183,7 +183,7 @@
 
       <h4>MicroServices</h4>
       <p style="clear:both"></p>
-      <p>Microservices are an architectural style that structures an application as a collection of loosely coupled services that are maintained and tested independently.
+      <p>Microservices are an architectural style that structures an application as a collection of loosely coupled services that are maintained and tested independently.  
         These services can be organized around business capabilities and reused where appropriate.  The isolation of these services also allows dedicated teams
         to freedom to use the technologies best suited to the task so long as the interfaces to the other services are maintained.
       </p>
@@ -376,33 +376,34 @@
     <div class="panel">
       <br/> 
       <p>
-        When building an application security is paramount.  A popular coding paradigm of "secure by design" ensures that feared events or macro outcomes are 
-        considered at the outset and the necessary precautions are taken to manage the associated risk.  Key considerations include:
+        When building an application security is paramount.  A popular coding paradigm of "secure by design" ensures that "feared events" or "macro outcomes" are 
+        considered at the outset and the necessary precautions taken to manage the associated risk.  Key considerations include:
       </p>
       <h4>Access control</h4>       
-        Ensure that users are only granted access to the content and features that they are entitled to, through a robust login and permission management system. Django provides a robust authorisation system that 
-        can easily be extended to provide comprehensive a role based access control (RBAC) system.  Another key consideration when producing robust production applications is to 
-        perform admin hardening and adding <a href="https://django-two-factor-auth.readthedocs.io/en/stable/">two-factor-authentication</a> as detailed in the provided link.
+        Ensure that users are only granted access to the content and features that they are entitled to, through a robust login and permission management system. 
+        Django provides a robust authorisation system that can easily be extended to provide a comprehensive role based access control (RBAC) system.  
+        Extra security can also be introduced by performing  <a href="https://github.com/dmpayton/django-admin-honeypot">admin hardening</a> 
+        and adding <a href="https://django-two-factor-auth.readthedocs.io/en/stable/">two-factor-authentication</a> as detailed in the provided links.
       </p>
+      <p>Equally important is ensuring secret keys are store as environment variable and <b>never</b> uploaded to a repository.</p>
 
       <h4>Attack vectors</h4>
         <p>The next type of threat to guard against are malicious attacks that can potentially compromise your site.  
-          One of the main benefits of using Django is the comprehensively tested libraries and built-in security features it provides 
-          that protect against a variety of attacks, however care must be taken when using 3rd party or out of date packages.
+          One of the main benefits of using Django is the comprehensively tested libraries and built-in security features 
+          that protect against a variety of attacks.
         </p>
         <p>Typical threats include:</p>
         <ul>
           <li><b>SQL injection</b>- occurs when a malicious user can execute arbitrary SQL code on a database which can result in records being deleted or data leakage</li>
           <li><b>Cross-site scripting (XSS)</b>- The attacker is able to inject small bits of code onto web pages that can subsequently be displayed on other people's browsers. </li>
-          <li><b>Cross-Site Request Forgery (CSRF)</b>- exploits that trust a site has in a user submitting a web request that they did not intend. This may cause actions to be 
+          <li><b>Cross-Site Request Forgery (CSRF)</b>- exploit that trust a site has in a user submitting a web request that they did not intend. This may cause actions to be 
             performed on the website that can include inadvertent client or server data leakage</li>
-          <li><b>Denial-of-Service (DoS) attack</b> - tries to make a website or network resource unavailable by flooding it with malicious traffic so that it is unable to operate</li>
+          <li><b>Denial-of-Service (DoS) attacks</b> - try to make a website or network resource unavailable by flooding it with malicious traffic so that it is unable to operate</li>
         </ul> 
 
        <h4>Testing and assurance</h4>
-       <p>Despite your best efforts to write clean code and taking the appropriate precaution to control user inputs 
-        and data being entered into your application tests provide additional assurances that the potential threats are being appropriately managed</p>
-        <p>Three commonly used types of security testing are:</p>
+       <p>Despite your best efforts tests provide are still necessary to give confidence in the developed solutions.</p>
+        <p>Three commonly used types of security testing include:</p>
        <ul>
         <li><b>Static Application Security Testing (SAST)-</b> It performs on the source code level, and is able to dig into code quality to ensure it's maintainability and reusability.
          Our favourite static code analysis tool is <a href="https://www.sonarqube.org/features/multi-languages/python/">SonarQube</a>.
